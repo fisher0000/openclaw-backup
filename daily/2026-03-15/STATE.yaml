@@ -1,0 +1,46 @@
+# 龙虾项目管理中心
+# Autonomous Project Management for 龙虾
+
+project: lobster-intelligence
+created: 2026-03-05T15:00:00Z
+updated: 2026-03-08T00:49:00Z
+owner: 龙虾（王涛）
+
+# 项目注册表 - 所有活跃项目
+projects: []
+
+# 活跃任务
+tasks:
+  - id: retry-skills-install
+    name: 重试安装失败的技能
+    status: completed
+    priority: p2
+    scheduled: "2026-03-07T20:16:00Z"
+    description: |
+      已安装成功：
+      - pdf (anthropics/skills@pdf) ✅
+      - image-manipulation-image-magick ✅
+
+  - id: cron-backup-setup
+    name: 设置自动备份任务
+    status: completed
+    priority: p1
+    scheduled: "2026-03-08T00:31:00Z"
+    completed: "2026-03-08T00:49:00Z"
+    description: |
+      已创建定时备份任务并测试成功：
+      ✅ 每日17:00：备份 SOUL.md, MEMORY.md, AGENTS.md
+      ✅ 每周五17:00：备份整个 workspace
+      目标仓库：github.com/fisher0000/openclaw-backup
+      SSH认证：已配置并测试通过
+
+# 下一步行动
+next_actions: []
+
+# 资源链接
+resources:
+  memory: ~/.openclaw/workspace/memory/
+  reports: ~/.openclaw/workspace/reports/
+  skills: ~/.openclaw/skills/
+  scripts: ~/.openclaw/scripts/
+  cron: ~/.openclaw/cron/

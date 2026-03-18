@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.24",
+    "lastTouchedAt": "2026-02-27T05:25:58.139Z"
+  },
+  "env": {
+    "vars": {
+      "ZAI_API_KEY": "6c4cb8f418834ca6a6c60e56bf93aed1.79KIuFovX605X7c9",
+      "BRAVE_API_KEY": "BSANqgXdaf1pernwZVr77RJEU74lDub",
+      "TZ": "Asia/Shanghai"
+    }
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-27T05:25:58.110Z",
+    "lastRunVersion": "2026.2.24",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {}
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "moonshot": {
+        "baseUrl": "https://api.moonshot.cn/v1",
+        "apiKey": "sk-txLB5nMQRWvAn2Rs5CboPLVvTwOa8FWoPTMXmxBK8i6twruT",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "kimi-k2.5",
+            "name": "Kimi K2.5",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 256000,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "local": {
+        "baseUrl": "http://192.168.1.88:8000/v1/",
+        "apiKey": "lRul9NtIrpgF10PztVbyKA4I_uVTWOwrUfo8nARxRo4",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "kimi",
+            "name": "kimi-k2.5",
+            "reasoning": false,
+            "input": ["text", "image"],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 108000,
+            "maxTokens": 8192
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "amazon-bedrock/us.anthropic.claude-sonnet-4-6"
+      },
+      "workspace": "/home/node/.openclaw/workspace"
+    },
+    "list": [
+      {
+        "id": "main",
+        "default": true,
+        "name": "总指挥",
+        "workspace": "/home/node/.openclaw/workspace",
+        "subagents": {
+          "allowAgents": ["secretary", "engineer", "intel"]
+        }
+      },
+      {
+        "id": "secretary",
+        "name": "小秘书",
+        "workspace": "/home/node/.openclaw/workspace-secretary"
+      },
+      {
+        "id": "engineer",
+        "name": "工程师",
+        "workspace": "/home/node/.openclaw/workspace-engineer"
+      }
+    ]
+  },
+  "bindings": [
+    { "agentId": "main", "match": { "channel": "feishu", "accountId": "app-main" } },
+    { "agentId": "secretary", "match": { "channel": "feishu", "accountId": "app-secretary" } },
+    { "agentId": "engineer", "match": { "channel": "discord", "accountId": "bot-eng" } }
+  ],
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "channels": {
+    "feishu": {
+      "appId": "cli_a91434f9c7b89bca",
+      "appSecret": "zlbpCaFzcTDd6YnW8MCzkeA7zTnJWIJ1",
+      "domain": "feishu",
+      "enabled": true,
+      "dmPolicy": "open",
+      "allowFrom": ["*"]
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "controlUi": {
+      "enabled": false
+    },
+    "auth": {
+      "mode": "token",
+      "token": "c1dff7c9bf0232a16f3a96c562217f02de28243bf62419466df244d09e3f881f"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "remote": {
+      "token": "c1dff7c9bf0232a16f3a96c562217f02de28243bf62419466df244d09e3f881f"
+    }
+  },
+  "plugins": {
+    "load": {
+      "paths": ["/app/extensions/feishu"]
+    },
+    "entries": {
+      "feishu": {
+        "enabled": true
+      }
+    },
+    "installs": {}
+  }
+}

@@ -1,0 +1,4582 @@
+{
+  "allPermissions": [
+    {
+      "name": "获取 user_access_token 基本信息普通auth:user_access_token:read",
+      "description": "开通权限后，应用可：\n查询 user_access_token 和 refresh_token 撤销事件"
+    },
+    {
+      "name": "获取事件的出口 IP普通event:ip_list",
+      "description": "允许应用获取事件推送的固定出口 IP。企业可以将获取到的事件出口 IP 配置到企业防火墙中，提升网络安全性。"
+    },
+    {
+      "name": "更新通讯录高级contact:contact",
+      "description": "获得以下接口权限：\n1. 更新用户相关能力：包括创建用户、修改用户部分信息、修改用户所有信息、删除用户\n2. 更新部门相关能力：包括创建部门、修改部分部门信息、修改部门所有信息、删除部门\n3. 更新人员类型相关能力：包括新增、更新、删除人员类型\n\n注：调用接口时，部分字段可能需要额外权限，具体以文档为准。"
+    },
+    {
+      "name": "获取通讯录基本信息普通contact:contact.base:readonly",
+      "description": "开通权限后，应用可获取下列 API 权限：\n1. 查询单个用户、查询部门用户列表、查询用户变更事件\n2. 查询单个部门、查询部门列表、查询父部门路径、查询部门变更事件\n3. 查询企业自定义字段\n4. 查询通讯录数据权限范围变更事件\n此外，权限中所涵盖的可查询的人员、部门数据范围取决于应用被授予的通讯录数据权限范围。获取结果字段数据可能需要额外的权限，具体以 API 文档为准。"
+    },
+    {
+      "name": "更新部门 ID高级contact:contact:update_department_id",
+      "description": "开通权限后，应用可更新部门 ID。"
+    },
+    {
+      "name": "更新用户 ID高级contact:contact:update_user_id",
+      "description": "开通权限后，应用可更新用户 ID。"
+    },
+    {
+      "name": "获取部门基础信息普通contact:department.base:readonly",
+      "description": "获取部门信息时，返回部门的基础信息，包括：\nid：部门 ID\nname：部门名称 \nchat_id：部门群 ID \nstatus：部门状态 \ni18n_name：部门国际化名称"
+    },
+    {
+      "name": "查询部门 HRBP 信息高级contact:department.hrbp:readonly",
+      "description": "开通权限后，应用可查询部门的 HRBP 信息。"
+    },
+    {
+      "name": "获取通讯录部门组织架构信息高级contact:department.organize:readonly",
+      "description": "访问部门信息时，返回部门的组织架构信息，包括：\nparent_department_id：父部门 ID \nleader_user_id：部门负责人 ID \nmember_count：部门直属成员数 \norder：部门在同级部门中的排序"
+    },
+    {
+      "name": "查看、创建、修改、删除角色及角色成员高级contact:functional_role",
+      "description": "开通权限后，应用可查看、创建、修改、删除角色及角色成员。"
+    },
+    {
+      "name": "查询角色信息、角色下的成员信息高级contact:functional_role:readonly",
+      "description": "开通权限后，应用可查询角色信息、角色下的成员信息。"
+    },
+    {
+      "name": "更新用户组信息高级contact:group",
+      "description": "获得用户组更新权限，可创建用户组、更新用户组、删除用户组、添加用户组成员、移除用户组成员。"
+    },
+    {
+      "name": "获取用户组信息高级contact:group:readonly",
+      "description": "获得用户组读取权限，可查询单个用户组、查询企业用户组列表、查询用户组成员列表。"
+    },
+    {
+      "name": "创建、删除、更新租户的工作序列高级contact:job_family",
+      "description": "开通权限后，应用可在通讯录权限范围内，创建、删除、更新租户的工作序列信息，包括：\n序列名称\n序列描述\n上级序列 ID\n是否启用\n多语言设置"
+    },
+    {
+      "name": "查询租户下工作序列的详细信息高级contact:job_family:readonly",
+      "description": "开通权限后，应用可在通讯录权限范围内，查询租户工作序列的详细信息，包括分页查询序列列表和获取单个序列的详情。\n序列信息包括：\n序列名称\n序列描述\n上级序列 ID\n是否启用\n多语言设置"
+    },
+    {
+      "name": "创建、删除、更新职级高级contact:job_level",
+      "description": "开通权限后，应用可在通讯录权限范围内，创建、删除、更新职级信息，包括：\n职级名称\n职级描述\n职级排序\n是否启用\n多语言设置"
+    },
+    {
+      "name": "查询职级列表高级contact:job_level:readonly",
+      "description": "开通权限后，应用可在通讯录权限范围内，查询职级列表信息，包括：\n职级名称\n职级描述\n职级排序\n是否启用\n多语言设置"
+    },
+    {
+      "name": "获取职务列表高级contact:job_title:readonly",
+      "description": "开通权限后，应用可查询企业中的职务列表。"
+    },
+    {
+      "name": "获取角色权限高级contact:role:readonly",
+      "description": "获得角色查询权限，可获取组织的角色列表、获取角色下的成员列表。"
+    },
+    {
+      "name": "更新单位信息高级contact:unit",
+      "description": "创建、删除、修改单位信息或修改单位和部门的绑定关系。\n当应用具有这个权限后，能够创建、修改单位，删除单位信息，或修改部门与单位的绑定关系。"
+    },
+    {
+      "name": "获取单位信息高级contact:unit:readonly",
+      "description": "获取单位信息或单位与部门的绑定关系。\n当应用具有这个权限后，能够具有获取单位信息，获取单位与部门的绑定关系的权限。"
+    },
+    {
+      "name": "查询用户席位信息高级contact:user.assign_info:read",
+      "description": "开通本权限后，应用可查询某一成员被分配的席位信息，包括：\nsubscription_id：成员被分配的席位 ID\nlicense_plan_key：席位值\nproduct_name：席位名称\ni18n_name：席位国际化名称\nstart_time：席位有效期开始时间\nend_time：席位有效期结束时间"
+    },
+    {
+      "name": "获取用户基本信息普通contact:user.base:readonly",
+      "description": "获得获取用户基本信息权限，在调用获取用户信息相关接口时返回以下基础信息： \nname：用户名 \nen_name：用户英文名 \navatar：用户头像"
+    },
+    {
+      "name": "获取用户组织架构信息高级contact:user.department:readonly",
+      "description": "获得获取用户组织架构相关信息的权限，在调用获取用户信息相关接口时返回以下信息： \ndepartment_ids：用户归属的部门 ID \nleader_user_id：用户的直属上级 ID \norders：用户在其直属部门内的排序、用户多个部门间的排序"
+    },
+    {
+      "name": "获取成员所在部门路径高级contact:user.department_path:readonly",
+      "description": "单个成员可存在于多个部门中，单个部门到最上级根部门的链路即为部门路径。该路径包含多语言名称和部门 ID，会根据管理后台的相关配置而变化。开通该权限后，应用可获取成员的部门路径。"
+    },
+    {
+      "name": "查看成员的虚线上级 ID高级contact:user.dotted_line_leader_info.read",
+      "description": "开通权限后，应用可获取成员的虚线上级 ID。"
+    },
+    {
+      "name": "获取用户邮箱信息高级contact:user.email:readonly",
+      "description": "获得获取用户邮箱的权限，在调用获取用户信息相关接口时返回用户邮箱。"
+    },
+    {
+      "name": "获取用户受雇信息高级contact:user.employee:readonly",
+      "description": "获得获取用户受雇相关信息权限，在调用获取用户信息相关接口时可获取以下信息： \nemployee_no：工号 \nemployee_type：人员类型 \nstatus：状态 \nis_tenant_manager：是否为租户管理员 \njoin_time：入职时间 \ncountry：国家/地区 \ncity：城市 \nwork_station：工位 \ncustom_attrs：自定义字段 \nenterprise_email：企业邮箱 \njob_title：职务"
+    },
+    {
+      "name": "获取用户 user ID高级contact:user.employee_id:readonly",
+      "description": "在调用获取用户信息相关接口时，返回 user_id/employee_id 字段。"
+    },
+    {
+      "name": "查看成员工号高级contact:user.employee_number:read",
+      "description": "开通权限后，应用可在调用获取用户信息相关 API 时获取成员的工号（employee_no）信息。"
+    },
+    {
+      "name": "获取用户性别高级contact:user.gender:readonly",
+      "description": "在调用获取用户信息相关接口时，返回用户性别信息。"
+    },
+    {
+      "name": "通过手机号或邮箱获取用户 ID高级contact:user.id:readonly",
+      "description": "获得“使用手机号或邮箱获取用户 ID”接口的调用能力，可通过用户邮箱或手机号查询用户的 open_id 和 user_id。"
+    },
+    {
+      "name": "查询用户所属的工作序列高级contact:user.job_family:readonly",
+      "description": "开通权限后，应用可在调用用户信息相关 API 时，查询用户所属的工作序列。\n序列信息包括：\n序列名称\n序列描述\n上级序列 ID\n是否启用\n多语言设置"
+    },
+    {
+      "name": "查询用户职级高级contact:user.job_level:readonly",
+      "description": "开通权限后，应用可在通讯录权限范围内，查询单个用户的职级信息，包括：\n职级名称\n职级描述\n职级排序\n是否启用\n多语言设置"
+    },
+    {
+      "name": "获取用户手机号高级contact:user.phone:readonly",
+      "description": "在调用获取用户信息相关接口时，返回用户手机号。"
+    },
+    {
+      "name": "分配用户席位高级contact:user.subscription_ids:write",
+      "description": "开通本权限后，应用可在创建成员、恢复离职成员时，为某一成员分配指定的席位。相关数据包括：\nsubscription_ids：分配给成员的席位 ID 列表"
+    },
+    {
+      "name": "查看成员数据驻留地高级contact:user.user_geo",
+      "description": "开通此权限后，应用可以查看成员的数据驻留地信息。"
+    },
+    {
+      "name": "搜索用户高级contact:user:search",
+      "description": "获取搜索用户的接口调用能力，可以以用户身份搜索其所在组织内的其他用户。"
+    },
+    {
+      "name": "获取工作城市列表高级contact:work_city:readonly",
+      "description": "开通权限后，应用可查询企业中的工作城市列表。"
+    },
+    {
+      "name": "查询租户下的席位信息高级tenant:tenant.product_assign_info:read",
+      "description": "开通本权限后，应用可查询租户下待分配的席位列表。"
+    },
+    {
+      "name": "创建、更新、删除应用消息流卡片高级im:app_feed_card:write",
+      "description": "开通权限后，应用可创建、更新、删除应用消息流卡片。"
+    },
+    {
+      "name": "查询实体与标签的绑定关系高级im:biz_entity_tag_relation:read",
+      "description": "开通权限后，应用可查询业务实体与标签的绑定关系。目前，“业务实体”只支持群组。"
+    },
+    {
+      "name": "在业务实体上绑定或解绑标签高级im:biz_entity_tag_relation:write",
+      "description": "开通权限后，应用可将创建的标签绑定到业务实体上展示，也可解绑标签。目前，“业务实体”只支持群组。"
+    },
+    {
+      "name": "获取与更新群组信息普通im:chat",
+      "description": "可以获取或更新群组信息，包括：群名称、群描述、群头像、群主 ID、群模式及群类型、 进退群的系统消息可见性、群成员的发言权限、加群审批、Tenant Key。\n当群设置了“仅群主和群管理员可更改群信息”时，应用需具备权限“im:chat:operate_as_owner”（更新应用所创建群的群信息）才可更新所有群信息。"
+    },
+    {
+      "name": "订阅访问机器人会话相关事件普通im:chat.access_event.bot_p2p_chat:read",
+      "description": "开通权限后，应用可订阅用户访问与机器人的会话的相关事件。"
+    },
+    {
+      "name": "查看群公告信息高级im:chat.announcement:read",
+      "description": "开通权限后，应用可查看所在群的群公告信息。"
+    },
+    {
+      "name": "更新群公告内容高级im:chat.announcement:write_only",
+      "description": "开通权限后，应用可更新所在群的群公告内容。"
+    },
+    {
+      "name": "查看新版群置顶高级im:chat.chat_pins:read",
+      "description": "开通权限后，应用可查看新版群置顶消息。"
+    },
+    {
+      "name": "操作新版群置顶高级im:chat.chat_pins:write_only",
+      "description": "开通权限后，应用可对新版群置顶进行添加、移除、排序等操作。"
+    },
+    {
+      "name": "查询群组与插件的关联关系高级im:chat.collab_plugins:read",
+      "description": "开通权限后，应用可查询群组与插件的关联关系。"
+    },
+    {
+      "name": "创建、解除群组与插件的关联关系高级im:chat.collab_plugins:write_only",
+      "description": "开通权限后，应用可创建、解除群组与插件的关联关系。"
+    },
+    {
+      "name": "添加、删除群管理员高级im:chat.managers:write_only",
+      "description": "开通权限后，应用可在操作者为群主的群组中指定或删除群管理员。"
+    },
+    {
+      "name": "订阅机器人进、出群事件普通im:chat.members:bot_access",
+      "description": "开通权限后，应用可订阅本机器人进、出群事件。"
+    },
+    {
+      "name": "查看群成员高级im:chat.members:read",
+      "description": "开通权限后，应用可读取所在群的群成员信息。"
+    },
+    {
+      "name": "添加、移除群成员高级im:chat.members:write_only",
+      "description": "开通权限后，应用可将用户或机器人拉入群组、移出群组等。"
+    },
+    {
+      "name": "查看群菜单高级im:chat.menu_tree:read",
+      "description": "开通权限后，应用可获取所在群的群菜单信息。"
+    },
+    {
+      "name": "操作群菜单高级im:chat.menu_tree:write_only",
+      "description": "开通权限后，应用可对所在群的群菜单进行添加、删除、排序等操作。"
+    },
+    {
+      "name": "查看群发言权限高级im:chat.moderation:read",
+      "description": "开通权限后，应用可查看所在群的发言权限设置。"
+    },
+    {
+      "name": "查看群会话标签页高级im:chat.tabs:read",
+      "description": "开通权限后，应用可读取所在群的会话标签页信息。"
+    },
+    {
+      "name": "操作群会话标签页高级im:chat.tabs:write_only",
+      "description": "开通权限后，应用可对所在群的会话标签页进行新增、删除、更新、排序等操作。"
+    },
+    {
+      "name": "操作群置顶高级im:chat.top_notice:write_only",
+      "description": "开通权限后，应用可更新、移除所在群的群置顶。"
+    },
+    {
+      "name": "查看群小组件高级im:chat.widgets:read",
+      "description": "开通权限后，应用可读取所在群的小组件。"
+    },
+    {
+      "name": "操作群小组件高级im:chat.widgets:write_only",
+      "description": "开通权限后，应用可向所在群中添加、删除小组件。"
+    },
+    {
+      "name": "创建群高级im:chat:create",
+      "description": "开通权限后，应用可创建群组。"
+    },
+    {
+      "name": "解散群高级im:chat:delete",
+      "description": "开通权限后，应用可解散操作者为群主的群组。"
+    },
+    {
+      "name": "操作群发言权限高级im:chat:moderation:write_only",
+      "description": "开通权限后，应用可操作所在群的发言权限设置。"
+    },
+    {
+      "name": "更新应用所创建群的群信息高级im:chat:operate_as_owner",
+      "description": "可更新应用所创建的群的群信息，包括：群名称、群描述、群头像、群主 ID、群模式及群类型、 进退群的系统消息可见性、群成员的发言权限、加群审批、Tenant Key。"
+    },
+    {
+      "name": "查看群信息高级im:chat:read",
+      "description": "开通权限后，应用可查看群组的群信息，如群名称、群头像等。"
+    },
+    {
+      "name": "获取群组信息普通im:chat:readonly",
+      "description": "可获取的群信息包括：群名称、群描述、群头像、群主 ID、群模式及群类型、 进退群的系统消息可见性、群成员的发言权限、加群审批、Tenant Key。"
+    },
+    {
+      "name": "更新群信息高级im:chat:update",
+      "description": "开通权限后，应用可更新群组的信息，包括群名称、群头像、群设置等。"
+    },
+    {
+      "name": "调用即时提醒能力高级im:datasync.feed_card.time_sensitive:write",
+      "description": "即时提醒能力是客户端在消息列表中提供的强提醒能力。开通权限后，当有重要通知或任务需要及时触达用户时，应用可调用即时提醒能力，将群组或机器人对话在消息列表中置顶展示，用户打开客户端首页即可处理重要任务。"
+    },
+    {
+      "name": "获取与发送单聊、群组消息普通im:message",
+      "description": "允许机器人在以下范围收发消息，包括：\n向应用可用性范围内的用户发送单聊消息 \n向机器人所在的群聊发送群消息 \n接收用户发送给机器人的所有单聊消息 \n\n注：\n1. 如需获取机器人所在群的历史消息记录，需要额外申请权限“im:message.group_msg”（获取群组中所有消息）\n2. 如需订阅用户在群聊中@机器人的消息事件，需要额外申请权限“im:message.group_at_msg”（获取用户在群组中@机器人的消息)"
+    },
+    {
+      "name": "接收群聊中@机器人消息事件普通im:message.group_at_msg:readonly",
+      "description": "可接收机器人所在群聊中用户@机器人的消息。"
+    },
+    {
+      "name": "获取群组中所有消息（敏感权限）高级im:message.group_msg",
+      "description": "可接收机器人所在群聊中所有的消息事件。关于事件类型，可前往开放平台查看开发文档“接收消息”。"
+    },
+    {
+      "name": "以用户身份获取群聊消息高级im:message.group_msg:get_as_user",
+      "description": "开通权限后，应用可以用户身份获取群聊里的消息。"
+    },
+    {
+      "name": "以用户身份获取单聊群消息高级im:message.p2p_msg:get_as_user",
+      "description": "开通权限后，应用可以用户身份获取单聊里的消息。"
+    },
+    {
+      "name": "读取用户发给机器人的单聊消息普通im:message.p2p_msg:readonly",
+      "description": "可接收单聊中用户向机器人发送的消息。"
+    },
+    {
+      "name": "查看 Pin 消息普通im:message.pins:read",
+      "description": "开通权限后，应用可查看 Pin 消息。"
+    },
+    {
+      "name": "添加、 取消 Pin 消息普通im:message.pins:write_only",
+      "description": "开通权限后，应用可添加、移除 Pin 消息。"
+    },
+    {
+      "name": "查看消息表情回复普通im:message.reactions:read",
+      "description": "开通权限后，应用可读取某条可见消息上的表情回复。"
+    },
+    {
+      "name": "发送、删除消息表情回复普通im:message.reactions:write_only",
+      "description": "开通权限后，应用可发送、删除消息表情回复。"
+    },
+    {
+      "name": "以用户身份发送消息普通im:message.send_as_user",
+      "description": "允许应用通过 user_access_token 以用户的身份发送消息。"
+    },
+    {
+      "name": "发送应用内加急消息高级im:message.urgent",
+      "description": "可在应用内发送加急消息，被加急的用户将会收到该消息在应用内的常驻强提醒。"
+    },
+    {
+      "name": "修改消息加急状态高级im:message.urgent.status:write",
+      "description": "修改消息加急状态"
+    },
+    {
+      "name": "发送电话加急消息高级im:message.urgent:phone",
+      "description": "可通过电话的方式发送加急消息，被加急的用户将会收到提醒电话。通过接口产生的短信及电话加急将消耗企业的加急额度，请慎重调用。剩余额度信息可以在“飞书管理后台 > 费用中心 > 权益数据”中查询。"
+    },
+    {
+      "name": "发送短信加急消息高级im:message.urgent:sms",
+      "description": "可通过短信的方式发送加急消息，被加急的用户将会收到提醒短信。通过接口产生的短信及电话加急将消耗企业的加急额度，请慎重调用。剩余额度信息可以在“飞书管理后台 > 费用中心 > 权益数据”中查询。"
+    },
+    {
+      "name": "获取单聊、群组消息普通im:message:readonly",
+      "description": "可获取消息的信息，包括：消息 ID、根消息 ID、父消息 ID、消息类型、消息生成的时间戳、消息更新的时间戳、消息是否被撤回、是否被更新、消息所属的群、发送者、消息内容、被@的用户或机器人 ID 列表、合并转发消息中上一层级的消息 ID、消息中的资源类型。"
+    },
+    {
+      "name": "撤回消息普通im:message:recall",
+      "description": "开通权限后，应用可在一定时间内撤回自己发送的消息。"
+    },
+    {
+      "name": "以应用的身份发消息普通im:message:send_as_bot",
+      "description": "可使用机器人通过单聊或群聊的方式向用户发消息，可发送文本、富文本、图片、文件、可交互的消息卡片、视频、音频、表情等消息。关于可发送消息的类型，可前往开放平台查看开发文档“发送消息 content 说明”。"
+    },
+    {
+      "name": "给一个或多个部门的成员批量发消息高级im:message:send_multi_depts",
+      "description": "可以以部门为单位，向一个或多个部门的成员批量发送消息。可发送文本、富文本、图片、文件、可交互的消息卡片、视频、音频、表情等消息。关于可发送消息的类型，可前往开放平台查看开发文档“发送消息 content 说明”。"
+    },
+    {
+      "name": "给多个用户批量发消息普通im:message:send_multi_users",
+      "description": "可向多个用户批量发送消息。可发送文本、富文本、图片、文件、可交互的消息卡片、视频、音频、表情等消息。关于可发送消息的类型，可前往开放平台查看开发文档“发送消息 content 说明”。"
+    },
+    {
+      "name": "发送特定模板系统消息高级im:message:send_sys_msg",
+      "description": "开通权限后，应用可以应用身份发送特定模板的系统消息。"
+    },
+    {
+      "name": "更新消息普通im:message:update",
+      "description": "开通权限后，应用可在一定时间内更新自己发送的消息。"
+    },
+    {
+      "name": "获取与上传图片或文件资源 高级im:resource",
+      "description": "可通过上传图片接口上传 JPEG、PNG、WEBP 格式的图片，或通过上传文件接口上传视频、音频和常见的文件类型。"
+    },
+    {
+      "name": "查询标签信息高级im:tag:read",
+      "description": "开通权限后，应用可根据标签 ID 查询标签信息，支持批量查询。查询内容包括标签默认名称、多语言名称、创建时间和更新时间。"
+    },
+    {
+      "name": "编辑标签信息高级im:tag:write",
+      "description": "开通权限后，应用可根据 ID 修改标签内容，支持修改标签默认名称和多语言名称。"
+    },
+    {
+      "name": "更新 URL 预览高级im:url_preview.update",
+      "description": "允许应用调用 URL 预览更新接口。"
+    },
+    {
+      "name": "获取客户端用户代理信息普通im:user_agent:read",
+      "description": "开通权限后，应用可获取客户端的用户代理信息，如用户使用的操作系统及版本、浏览器及版本、浏览器渲染引擎、客户端版本、客户端语言等。"
+    },
+    {
+      "name": "查看、评论、编辑和管理多维表格高级bitable:app",
+      "description": "允许应用在多维表格访问范围内进行以下操作：\n增删改加行记录\n增删改加列字段\n增删改视图\n增删改数据表\n增删改多维表格的权限授予"
+    },
+    {
+      "name": "查看、评论和导出多维表格高级bitable:app:readonly",
+      "description": "允许应用在多维表格访问范围内进行以下操作：\n查看多维表格的数据表、视图、记录以及字段等信息的内容和配置\n查看多维表格中每行记录的评论\n导出多维表格中所有数据表的数据"
+    },
+    {
+      "name": "创建画板节点高级board:whiteboard:node:create",
+      "description": "开通权限后，应用可创建画板中的节点。"
+    },
+    {
+      "name": "删除画板节点高级board:whiteboard:node:delete",
+      "description": "开通权限后，应用可删除画板中的节点。"
+    },
+    {
+      "name": "查看画板节点高级board:whiteboard:node:read",
+      "description": "开通权限后，应用可查看画板中的节点。"
+    },
+    {
+      "name": "更新画板节点高级board:whiteboard:node:update",
+      "description": "开通权限后，应用可更新画板中的节点。"
+    },
+    {
+      "name": "查看、评论、编辑和管理文档高级docs:doc",
+      "description": "允许应用在文档访问范围内进行以下操作：\n增删改文档\n增删改文档内容\n增删改文档的权限授予\n\n注：该权限包含“docs:doc:readonly”（查看、评论和导出文档） 的所有授权内容。"
+    },
+    {
+      "name": "查看、评论和导出文档高级docs:doc:readonly",
+      "description": "允许应用在文档访问范围内进行以下操作：\n获取文档内容"
+    },
+    {
+      "name": "添加、回复云文档中的评论高级docs:document.comment:create",
+      "description": "开通权限后，应用可在云文档中添加和回复评论。"
+    },
+    {
+      "name": "获取云文档中的评论高级docs:document.comment:read",
+      "description": "开通权限后，应用可获取指定云文档的评论、评论的回复等。"
+    },
+    {
+      "name": "修改云文档中的评论高级docs:document.comment:update",
+      "description": "开通权限后，应用可修改云文档中的评论内容和评论状态。"
+    },
+    {
+      "name": "回复、修改、删除云文档中的评论高级docs:document.comment:write_only",
+      "description": "开通权限后，应用可在云文档访问范围内进行以下操作：\n添加全文评论\n删除评论回复\n修改评论回复\n修改评论状态"
+    },
+    {
+      "name": "查看云文档内容高级docs:document.content:read",
+      "description": "开通权限后，应用可获取云文档访问范围内的文档内容，包括文档内的文本、表格等。"
+    },
+    {
+      "name": "下载云文档中的图片和附件高级docs:document.media:download",
+      "description": "开通权限后，应用可下载云文档中的图片和附件。"
+    },
+    {
+      "name": "上传图片和附件到云文档中高级docs:document.media:upload",
+      "description": "开通权限后，应用可上传图片和附件到云文档中。"
+    },
+    {
+      "name": "订阅云文档和更新云文档订阅状态高级docs:document.subscription",
+      "description": "开通权限后，应用可订阅指定云文档和更新指定云文档的订阅状态。“订阅”指关注文档更新或文档评论的操作。"
+    },
+    {
+      "name": "获取云文档订阅状态高级docs:document.subscription:read",
+      "description": "开通权限后，应用可获取指定云文档的订阅状态。"
+    },
+    {
+      "name": "复制云文档高级docs:document:copy",
+      "description": "开通权限后，应用可对指定的云文档执行创建副本操作。"
+    },
+    {
+      "name": "导出云文档高级docs:document:export",
+      "description": "开通权限后，应用可导出云文档。"
+    },
+    {
+      "name": "查看、创建云文档导入任务高级docs:document:import",
+      "description": "开通权限后，应用可创建云文档的导入任务，并可查看指定云文档导入任务的执行状态。"
+    },
+    {
+      "name": "接收云文档删除事件高级docs:event.document_deleted:read",
+      "description": "开通权限后，应用可接收已订阅云文档的删除事件通知。"
+    },
+    {
+      "name": "接收云文档编辑事件高级docs:event.document_edited:read",
+      "description": "开通权限后，应用可接收已订阅云文档的编辑事件通知。"
+    },
+    {
+      "name": "接收云文档打开事件高级docs:event.document_opened:read",
+      "description": "开通权限后，应用可接收已订阅云文档的打开事件通知。"
+    },
+    {
+      "name": "订阅云文档事件高级docs:event:subscribe",
+      "description": "开通权限后，应用可订阅指定云文档的各类通知事件、查询事件订阅状态和取消事件订阅。"
+    },
+    {
+      "name": "查看、新增、更新、删除云文档协作者高级docs:permission.member",
+      "description": "开通权限后，应用可查看、新增、更新、删除云文档的协作者。"
+    },
+    {
+      "name": "判断当前用户是否有云文档权限高级docs:permission.member:auth",
+      "description": "开通权限后，应用可判断当前用户是否有云文档、知识库节点的权限。"
+    },
+    {
+      "name": "添加云文档协作者高级docs:permission.member:create",
+      "description": "开通权限后，应用可为用户添加云文档、知识库节点的权限。"
+    },
+    {
+      "name": "移除云文档协作者高级docs:permission.member:delete",
+      "description": "开通权限后，应用可移除云文档、知识库节点的协作者的权限。"
+    },
+    {
+      "name": "查看云文档协作者（历史版本）高级docs:permission.member:readonly",
+      "description": "开通权限后，应用可获取云文档的协作者列表。"
+    },
+    {
+      "name": "查看云文档的协作者列表高级docs:permission.member:retrieve",
+      "description": "开通权限后，应用可查看云文档、知识库节点的协作者列表。"
+    },
+    {
+      "name": "转移云文档的所有权高级docs:permission.member:transfer",
+      "description": "开通权限后，应用可转移云文档、知识库节点的所有权。"
+    },
+    {
+      "name": "更新云文档协作者权限高级docs:permission.member:update",
+      "description": "开通权限后，应用可修改云文档、知识库节点的协作者的权限。"
+    },
+    {
+      "name": "查看、更新云文档权限设置高级docs:permission.setting",
+      "description": "开通权限后，应用可查看和更新云文档权限设置，包括是否允许内容被分享到组织外、链接分享设置以及谁可以评论等。"
+    },
+    {
+      "name": "查询云文档权限设置高级docs:permission.setting:read",
+      "description": "开通权限后，应用可查询云文档、知识库节点的权限设置。"
+    },
+    {
+      "name": "查看云文档权限设置高级docs:permission.setting:readonly",
+      "description": "开通权限后，应用可获取云文档权限设置。"
+    },
+    {
+      "name": "修改云文档权限设置高级docs:permission.setting:write_only",
+      "description": "开通权限后，应用可修改云文档、知识库节点的权限设置。"
+    },
+    {
+      "name": "创建及编辑新版文档高级docx:document",
+      "description": "允许应用在文档访问范围内进行以下操作：\n创建新版文档\n增删改查新版文档内容\n\n注：该权限包含\"docx:document:readonly\"（查看新版文档） 的所有授权内容。"
+    },
+    {
+      "name": "文本内容转换为云文档块高级docx:document.block:convert",
+      "description": "文本内容转换为云文档块"
+    },
+    {
+      "name": "创建新版文档高级docx:document:create",
+      "description": "开通权限后，应用可在云空间下创建新版文档。"
+    },
+    {
+      "name": "查看新版文档高级docx:document:readonly",
+      "description": "允许应用在文档访问范围内进行以下操作：\n获取新版文档内容"
+    },
+    {
+      "name": "编辑新版文档高级docx:document:write_only",
+      "description": "开通权限后，应用可在文档访问范围内，增加、删除、修改新版文档内容。"
+    },
+    {
+      "name": "查看、评论、编辑和管理云空间中所有文件高级drive:drive",
+      "description": "允许应用在云空间文件访问范围内进行以下操作：\n增删改文件\n增删改文件内容\n增删改文件的权限授予\n\n注：该权限包含“drive:drive:readonly”（查看、评论和下载云文档所有文件） 的所有授权内容。"
+    },
+    {
+      "name": "查看云空间中文件元数据高级drive:drive.metadata:readonly",
+      "description": "允许应用在云空间文件访问范围内进行以下操作：\n查看文件的元数据，包括文件 token、类型、标题、所有者等"
+    },
+    {
+      "name": "搜索云文档高级drive:drive.search:readonly",
+      "description": "允许应用在云空间文件访问范围内进行以下操作：\n查看符合搜索条件的所有云文档/文件列表，并可查看文件的元数据"
+    },
+    {
+      "name": "查看、评论和下载云空间中所有文件高级drive:drive:readonly",
+      "description": "允许应用在文档访问范围内进行以下操作：\n获取文件内容\n评论文件内容\n保存文件内容"
+    },
+    {
+      "name": "查看、创建、删除文档版本高级drive:drive:version",
+      "description": "开通此权限后，应用可查看、创建和删除文档版本。"
+    },
+    {
+      "name": "查看文档版本高级drive:drive:version:readonly",
+      "description": "开通此权限后，应用可查看文档版本。"
+    },
+    {
+      "name": "导出云文档高级drive:export:readonly",
+      "description": "开通此权限后，应用可以导出云文档。"
+    },
+    {
+      "name": "上传、下载文件到云空间高级drive:file",
+      "description": "允许应用在文档访问范围内进行以下操作：\n上传文件到个人空间\n保存文件内容"
+    },
+    {
+      "name": "查看云文档的点赞信息高级drive:file.like:readonly",
+      "description": "开通权限后，应用可在云空间文档访问范围内进行以下操作：\n获取文档的点赞者列表"
+    },
+    {
+      "name": "获取文档密级标签名称高级drive:file.meta.sec_label.read_only",
+      "description": "文档密级标签：根据组织业务需求，为不同级别敏感内容文档创建的标签，一类标签包含有多个权限点位的控制。\n获取本权限后，应用可获取文档的密级标签名称。在“获取文档元数据” API 返回的协议中，会返回 sec_label_name 字段，该字段即为文档密级标签的名称。\n该权限仅限自建应用申请，商店应用无法申请。"
+    },
+    {
+      "name": "下载云空间下的文件高级drive:file:download",
+      "description": "开通权限后，应用可将云空间下指定的文件下载到本地。"
+    },
+    {
+      "name": "查看和下载云空间中的文件高级drive:file:readonly",
+      "description": "允许应用在文档访问范围内进行以下操作：\n获取文件内容\n保存文件内容"
+    },
+    {
+      "name": "上传文件高级drive:file:upload",
+      "description": "开通权限后，应用可将本地文件上传到云空间的指定文件夹下。"
+    },
+    {
+      "name": "获取文档访问记录高级drive:file:view_record:readonly",
+      "description": "开通此权限后，应用可获取文档访问记录。文档访问记录包含用户 ID、用户最近访问时间、用户名以及用户头像 URL等。"
+    },
+    {
+      "name": "查看、评论、编辑和管理电子表格高级sheets:spreadsheet",
+      "description": "允许应用在表格访问范围内进行以下操作：\n增删改表格\n增删改行列数据\n增删改浮动图片、筛选视图\n增删改表格的权限授予\n\n注：该权限包含“sheets:spreadsheet:readonly”（查看、评论和导出表格） 的所有授权内容。"
+    },
+    {
+      "name": "查询电子表格元信息高级sheets:spreadsheet.meta:read",
+      "description": "开通权限后，应用可查看电子表格元信息，包含标题、链接、所有者等。"
+    },
+    {
+      "name": "修改电子表格元信息高级sheets:spreadsheet.meta:write_only",
+      "description": "开通权限后，应用可修改电子表格元信息。"
+    },
+    {
+      "name": "创建电子表格高级sheets:spreadsheet:create",
+      "description": "开通权限后，应用可在云空间下创建电子表格。"
+    },
+    {
+      "name": "查看电子表格高级sheets:spreadsheet:read",
+      "description": "开通权限后，应用可在表格访问范围内进行以下操作：\n查看表格的结构、数据等信息的内容和配置"
+    },
+    {
+      "name": "查看、评论和导出电子表格高级sheets:spreadsheet:readonly",
+      "description": "允许应用在表格访问范围内进行以下操作：\n查看表格的数据表、视图、记录以及字段等信息的内容和配置\n查看表格中每行记录的评论\n导出表格中所有数据表的数据"
+    },
+    {
+      "name": "编辑电子表格高级sheets:spreadsheet:write_only",
+      "description": "开通权限后，应用可在表格访问范围内进行以下操作：\n增删改电子表格结构 \n增删改电子表格数据内容"
+    },
+    {
+      "name": "创建幻灯片高级slides:presentation:create",
+      "description": "开通权限后，应用可在云空间下创建幻灯片。"
+    },
+    {
+      "name": "查看幻灯片高级slides:presentation:read",
+      "description": "开通权限后，应用可在文档访问范围内获取幻灯片内容。"
+    },
+    {
+      "name": "编辑幻灯片高级slides:presentation:update",
+      "description": "开通权限后，应用可在文档可访问范围内更新或删除幻灯片内容。"
+    },
+    {
+      "name": "创建及编辑幻灯片高级slides:presentation:write_only",
+      "description": "开通权限后，应用可在云空间下创建幻灯片，以及在文档可访问范围内更新或删除幻灯片。"
+    },
+    {
+      "name": "订阅文件夹下的文件相关事件高级space:document.event:read",
+      "description": "开通权限后，应用可订阅文件夹下的文件相关事件。当前，仅支持“文件创建”事件。"
+    },
+    {
+      "name": "删除云空间文件夹和云文档高级space:document:delete",
+      "description": "开通此权限后，应用可删除云空间下指定的文件夹和云文档。"
+    },
+    {
+      "name": "移动云空间文件夹和云文档高级space:document:move",
+      "description": "开通权限后，应用可在云空间下移动指定的文件夹和云文档。"
+    },
+    {
+      "name": "获取云空间文件夹下的云文档清单高级space:document:retrieve",
+      "description": "开通权限后，应用可获取云空间指定文件夹下的云文档清单信息。信息包含云文档标题、链接、所有者等。"
+    },
+    {
+      "name": "创建云文档的快捷方式高级space:document:shortcut",
+      "description": "开通权限后，应用可为指定云文档创建快捷方式。"
+    },
+    {
+      "name": "创建云空间文件夹高级space:folder:create",
+      "description": "开通权限后，应用可在指定云空间下创建文件夹。"
+    },
+    {
+      "name": "新增知识空间成员高级wiki:member:create",
+      "description": "开通权限后，应用可新增知识空间成员。"
+    },
+    {
+      "name": "查看知识空间成员列表高级wiki:member:retrieve",
+      "description": "开通权限后，应用可查看知识空间成员。"
+    },
+    {
+      "name": "更新知识空间成员高级wiki:member:update",
+      "description": "开通权限后，应用可更新知识空间成员。"
+    },
+    {
+      "name": "创建知识空间节点副本高级wiki:node:copy",
+      "description": "开通权限后，应用可创建知识空间节点副本。"
+    },
+    {
+      "name": "创建知识空间节点高级wiki:node:create",
+      "description": "开通权限后，应用可创建知识空间节点。"
+    },
+    {
+      "name": "移动知识空间节点高级wiki:node:move",
+      "description": "开通权限后，应用可移动知识空间节点。"
+    },
+    {
+      "name": "查看知识空间节点信息高级wiki:node:read",
+      "description": "开通权限后，应用可查看知识空间节点信息。"
+    },
+    {
+      "name": "查看知识空间节点列表高级wiki:node:retrieve",
+      "description": "开通权限后，应用可查看知识空间节点列表。"
+    },
+    {
+      "name": "更新知识空间节点信息高级wiki:node:update",
+      "description": "开通权限后，应用可更新知识空间节点信息。"
+    },
+    {
+      "name": "查看知识空间设置高级wiki:setting:read",
+      "description": "开通权限后，应用可查看知识空间设置。"
+    },
+    {
+      "name": "更新知识空间设置高级wiki:setting:write_only",
+      "description": "开通权限后，应用可更新知识空间设置。"
+    },
+    {
+      "name": "查看知识空间信息高级wiki:space:read",
+      "description": "开通权限后，应用可查看知识空间信息。"
+    },
+    {
+      "name": "查看知识空间列表高级wiki:space:retrieve",
+      "description": "开通权限后，应用可查看知识空间列表。"
+    },
+    {
+      "name": "创建、更新知识空间高级wiki:space:write_only",
+      "description": "开通权限后，应用可创建、更新知识空间。"
+    },
+    {
+      "name": "查看、编辑和管理知识库高级wiki:wiki",
+      "description": "允许应用在知识库访问范围内进行以下操作：\n增删改知识库\n增删改知识库节点\n增删改知识库成员和节点权限\n\n注：该权限包含“wiki:wiki:readonly”（查看知识库） 的所有授权内容。"
+    },
+    {
+      "name": "查看知识库高级wiki:wiki:readonly",
+      "description": "允许应用在知识库访问范围内进行以下操作：\n获取知识库和节点的信息"
+    },
+    {
+      "name": "复制多维表格高级base:app:copy",
+      "description": "开通权限后，应用可复制多维表格。"
+    },
+    {
+      "name": "创建多维表格高级base:app:create",
+      "description": "创建多维表格"
+    },
+    {
+      "name": "获取多维表格信息高级base:app:read",
+      "description": "获取多维表格信息"
+    },
+    {
+      "name": "更新多维表格高级base:app:update",
+      "description": "更新多维表格"
+    },
+    {
+      "name": "新增协作者高级base:collaborator:create",
+      "description": "新增协作者"
+    },
+    {
+      "name": "删除协作者高级base:collaborator:delete",
+      "description": "删除协作者"
+    },
+    {
+      "name": "列出协作者高级base:collaborator:read",
+      "description": "列出协作者"
+    },
+    {
+      "name": "复制仪表盘高级base:dashboard:copy",
+      "description": "复制仪表盘"
+    },
+    {
+      "name": "获取仪表盘信息高级base:dashboard:read",
+      "description": "获取仪表盘信息"
+    },
+    {
+      "name": "新增字段高级base:field:create",
+      "description": "新增字段"
+    },
+    {
+      "name": "删除字段高级base:field:delete",
+      "description": "删除字段"
+    },
+    {
+      "name": "获取字段信息高级base:field:read",
+      "description": "获取字段信息"
+    },
+    {
+      "name": "更新字段高级base:field:update",
+      "description": "更新字段"
+    },
+    {
+      "name": "获取表单数据高级base:form:read",
+      "description": "获取表单数据"
+    },
+    {
+      "name": "更新表单数据高级base:form:update",
+      "description": "更新表单数据"
+    },
+    {
+      "name": "新增记录高级base:record:create",
+      "description": "新增记录"
+    },
+    {
+      "name": "删除记录高级base:record:delete",
+      "description": "删除记录"
+    },
+    {
+      "name": "检索特定记录高级base:record:read",
+      "description": "检索特定记录"
+    },
+    {
+      "name": "根据条件搜索记录高级base:record:retrieve",
+      "description": "根据条件搜索记录"
+    },
+    {
+      "name": "更新记录高级base:record:update",
+      "description": "更新记录"
+    },
+    {
+      "name": "新增自定义角色高级base:role:create",
+      "description": "开通权限后，应用可新增多维表格中的自定义角色。"
+    },
+    {
+      "name": "删除自定义角色高级base:role:delete",
+      "description": "开通权限后，应用可删除多维表格中的自定义角色。"
+    },
+    {
+      "name": "查询自定义角色高级base:role:read",
+      "description": "开通权限后，应用可查看多维表格中的自定义角色。"
+    },
+    {
+      "name": "更新自定义角色高级base:role:update",
+      "description": "开通权限后，应用可更新多维表格中的自定义角色。"
+    },
+    {
+      "name": "新增数据表高级base:table:create",
+      "description": "新增数据表"
+    },
+    {
+      "name": "删除数据表高级base:table:delete",
+      "description": "删除数据表"
+    },
+    {
+      "name": "获取数据表信息高级base:table:read",
+      "description": "获取数据表信息"
+    },
+    {
+      "name": "更新数据表高级base:table:update",
+      "description": "更新数据表"
+    },
+    {
+      "name": "检索视图高级base:view:read",
+      "description": "检索视图"
+    },
+    {
+      "name": "新增、更新或删除视图高级base:view:write_only",
+      "description": "新增、更新或删除视图"
+    },
+    {
+      "name": "查看自动化流程/工作流高级base:workflow:read",
+      "description": "开通权限后，应用可查看自动化流程/工作流。"
+    },
+    {
+      "name": "更新自动化流程/工作流状态高级base:workflow:write",
+      "description": "开通权限后，应用可更新自动化流程/工作流的状态。"
+    },
+    {
+      "name": "更新日历及日程信息高级calendar:calendar",
+      "description": "获得全部日历接口的授权，包括用户访问控制、日历、日程、日程参与人、日程参与人群成员、忙闲、请假、日历设置和 Exchange 绑定。"
+    },
+    {
+      "name": "新增日历访问控制权限高级calendar:calendar.acl:create",
+      "description": "开通权限后，应用可新增日历访问控制权限。"
+    },
+    {
+      "name": "删除日历访问控制权限高级calendar:calendar.acl:delete",
+      "description": "开通权限后，应用可删除日历访问控制权限。"
+    },
+    {
+      "name": "读取日历访问控制权限高级calendar:calendar.acl:read",
+      "description": "开通权限后，应用可读取日历访问控制权限。"
+    },
+    {
+      "name": "创建日程高级calendar:calendar.event:create",
+      "description": "开通权限后，应用可创建日程。"
+    },
+    {
+      "name": "删除日程高级calendar:calendar.event:delete",
+      "description": "开通权限后，应用可删除日程。"
+    },
+    {
+      "name": "读取日程信息高级calendar:calendar.event:read",
+      "description": "开通权限后，应用可读取日程信息，包括读取日程基础信息、获取（群）参与人列表。"
+    },
+    {
+      "name": "回复日程高级calendar:calendar.event:reply",
+      "description": "开通权限后，应用可回复日程。"
+    },
+    {
+      "name": "更新日程高级calendar:calendar.event:update",
+      "description": "开通权限后，应用可修改日程，包括修改日程基础信息、添加或删除参与人、创建和解绑会议群。"
+    },
+    {
+      "name": "读取日历忙闲信息高级calendar:calendar.free_busy:read",
+      "description": "开通权限后，应用可读取日历忙闲信息。"
+    },
+    {
+      "name": "创建日历高级calendar:calendar:create",
+      "description": "开通权限后，应用可创建日历。"
+    },
+    {
+      "name": "删除日历高级calendar:calendar:delete",
+      "description": "开通权限后，应用可删除日历。"
+    },
+    {
+      "name": "读取日历信息高级calendar:calendar:read",
+      "description": "开通权限后，应用可读取日历信息。"
+    },
+    {
+      "name": "获取日历、日程及忙闲信息普通calendar:calendar:readonly",
+      "description": "仅获得读取数据接口的授权，即所有与“获取”、“查询”相关的接口，包括：获取访问控制列表、获取日历、获取日历列表、获取日程、获取日程列表、获取日程参与人列表、获取日程参与人群成员列表、查询忙闲、查询 Exchange 绑定状态。"
+    },
+    {
+      "name": "订阅、退订日历高级calendar:calendar:subscribe",
+      "description": "开通权限后，应用可订阅、退订日历。"
+    },
+    {
+      "name": "更新日历高级calendar:calendar:update",
+      "description": "开通权限后，应用可更新日历。"
+    },
+    {
+      "name": "创建 Exchange 绑定关系高级calendar:exchange.bindings:create",
+      "description": "开通权限后，应用可创建 Exchange 绑定关系。"
+    },
+    {
+      "name": "删除 Exchange 绑定关系高级calendar:exchange.bindings:delete",
+      "description": "开通权限后，应用可删除 Exchange 绑定关系。"
+    },
+    {
+      "name": "读取 Exchange 绑定关系高级calendar:exchange.bindings:read",
+      "description": "开通权限后，应用可读取 Exchange 绑定关系。"
+    },
+    {
+      "name": "生成 CalDAV 配置信息高级calendar:settings.caldav:create",
+      "description": "开通权限后，应用可生成 Caldav 配置。CalDAV 是一种用于存取日历日程的通用协议，在各个操作系统中被广泛使用。使用这一权限，应用能够为当前用户生成一个 CalDAV 账号密码，用于将客户端的日历信息同步到本地设备的日历中。"
+    },
+    {
+      "name": "读取 WorkHour 配置高级calendar:settings.workhour:read",
+      "description": "开通权限后，应用可读取 WorkHour 配置。"
+    },
+    {
+      "name": "创建请假日程高级calendar:time_off:create",
+      "description": "开通权限后，应用可创建请假日程。"
+    },
+    {
+      "name": "删除请假日程高级calendar:time_off:delete",
+      "description": "开通权限后，应用可删除请假日程。"
+    },
+    {
+      "name": "创建或删除请假日程高级calendar:timeoff",
+      "description": "请假是一种特殊的日程，创建请假日程后，除了在日历内显示该日程外，还会在个人签名上展示请假信息。开发者可以调用这个接口，将用户的请假状态同步到日历和个人签名中。\n删除请假日程则会同步删除个人签名中的请假状态。"
+    },
+    {
+      "name": "获取告警中心告警信息高级vc:alert:readonly",
+      "description": "开通此权限后，应用可获取租户下的告警数据，包括会议室设备相关的告警，以及 ERC、SIP 相关的告警。"
+    },
+    {
+      "name": "导出视频会议信息高级vc:export",
+      "description": "开通该权限后，应用可导出企业内的视频会议相关信息，包括会议列表、参会人列表、参会人音视频质量数据和会议室预定数据。"
+    },
+    {
+      "name": "更新会议信息高级vc:meeting",
+      "description": "允许应用更新归属于自己的会议日程信息，具体操作包括：\n设置日程到期时间\n设置会议主题\n设置会议权限\n邀请参会人\n移除参会人\n设置主持人\n结束会议"
+    },
+    {
+      "name": "获取所有视频会议信息高级vc:meeting.all_meeting:readonly",
+      "description": "获取所有视频会议信息"
+    },
+    {
+      "name": "获取会议信息普通vc:meeting:readonly",
+      "description": "允许应用获取一段时间内的归属于自己的会议日程信息，包括：\n会议主题、会议 ID、会议链接\n会议创建时间、开始时间、结束时间\n参会人数、参会人列表、参会人状态"
+    },
+    {
+      "name": "更新会议录制信息高级vc:record",
+      "description": "允许应用在会议结束后更新归属于自己的会议录制文件，并可将其授权给其他用户，具体操作包括：\n更新授权对象和权限，可选择授权给用户、群组、租户和互联网"
+    },
+    {
+      "name": "获取会议录制信息高级vc:record:readonly",
+      "description": "允许应用在会议结束后获取归属于自己的会议录制文件信息，包括：\n录制文件链接\n录制总时长"
+    },
+    {
+      "name": "获取会议报告高级vc:report:readonly",
+      "description": "允许应用获取一段时间内的归属于组织的每日会议使用报告：\n总会议数量、总会议时长、总参会人数\n每日会议报告列表、日期、会议数量、会议时长、参会人数"
+    },
+    {
+      "name": "更新会议预约信息高级vc:reserve",
+      "description": "允许应用更新归属于自己的会议日程信息，包括：\n日程到期时间\n会议主题\n会议权限配置"
+    },
+    {
+      "name": "获取会议预约信息普通vc:reserve:readonly",
+      "description": "允许应用获取一段时间内的归属于自己的会议预约信息：\n会议主题、会议 ID、会议链接\n会议创建时间、开始时间、结束时间\n参会人数、参会人列表、参会人状态"
+    },
+    {
+      "name": "管理会议室信息高级calendar:room",
+      "description": "允许应用对会议室信息进行以下操作：\n查询指定建筑物的名称、描述、ID 和所有楼层列表\n查询会议室名称、会议室 ID、所在建筑物名称、所在建筑物 ID、容纳人数、描述、所在楼层名称、是否可用、忙闲状态\n创建、更新、删除建筑物，查询建筑物 ID\n创建、更新、删除会议室，查询会议室 ID\n预定第三方系统的会议室"
+    },
+    {
+      "name": "获取会议室信息高级calendar:room:readonly",
+      "description": "允许应用在日程访问范围内进行以下操作：\n获取会议室日程主题\n获取建筑物列表\n获取指定建筑下的会议室列表\n获取国家/地区列表\n获取城市列表\n获取告警会议室列表（仅字节租户）\n获取会议室告警信息（仅字节租户）"
+    },
+    {
+      "name": "更新视频会议室信息高级vc:room",
+      "description": "允许应用设置飞书会议室的具体信息，包括：\n飞书会议室背景图配置\n飞书签到板背景图配置\n飞书会议室数字标牌配置及素材管理"
+    },
+    {
+      "name": "获取视频会议室信息普通vc:room:readonly",
+      "description": "允许应用查询飞书会议室的具体信息，包括：\n飞书会议室背景图\n飞书签到板背景图\n飞书会议室数字标牌及素材"
+    },
+    {
+      "name": "假勤提交加班审批高级attendance:overtime_approval:write",
+      "description": "假勤提交加班审批"
+    },
+    {
+      "name": "写入打卡管理规则高级attendance:rule",
+      "description": "获得打卡管理规则写入权限，允许写入授权范围内的考勤组、班次、用户设置等数据。"
+    },
+    {
+      "name": "导出打卡管理规则高级attendance:rule:readonly",
+      "description": "获得打卡管理规则读取权限，允许查询或导出授权范围内的考勤组、班次、用户设置等数据。"
+    },
+    {
+      "name": "写入打卡数据高级attendance:task",
+      "description": "获得打卡数据写入权限，允许写入授权范围内的打卡流水、用户排班、审批、统计设置等数据。"
+    },
+    {
+      "name": "导出打卡数据高级attendance:task:readonly",
+      "description": "获得打卡数据读取权限，允许查询或导出授权范围内的打卡流水、用户排班、审批、统计设置等数据。"
+    },
+    {
+      "name": "查看、创建、更新、删除审批应用相关信息高级approval:approval",
+      "description": "开通此权限后，应用可以查看、创建、更新、删除审批应用相关的信息。"
+    },
+    {
+      "name": "查询审批列表高级approval:approval.list:readonly",
+      "description": "通过此权限可调用“实例列表查询”、“任务列表查询”\n、“抄送列表查询”接口。"
+    },
+    {
+      "name": "访问审批应用高级approval:approval:readonly",
+      "description": "通过此权限可以完成自建审批和三方审批的创建审批定义、审批实例、发送更新机器人消息，并可以对机器人进行更新。"
+    },
+    {
+      "name": "查看、创建、更新、删除原生审批定义相关信息高级approval:definition",
+      "description": "审批定义是审批的描述，包括审批名称、图标、描述等基础信息。\n开通此权限后，应用可以创建、更新、查看审批定义。"
+    },
+    {
+      "name": "查看、创建、更新、删除三方审批定义相关信息高级approval:external_approval",
+      "description": "三方审批定义是对三方审批的描述，包括审批名称、图标、描述等基础信息。\n开通此权限后，应用可以创建、更新三方审批定义相关的信息。"
+    },
+    {
+      "name": "查看、创建、更新、删除三方审批实例相关信息高级approval:external_instance",
+      "description": "三方审批实例是根据审批定义发起的一个具体的审批流，包括多个审批任务、审批抄送等信息。\n开通此权限后，应用可以创建、更新、校验三方审批实例相关的信息。"
+    },
+    {
+      "name": "查看、创建、更新、删除原生审批实例相关信息高级approval:instance",
+      "description": "审批实例是根据审批定义发起的一个具体的审批流，包括多个审批任务、审批抄送等信息。\n开通此权限后，应用可以对原生审批实例进行一些操作，包括查看、创建、抄送审批实例，预览审批流程等。"
+    },
+    {
+      "name": "查看、创建、更新、删除原生审批评论相关信息高级approval:instance.comment",
+      "description": "开通此权限后，应用可以查看、创建、清空、删除原生审批评论相关的信息。"
+    },
+    {
+      "name": "同意、拒绝、退回、加签等原生审批任务操作高级approval:task",
+      "description": "每当审批实例流转到新的节点时，创建该节点的任务。每一个审批节点可能包含一个或多个审批任务，每一个任务表明当前审批节点的审批人是谁。\n开通此权限后，应用可以对原生审批任务进行一些操作，包括同意、拒绝、转交、退回、加签、重新提交等。"
+    },
+    {
+      "name": "以用户身份获取用户可见的审批定义列表高级serviceaccount:approval:approvals:read",
+      "description": "以用户身份获取用户可见的审批定义列表"
+    },
+    {
+      "name": "更新服务台资源详情高级helpdesk:all",
+      "description": "查看和修改服务台资源详情，包含工单详情字段、知识库、推送内容和客服状态、日程、技能等。"
+    },
+    {
+      "name": "获取服务台资源详情高级helpdesk:all:readonly",
+      "description": "查看服务台资源详情，包含工单详情字段、知识库、推送内容和客服状态日程技能等。"
+    },
+    {
+      "name": "访问服务台高级helpdesk:helpdesk:access",
+      "description": "访问服务台。应用需先获取访问服务台的权限，才可获取查看和修改服务台资源详情的权限。"
+    },
+    {
+      "name": "查看任务附件普通task:attachment:read",
+      "description": "任务和任务评论均支持附件功能。开通权限后，应用可查看任务附件列表和附件详情，包括上传人、上传时间、下载链接等。"
+    },
+    {
+      "name": "查看、创建、删除任务附件高级task:attachment:write",
+      "description": "任务和任务评论均支持附件功能。开通权限后，应用可查看任务附件列表和详情，以及将云盘上传的附件添加到任务或者移除任务中的附件。"
+    },
+    {
+      "name": "查看、创建、修改、删除任务评论（旧版）高级task:comment",
+      "description": "可通过机器人创建新的任务评论，支持查看该任务、修改该任务评论以及删除该任务的评论。"
+    },
+    {
+      "name": "查看任务评论普通task:comment:read",
+      "description": "任务支持评论功能。开通权限后，应用可获取任务评论列表和查看评论内容。"
+    },
+    {
+      "name": "查看任务评论（旧版）普通task:comment:readonly",
+      "description": "只可查看任务评论，无法创建任务或修改、删除评论。"
+    },
+    {
+      "name": "查看、创建、更新、删除任务评论高级task:comment:write",
+      "description": "任务支持评论功能。开通权限后，应用可进行以下操作：\n获取任务评论列表\n查看评论内容\n创建、更新、删除评论"
+    },
+    {
+      "name": "查看自定义字段信息普通task:custom_field:read",
+      "description": "任务是套件内的一款轻量级任务管理工具。 开通权限后，应用可查询有权限查看的自定义字段信息，包括数字、成员、单选、多选、日期等类型。"
+    },
+    {
+      "name": "查看、创建、更新自定义字段普通task:custom_field:write",
+      "description": "任务是套件内的一款轻量级任务管理工具。开通权限后，应用可进行以下操作：\n- 查看、创建、更新、删除自定义字段\n- 将自定义字段添加到清单\n- 从清单中移除自定义字段"
+    },
+    {
+      "name": "查看自定义分组普通task:section:read",
+      "description": "任务在“我负责的”任务列表和“任务清单”中支持自定义分组，用户可以将任务按照相关性划分组别。开通权限后，应用可查看“我负责的”任务列表和“任务清单”中的自定义分组信息，包括自定义分组名称和关联的清单摘要信息。"
+    },
+    {
+      "name": "查看、创建、更新、删除自定义分组高级task:section:write",
+      "description": "任务在“我负责的”任务列表和“任务清单”中支持自定义分组，用户可以将任务按照相关性划分组别。开通权限后，应用可进行以下操作：\n查看“我负责的”任务列表和“任务清单”中的自定义分组\n在“我负责的”任务列表和“任务清单”中创建、更新、删除自定义分组\n调整分组在“我负责的”和“任务清单”中的顺序"
+    },
+    {
+      "name": "查看、创建、编辑和删除任务（旧版）高级task:task",
+      "description": "可通过机器人创建新的任务，支持查看该任务详情、修改该任务以及删除该任务。"
+    },
+    {
+      "name": "租户维度下任务变更事件订阅高级task:task.event_update_tenant:readonly",
+      "description": "接收与发生变更任务相关的用户的 open_id。\n应用拥有此权限后，可通过订阅相关事件，接收与发生变更任务关联的用户的 open_id。凭此 open_id，应用可以获取与对应用户相关的所有任务。"
+    },
+    {
+      "name": "受限根据任务ID获取任务详情高级task:task.privilege:read",
+      "description": "受限根据任务ID获取任务详情"
+    },
+    {
+      "name": "查看任务信息普通task:task:read",
+      "description": "任务是套件内的一款轻量级任务管理工具。 开通权限后，应用可查询与用户有关的任务列表和详情，包括任务的标题、描述、负责人、关注人、截止时间等信息。"
+    },
+    {
+      "name": "查看任务详情普通task:task:readonly",
+      "description": "只可查看任务详情，无法创建任务或修改、删除评论。"
+    },
+    {
+      "name": "查看、创建、更新、删除任务高级task:task:write",
+      "description": "任务是套件内的一款轻量级任务管理工具。开通权限后，应用可进行以下操作：\n查看、创建、更新、删除任务\n添加、移除任务的负责人或关注人\n创建子任务"
+    },
+    {
+      "name": "创建、更新任务高级task:task:writeonly",
+      "description": "开通权限后，应用可创建和更新任务。"
+    },
+    {
+      "name": "受限根据清单ID获取清单详情高级task:tasklist.privilege:read",
+      "description": "受限根据清单ID获取清单详情"
+    },
+    {
+      "name": "查看任务清单普通task:tasklist:read",
+      "description": "任务清单是任务的一项功能，用于管理具有共同目标的一组任务的分工和进展。 开通权限后，应用可查询用户拥有权限的清单列表、名称、协作成员，以及清单内部的任务摘要信息。"
+    },
+    {
+      "name": "查看、创建、更新、删除任务清单高级task:tasklist:write",
+      "description": "任务清单是任务的一项功能，用于管理具有共同目标的一组任务的分工和进展。开通权限后，应用可进行以下操作：\n查看、创建、更新、删除清单\n添加或移除清单的协作成员\n在清单中新增或移除任务"
+    },
+    {
+      "name": "查看工作台的使用数据高级workplace:workplace_using_data:read",
+      "description": "开通权限后，应用可查看指定时间内本企业下工作台的使用人数、使用次数（可区分默认工作台和定制工作台），以及定制工作台中的小组件使用人数、使用次数。"
+    },
+    {
+      "name": "订阅邮箱相关事件高级mail:event",
+      "description": "开通权限后，应用可订阅邮箱相关事件。"
+    },
+    {
+      "name": "查询、创建、修改、删除邮件组高级mail:mailgroup",
+      "description": "通过此权限可进行以下操作：\n查询邮件组的信息，包括邮件组 ID、邮件组地址、邮件组名称、邮件组成员数量、邮件组内成员地址等；\n更新邮件组部分字段，包括邮件组名称、邮件组描述、邮件组的发信权限\n创建或删除邮件组"
+    },
+    {
+      "name": "查询邮件组高级mail:mailgroup:readonly",
+      "description": "通过此权限可以查询邮件组的信息，包括邮件组 ID、邮件组地址、邮件组名称、邮件组成员数量、邮件组内成员地址等。"
+    },
+    {
+      "name": "查询、创建、修改公共邮箱高级mail:public_mailbox",
+      "description": "通过此权限可进行以下操作：\n查询公共邮箱的信息，包括公共邮箱唯一标识、公共邮箱地址和公共邮箱名称\n更新公共邮箱的公共邮箱名称\n创建公共邮箱"
+    },
+    {
+      "name": "查询公共邮箱高级mail:public_mailbox:readonly",
+      "description": "通过此权限可以查询公共邮箱的信息，包括公共邮箱唯一标识、公共邮箱地址和公共邮箱名称。"
+    },
+    {
+      "name": "查询、创建、修改和删除用户的企业邮箱高级mail:user_mailbox",
+      "description": "通过此权限，当前仅可删除用户企业邮箱。"
+    },
+    {
+      "name": "获取事件中的邮箱地址字段高级mail:user_mailbox.event.mail_address:read",
+      "description": "开通权限后，应用可获取邮箱相关事件中的邮箱地址字段。"
+    },
+    {
+      "name": "查询邮箱文件夹普通mail:user_mailbox.folder:read",
+      "description": "开通权限后，应用可查询邮箱文件夹的信息，包括文件夹 ID、文件夹名称等。"
+    },
+    {
+      "name": "查看、创建、更新、删除邮箱文件夹普通mail:user_mailbox.folder:write",
+      "description": "开通权限后，应用可进行以下操作：\n查询邮箱文件夹的信息，包括文件夹 ID、文件夹名称等\n更新邮箱文件夹部分字段，包括文件夹名称等\n创建或删除文件夹"
+    },
+    {
+      "name": "读取邮箱联系人邮箱地址字段高级mail:user_mailbox.mail_contact.mail_address:read",
+      "description": "开通权限后，应用在调用查询邮箱联系人相关 API 时，可读取邮箱联系人邮箱地址字段。"
+    },
+    {
+      "name": "读取邮箱联系人手机号字段高级mail:user_mailbox.mail_contact.phone:read",
+      "description": "开通权限后，应用在调用查询邮箱联系人相关 API 时，可读取邮箱联系人手机号字段。"
+    },
+    {
+      "name": "查看邮箱联系人普通mail:user_mailbox.mail_contact:read",
+      "description": "开通权限后，应用可查询邮箱联系人的信息，包括邮箱联系人 ID、邮箱联系人名称、邮箱联系人公司等。"
+    },
+    {
+      "name": "查看、创建、更新、删除邮箱联系人普通mail:user_mailbox.mail_contact:write",
+      "description": "开通权限后，应用可进行以下操作：\n- 查询邮箱联系人的信息，包括邮箱联系人 ID、邮箱联系人名称、邮箱联系人公司等\n- 更新邮箱联系人部分字段，包含邮箱联系人名称、邮箱联系人公司\n- 创建或删除邮箱联系人"
+    },
+    {
+      "name": "获取邮件内容中地址相关字段高级mail:user_mailbox.message.address:read",
+      "description": "开通权限后，应用可获取邮件内容中的发件人、收件人、抄送、密送字段的数据。"
+    },
+    {
+      "name": "获取邮件正文高级mail:user_mailbox.message.body:read",
+      "description": "开通权限后，应用可获取邮件内容中的纯文本正文、HTML 正文字段等数据。"
+    },
+    {
+      "name": "获取邮件主题高级mail:user_mailbox.message.subject:read",
+      "description": "开通权限后，应用可获取邮件内容中的主题相关数据。"
+    },
+    {
+      "name": "查询用户邮件高级mail:user_mailbox.message:readonly",
+      "description": "开通权限后，应用可进行以下操作：\n获取邮件列表\n获取邮件详情"
+    },
+    {
+      "name": "发送用户邮件高级mail:user_mailbox.message:send",
+      "description": "开通此权限后，应用可向用户申请发送邮件的授权，获得用户授权后可代表该用户发送邮件。"
+    },
+    {
+      "name": "查看收信规则高级mail:user_mailbox.rule:read",
+      "description": "开通权限后，应用可查询邮箱收信规则的信息，包括收信规则 ID、收信规则名称、收信规则详情等。"
+    },
+    {
+      "name": "查看、创建、更新、删除收信规则高级mail:user_mailbox.rule:write",
+      "description": "开通权限后，应用可进行以下操作：\n查询邮箱收信规则的信息，包括收信规则 ID、收信规则名称、收信规则详情等\n更新收信规则部分字段，包括收信规则名称、收信规则详情等\n创建或删除收信规则"
+    },
+    {
+      "name": "查询用户的企业邮箱高级mail:user_mailbox:readonly",
+      "description": "通过此权限，当前仅可删除用户企业邮箱。"
+    },
+    {
+      "name": "校验用户是否为应用管理员普通admin:app.admin:check",
+      "description": "应用管理员负责应用的安装、安装和管理，此权限可用于校验当前用户是普通用户还是租户的应用管理员。"
+    },
+    {
+      "name": "获取应用管理员 ID、管理范围等信息高级admin:app.admin:readonly",
+      "description": "获取应用管理员的管理范围，即该应用管理员能够管理哪些部门。"
+    },
+    {
+      "name": "获取应用管理员 ID普通admin:app.admin_id:readonly",
+      "description": "应用管理员负责应用的安装、安装和管理，此权限可用于查询应用的管理员列表。"
+    },
+    {
+      "name": "更新应用分组高级admin:app.category:update",
+      "description": "更新应用分组"
+    },
+    {
+      "name": "启停用应用高级admin:app.enable:write",
+      "description": "开通权限后，应用可启用或停用指定应用。"
+    },
+    {
+      "name": "获取应用信息高级admin:app.info:readonly",
+      "description": "允许应用查看企业内应用的基本信息和功能配置，比如应用名称、图标、创建者、应用的权限、线上版本号、最新版本号等。"
+    },
+    {
+      "name": "获取用户可用的应用高级admin:app.user_usable:readonly",
+      "description": "允许应用查询用户可用的应用列表，可查看信息包括应用 ID、应用名称、应用图标、应用类型、启停用状态等。"
+    },
+    {
+      "name": "管理应用可见范围高级admin:app.visibility",
+      "description": "允许应用调整某应用的可见性，支持新增用户或部门、删除用户或部门。"
+    },
+    {
+      "name": "更新应用信息高级application:application",
+      "description": "允许应用更新某应用的基本信息，比如应用名称、图标、创建者、应用的权限、分组等。"
+    },
+    {
+      "name": "获取机器人发送消息的概览数据高级application:application.app_message_stats.overview:readonly",
+      "description": "允许应用查看某机器人在统计周期内的消息发送情况，包括推送消息数量、消息触达人数、消息已读数量等。"
+    },
+    {
+      "name": "更新企业内自建应用的程序包高级application:application.app_package",
+      "description": "为企业内所有的自建应用上传不同的程序包，包括小程序包、小组件包。"
+    },
+    {
+      "name": "获取员工使用应用的概览数据高级application:application.app_usage_stats.overview:readonly",
+      "description": "允许应用查看某应用的统计数据，比如该应用的活跃用户数、累计活跃用户数等指标。"
+    },
+    {
+      "name": "更新应用版本信息高级application:application.app_version",
+      "description": "通过此权限可以设置应用版本的具体信息，包括应用名称、图标、权限、事件、已开启能力及具体配置、版本创建与发布时间等。"
+    },
+    {
+      "name": "获取应用版本信息高级application:application.app_version:readonly",
+      "description": "通过此权限可以查看应用版本的具体信息，包括应用名称、图标、权限、事件、已开启能力及具体配置、版本创建与发布时间等。"
+    },
+    {
+      "name": "获取机器人自定义菜单操作人名称普通application:application.bot.operator_name:readonly",
+      "description": "开发者可为应用的机器人开启自定义菜单功能。开通权限后，应用可获取点击机器人菜单的用户的名称。"
+    },
+    {
+      "name": "更新应用协作者信息高级application:application.collaborators:write",
+      "description": "开通权限后，应用可转移企业内任意应用的所有权，添加或删除任意应用的协作者。"
+    },
+    {
+      "name": "更新应用通讯录权限范围高级application:application.contacts_range:write",
+      "description": "开通权限后，可更新企业内应用的通讯录权限范围。"
+    },
+    {
+      "name": "管理应用反馈数据高级application:application.feedback.feedback_info",
+      "description": "管理应用反馈数据"
+    },
+    {
+      "name": "管理应用自身资源普通application:application:self_manage",
+      "description": "通过此权限可以查看和更新当前应用的具体信息，包括应用名称、图标、权限、事件、已开启能力及具体配置、版本创建与发布时间等。"
+    },
+    {
+      "name": "获取机器人千人千面菜单普通application:bot.menu:readonly",
+      "description": "获取机器人千人千面菜单"
+    },
+    {
+      "name": "创建、更新、删除机器人菜单普通application:bot.menu:write",
+      "description": "开通权限后，应用可为用户创建、更新或删除个性化机器人菜单。"
+    },
+    {
+      "name": "查看企业的完整域名高级tenant:tenant.domain:read",
+      "description": "开通权限后，应用可通过调用获取企业信息的 API，查看企业的完整域名信息。"
+    },
+    {
+      "name": "获取企业信息普通tenant:tenant:readonly",
+      "description": "获取企业的详细信息，当前包括：企业名称、编号和头像。"
+    },
+    {
+      "name": "获取应用搜索结果高级search:app",
+      "description": "开通本权限后，应用可以通过关键字搜索应用，返回\nApp ID。"
+    },
+    {
+      "name": "为数据项创建索引高级search:data_item:create",
+      "description": "飞书搜索开放是企业将外部信息搜索能力集成到飞书的解决方案，定义了数据源（datasource）、范式（schema）和数据项（item）三种资源。用户可以通过对这三个资源的管理，实现外部数据快速集成到飞书搜索，在飞书实现企业信息的统一搜索。\n开通权限后，应用可为数据项创建索引。"
+    },
+    {
+      "name": "删除数据项高级search:data_item:delete",
+      "description": "飞书搜索开放是企业将外部信息搜索能力集成到飞书的解决方案，定义了数据源（datasource）、范式（schema）和数据项（item）三种资源。用户可以通过对这三个资源的管理，实现外部数据快速集成到飞书搜索，在飞书实现企业信息的统一搜索。\n开通权限后，应用可删除数据项。"
+    },
+    {
+      "name": "查询数据项高级search:data_item:readonly",
+      "description": "飞书搜索开放是企业将外部信息搜索能力集成到飞书的解决方案，定义了数据源（datasource）、范式（schema）和数据项（item）三种资源。用户可以通过对这三个资源的管理，实现外部数据快速集成到飞书搜索，在飞书实现企业信息的统一搜索。\n开通权限后，应用可查询数据项。"
+    },
+    {
+      "name": "创建数据范式高级search:data_schemas:create",
+      "description": "飞书搜索开放是企业将外部信息搜索能力集成到飞书的解决方案，定义了数据源（datasource）、范式（schema）和数据项（item）三种资源。用户可以通过对这三个资源的管理，实现外部数据快速集成到飞书搜索，在飞书实现企业信息的统一搜索。\n开通权限后，应用可创建数据范式。"
+    },
+    {
+      "name": "删除数据范式高级search:data_schemas:delete",
+      "description": "飞书搜索开放是企业将外部信息搜索能力集成到飞书的解决方案，定义了数据源（datasource）、范式（schema）和数据项（item）三种资源。用户可以通过对这三个资源的管理，实现外部数据快速集成到飞书搜索，在飞书实现企业信息的统一搜索。\n开通权限后，应用可删除数据范式。"
+    },
+    {
+      "name": "获取数据范式高级search:data_schemas:readonly",
+      "description": "飞书搜索开放是企业将外部信息搜索能力集成到飞书的解决方案，定义了数据源（datasource）、范式（schema）和数据项（item）三种资源。用户可以通过对这三个资源的管理，实现外部数据快速集成到飞书搜索，在飞书实现企业信息的统一搜索。\n开通权限后，应用可获取数据范式。"
+    },
+    {
+      "name": "修改数据范式高级search:data_schemas:update",
+      "description": "飞书搜索开放是企业将外部信息搜索能力集成到飞书的解决方案，定义了数据源（datasource）、范式（schema）和数据项（item）三种资源。用户可以通过对这三个资源的管理，实现外部数据快速集成到飞书搜索，在飞书实现企业信息的统一搜索。\n开通权限后，应用可修改数据范式。"
+    },
+    {
+      "name": "查询、创建、修改和删除自定义搜索数据源、数据范式或数据项高级search:data_source",
+      "description": "飞书搜索开放是企业将外部信息搜索能力集成到飞书的解决方案，定义了数据源（datasource）、范式（schema）和数据项（item）三种资源。用户可以通过对这三个资源的管理，实现外部数据快速集成到飞书搜索，在飞书实现企业信息的统一搜索。\n应用具有这个权限后，可以通过对数据源、范式和数据项的管理，完成搜索开放接入。"
+    },
+    {
+      "name": "创建自定义搜索数据源高级search:data_source:create",
+      "description": "飞书搜索开放是企业将外部信息搜索能力集成到飞书的解决方案，定义了数据源（datasource）、范式（schema）和数据项（item）三种资源。用户可以通过对这三个资源的管理，实现外部数据快速集成到飞书搜索，在飞书实现企业信息的统一搜索。\n开通权限后，应用可创建自定义搜索数据源。"
+    },
+    {
+      "name": "删除自定义搜索数据源高级search:data_source:delete",
+      "description": "飞书搜索开放是企业将外部信息搜索能力集成到飞书的解决方案，定义了数据源（datasource）、范式（schema）和数据项（item）三种资源。用户可以通过对这三个资源的管理，实现外部数据快速集成到飞书搜索，在飞书实现企业信息的统一搜索。\n开通权限后，应用可删除自定义搜索数据源。"
+    },
+    {
+      "name": "查询自定义搜索数据源、数据范式或数据项高级search:data_source:readonly",
+      "description": "飞书搜索开放是企业将外部信息搜索能力集成到飞书的解决方案，定义了数据源（datasource）、范式（schema）和数据项（item）三种资源。用户可以通过对这三个资源的管理，实现外部数据快速集成到飞书搜索，在飞书实现企业信息的统一搜索。\n应用具有这个权限后，可以查看当前已经接入到飞书搜索开放的数据源、范式和数据项信息。"
+    },
+    {
+      "name": "修改自定义搜索数据源高级search:data_source:update",
+      "description": "飞书搜索开放是企业将外部信息搜索能力集成到飞书的解决方案，定义了数据源（datasource）、范式（schema）和数据项（item）三种资源。用户可以通过对这三个资源的管理，实现外部数据快速集成到飞书搜索，在飞书实现企业信息的统一搜索。\n开通权限后，应用可修改自定义搜索数据源。"
+    },
+    {
+      "name": "创建用于向量召回的数据集文档高级search:dataset.docs:create",
+      "description": "数据集是指用户上传的纯文本数据。向量召回是指将数据集里的文本进行向量化后，根据用户输入进行模糊匹配。\n开通权限后，应用可创建用于向量召回的数据集文档。"
+    },
+    {
+      "name": "删除用于向量召回的数据集文档高级search:dataset.docs:delete",
+      "description": "数据集是指用户上传的纯文本数据。向量召回是指将数据集里的文本进行向量化后，根据用户输入进行模糊匹配。\n开通权限后，应用可删除用于向量召回的数据集文档。"
+    },
+    {
+      "name": "创建用于向量召回的数据集高级search:dataset:create",
+      "description": "数据集是指用户上传的纯文本数据。向量召回是指将数据集里的文本进行向量化后，根据用户输入进行模糊匹配。\n开通权限后，应用可创建用于向量召回的数据集。"
+    },
+    {
+      "name": "删除用于向量召回的数据集高级search:dataset:delete",
+      "description": "数据集是指用户上传的纯文本数据。向量召回是指将数据集里的文本进行向量化后，根据用户输入进行模糊匹配。\n开通权限后，应用可删除用于向量召回的数据集。"
+    },
+    {
+      "name": "搜索部门高级search:department:read",
+      "description": "开通权限后，应用可搜索用户有权限的部门。"
+    },
+    {
+      "name": "搜索云文档普通search:docs:read",
+      "description": "开通权限后，应用可搜索用户有权限的云文档。"
+    },
+    {
+      "name": "获取消息搜索结果高级search:message",
+      "description": "开通本权限后，应用可以通过关键字搜索消息，返回消息 ID。"
+    },
+    {
+      "name": "识别银行卡高级document_ai:bank_card:recognize",
+      "description": "开通权限后，应用可识别并以结构化的形式输出文件中的银行卡信息，包括银行卡卡号以及有效截止期。"
+    },
+    {
+      "name": "识别名片高级document_ai:business_card:recognize",
+      "description": "开通权限后，应用可识别并以结构化的形式输出文件中的名片信息，包括联系人姓名、公司名、部门等。"
+    },
+    {
+      "name": "高级权限\t营业执照识别高级document_ai:business_license:recognize",
+      "description": "高级权限\t营业执照识别"
+    },
+    {
+      "name": "识别中国护照高级document_ai:chinese_passport:recognize",
+      "description": "开通权限后，应用可识别并以结构化的形式输出文件中的中国护照信息，包括中文姓名、英文格式姓名、出生日期、有效截止期、签发地点以及护照号码。"
+    },
+    {
+      "name": "获取合同字段提取高级document_ai:contract:field_extract",
+      "description": "获取合同字段提取"
+    },
+    {
+      "name": "驾驶证识别高级document_ai:driving_license:recognize",
+      "description": "驾驶证识别"
+    },
+    {
+      "name": "食品管理许可证识别高级document_ai:food_manage_license:recognize",
+      "description": "食品管理许可证识别"
+    },
+    {
+      "name": "食品生产许可证识别高级document_ai:food_produce_license:recoginze",
+      "description": "食品生产许可证识别"
+    },
+    {
+      "name": "识别健康证普通document_ai:health_certificate:recognize",
+      "description": "开通权限后，应用可识别并以结构化的形式输出文件中的健康证信息，包括姓名、发证机关、发证日期等。"
+    },
+    {
+      "name": "识别港澳来往内地通行证高级document_ai:hkm_mainland_travel_permit:recognize",
+      "description": "开通权限后，应用可识别并以结构化的形式输出文件中的港澳来往内地通行证信息，包括中文姓名、英文格式姓名、出生日期、有效截止期和证件号码。"
+    },
+    {
+      "name": "身份证识别高级document_ai:id_card:recognize",
+      "description": "身份证识别"
+    },
+    {
+      "name": "识别简历高级document_ai:resume:recognize",
+      "description": "开通权限后，应用可识别并以结构化的形式输出文件中的简历信息。"
+    },
+    {
+      "name": "出租车发票识别高级document_ai:taxi_invoice:recognize",
+      "description": "出租车发票识别"
+    },
+    {
+      "name": "火车票识别高级document_ai:train_invoice:recognize",
+      "description": "火车票识别"
+    },
+    {
+      "name": "识别台湾往来大陆许可证高级document_ai:tw_mainland_travel_permit:recognize",
+      "description": "开通权限后，应用可识别并以结构化的形式输出文件中的台湾往来大陆许可证信息，包括中文姓名、英文格式姓名、出生日期、有效截止期以及证件号码。"
+    },
+    {
+      "name": "增值税发票识别高级document_ai:vat_invoice:recognize",
+      "description": "增值税发票识别"
+    },
+    {
+      "name": "识别机动车发票普通document_ai:vehicle_invoice:recognize",
+      "description": "开通权限后，应用可识别并以结构化的形式输出文件中的机动车发票信息，包括发票代码、发票号码等。"
+    },
+    {
+      "name": "行驶证识别高级document_ai:vehicle_license:recognize",
+      "description": "行驶证识别"
+    },
+    {
+      "name": "图片识别高级optical_char_recognition:image",
+      "description": "图像识别能力可以识别图片中的文字，并按区域返回文本列表。\n应用获得此权限后，可对图片进行文字识别处理。"
+    },
+    {
+      "name": "语音识别高级speech_to_text:speech",
+      "description": "语音识别能力可以将音频中的语音转换成文字。\n应用获得此权限后，可使用流式语音识别和文件语音识别两种能力，分别实现分片传入音频并实时获取识别结果，以及整段传入音频并一次性获取完成识别结果的功能。"
+    },
+    {
+      "name": "文本翻译高级translation:text",
+      "description": "文本翻译可以实现音频语种识别和文本翻译两种能力。\n应用获得此权限后，可使用语种识别能力，对音频中语音的使用语种进行识别，也可使用文本翻译能力，对文本进行中、日、英三语的互译。"
+    },
+    {
+      "name": "获取部门维度的用户活跃和功能使用数据高级admin:admin_dept_stat:readonly",
+      "description": "获取组织内各部门的用户活跃和功能使用数据的权限，涉及 消息、日历、云文档、视频会议功能，包括部门总人数、激活人数、活跃人数、消息活跃人数、日历活跃人数、创建文件人数等数据指标。\n仅支持查询组织内根部门及其下前 4 级部门的数据。"
+    },
+    {
+      "name": "获取用户维度的用户活跃和功能使用数据高级admin:admin_user_stat:readonly",
+      "description": "获取组织内每个用户活跃和功能使用数据的权限，涉及消息、日历、云文档、视频会议功能。\n具体数据包括：用户激活状态、激活时间、用户活跃状态、最近活跃时间、用户消息活跃状态、发送消息数、用户云文档活跃状态、创建文件数、用户日历活跃状态、创建日程数、用户音视频会议活跃状态、会议时长、活跃设备。"
+    },
+    {
+      "name": "查看、创建、编辑勋章信息和上传勋章图片高级admin:badge",
+      "description": "开通此权限后，应用可以上传勋章图片，查看、创建、更新勋章的信息。"
+    },
+    {
+      "name": "查看、创建、编辑、删除勋章授予名单高级admin:badge.grant",
+      "description": "开通此权限后，应用可以查看、创建、更新、删除勋章的授予名单信息。授予名单中的成员范围不受应用的可用范围影响，支持关联配置租户下的所有成员。"
+    },
+    {
+      "name": "修改企业邮箱的密码高级admin:ent_email_password",
+      "description": "此权限允许修改用户的企业邮箱密码，用于解决企业邮箱登录死锁问题。被修改用户的邮箱需与企业邮箱一致。"
+    },
+    {
+      "name": "获取飞书人事（标准版）应用中的附件数据高级ehr:attachment:readonly",
+      "description": "根据“获取飞书人事（标准版）员工花名册信息”接口范围的文件凭证（token），下载附件数据。"
+    },
+    {
+      "name": "获取飞书人事（标准版）应用中的员工花名册信息高级ehr:employee:readonly",
+      "description": "获取飞书人事（标准版）应用中员工的信息，包括：姓名、手机号、部门、附件等信息。"
+    },
+    {
+      "name": "更新招聘广告信息高级hire:advertisement",
+      "description": "获得职位发布权限，支持将职位发布至招聘官网、内推平台。"
+    },
+    {
+      "name": "更新招聘猎头信息高级hire:agency",
+      "description": "获得猎头供应商信息更新和查询权限，支持设置猎头保护期，并可支持根据猎头供应商的 ID 和供应商名称查询猎头供应商的详细信息。"
+    },
+    {
+      "name": "获取招聘猎头信息高级hire:agency:readonly",
+      "description": "获得猎头供应商信息的查询权限，支持根据猎头供应商的 ID 和供应商名称查询猎头供应商的详细信息。"
+    },
+    {
+      "name": "更新猎头供应商下猎头信息高级hire:agency_account",
+      "description": "更新猎头供应商下猎头信息"
+    },
+    {
+      "name": "查询猎头供应商下猎头信息高级hire:agency_account:readonly",
+      "description": "查询猎头供应商下猎头信息"
+    },
+    {
+      "name": "更新投递信息高级hire:application",
+      "description": "获得候选人投递、offer、入职相关信息的更新和查询权限，可进行的操作包括：创建投递、终止投递、转移阶段、获取投递列表、获取投递信息、获取 offer 信息、操作候选人入职、取消候选人入职和查询待入职。"
+    },
+    {
+      "name": "获取投递信息高级hire:application:readonly",
+      "description": "获得候选人投递、offer、入职相关信息的查询权限，可进行的操作包括：获取投递列表、获取投递信息、获取 offer 信息、查询待入职。"
+    },
+    {
+      "name": "上传招聘相关附件高级hire:attachment",
+      "description": "获得附件信息的更新和查询权限，支持获取附件预览信息、获取附件信息、创建附件、上传附件。"
+    },
+    {
+      "name": "获取附件信息高级hire:attachment:readonly",
+      "description": "获得附件信息的查询权限，可访问和获取招聘系统中附件的元信息，如文件名、创建时间、文件链接地址等。"
+    },
+    {
+      "name": "更新招聘权限信息高级hire:auth",
+      "description": "该权限为租户级别权限。应用获取该权限后，可更新该租户下用户的招聘权限数据。"
+    },
+    {
+      "name": "获取招聘权限信息高级hire:auth:readonly",
+      "description": "该权限为租户级别权限。应用获取该权限后，可获取该租户下用户的招聘权限数据。"
+    },
+    {
+      "name": "更新招聘背调信息高级hire:background_check_order",
+      "description": "该权限为租户级别权限。应用获取该权限后，可更新该租户下用户的背调信息数据。"
+    },
+    {
+      "name": "获取招聘背调信息高级hire:background_check_order:readonly",
+      "description": "该权限为租户级别权限。应用获取该权限后，可获取该租户下用户的背调信息数据。"
+    },
+    {
+      "name": "更新导入 e-HR 任务高级hire:ehr_import",
+      "description": "获得“更新 e-HR 导入任务结果”接口权限。在处理完导入 e-HR 事件后，可调用该接口更新 e-HR 导入任务结果。"
+    },
+    {
+      "name": "更新招聘员工信息高级hire:employee",
+      "description": "获得招聘员工信息的更新和查询权限，可更新员工入职状态，并支持通过投递 ID 或员工 ID 查询员工的入职信息。"
+    },
+    {
+      "name": "获取招聘员工信息高级hire:employee:readonly",
+      "description": "获得招聘员工信息的查询权限，支持通过投递 ID 或员工 ID 查询员工的入职信息。"
+    },
+    {
+      "name": "获取简历评估信息高级hire:evaluation:readonly",
+      "description": "该权限为租户级别权限。应用获取该权限后，可获取该租户下的所有简历评估数据。"
+    },
+    {
+      "name": "更新笔试信息高级hire:exam",
+      "description": "该权限为租户级别权限。应用获取该权限后，可更新该租户下用户的笔试数据。"
+    },
+    {
+      "name": "获取笔试信息高级hire:exam:readonly",
+      "description": "该权限为租户级别权限。应用获取该权限后，可获取该租户下用户的笔试数据。"
+    },
+    {
+      "name": "更新外部投递高级hire:external_application",
+      "description": "获得“创建外部投递”接口权限，可导入来自其他系统的投递信息，创建为外部投递。"
+    },
+    {
+      "name": "查看外部投递高级hire:external_application:readonly",
+      "description": "查看外部投递"
+    },
+    {
+      "name": "更新外部 Offer高级hire:external_offer",
+      "description": "更新外部 Offer"
+    },
+    {
+      "name": "查看外部 Offer高级hire:external_offer:readonly",
+      "description": "查看外部 Offer"
+    },
+    {
+      "name": "导入内推奖励高级hire:external_referral_reward",
+      "description": "开通权限后，应用可导入来自其他系统的内推奖励信息。"
+    },
+    {
+      "name": "更新面试信息高级hire:interview",
+      "description": "获得面试信息、面试评价信息的更新和查询权限，可进行的操作包括：获取投递面试信息、获取面试列表信息、获取面试评价表信息、获取面试评价详细信息。"
+    },
+    {
+      "name": "获取面试信息高级hire:interview:readonly",
+      "description": "获得面试信息、面试评价信息的查询权限，可进行的操作包括：获取投递面试信息、获取面试列表信息、获取面试评价表信息、获取面试评价详细信息。"
+    },
+    {
+      "name": "管理面试官信息普通hire:interviewer",
+      "description": "管理面试官信息"
+    },
+    {
+      "name": "获取面试官信息普通hire:interviewer:readonly",
+      "description": "获取面试官信息"
+    },
+    {
+      "name": "更新职位信息高级hire:job",
+      "description": "获得职位、职能分类、招聘需求、招聘流程相关信息的更新和查询权限，可进行的操作包括：新建职位、更新职位、关闭职位、重启职位、更新职位设置、获取职位列表、获取职位模板、获取职位上的招聘人员信息、获取职位详细信息、搜索职位信息、更新招聘需求、删除招聘需求、获取招聘需求模板、获取招聘需求列表、获取招聘流程信息。"
+    },
+    {
+      "name": "查看职位详情信息高级hire:job.composite_info:readonly",
+      "description": "开通权限后，应用可查看职位基本信息、职位设置、关联招需门店列表等信息。"
+    },
+    {
+      "name": "获取职位信息高级hire:job:readonly",
+      "description": "获得职位、职能分类、招聘需求、招聘流程相关信息查询权限，可进行的操作包括：获取职位列表、获取职位模板、获取职位上的招聘人员信息、获取职位详细信息、搜索职位信息。"
+    },
+    {
+      "name": "获取招聘流程信息高级hire:job_process:readonly",
+      "description": "获得招聘流程信息的查询权限。"
+    },
+    {
+      "name": "更新招聘需求信息高级hire:job_requirement",
+      "description": "获得招聘需求相关信息的更新和查询权限，可进行的操作包括：更新招聘需求、删除招聘需求、获取招聘需求模板、获取招聘需求列表。"
+    },
+    {
+      "name": "获取招聘需求信息高级hire:job_requirement:readonly",
+      "description": "获得招聘需求相关信息的查询权限，可进行的操作包括：获取招聘需求模板、获取招聘需求列表。"
+    },
+    {
+      "name": "获取招聘相关位置信息高级hire:location:readonly",
+      "description": "获得招聘相关位置信息的查询权限，可进行的操作包括：获取地址列表、获取地址码。"
+    },
+    {
+      "name": "更新招聘备注信息高级hire:note",
+      "description": "获取招聘备注相关信息的更新和查询权限，可进行的操作包括：创建备注、更新备注、获取备注列表、获取备注详情。"
+    },
+    {
+      "name": "获取招聘备注信息高级hire:note:readonly",
+      "description": "获取招聘备注相关信息的查询权限，支持获取备注列表和备注详情信息。"
+    },
+    {
+      "name": "更新 offer 信息高级hire:offer",
+      "description": "获取 offer 信息的更新和查询权限，可进行的操作包括：取消 offer、获取 offer 审批流配置列表、获取 offer 申请表列表、获取 offer 申请表、获取 offer 申请表详细信息。"
+    },
+    {
+      "name": "获取 offer 信息高级hire:offer:readonly",
+      "description": "获取 offer 信息的查询权限。可进行的操作包括：获取 offer 详情。"
+    },
+    {
+      "name": "获取 offer 审批流配置信息普通hire:offer_approval_template:readonly",
+      "description": "获得“获取 offer 审批流配置列表”接口权限，可获取 offer 审批流配置信息。"
+    },
+    {
+      "name": "获取 offer 申请表信息高级hire:offer_schema:readonly",
+      "description": "获取 offer 申请表信息的查询权限，可进行的操作包括：获取 offer 申请表列表、获取 offer 申请表、获取 offer 申请表详细信息。"
+    },
+    {
+      "name": "更新 offer 自定义字段信息高级hire:offer_selection_object",
+      "description": "获得 offer 自定义字段信息的更新权限，可根据单选/多选自定义字段 ID，全量更新选项信息。\n\n注：该权限已不再维护，只供调用历史接口“更新 offer 自定义字段信息”时使用。"
+    },
+    {
+      "name": "更新面试满意度问卷信息高级hire:questionnaire",
+      "description": "该权限为租户级别权限。应用获取该权限后，可更新该租户下用户的面试满意度问卷数据。"
+    },
+    {
+      "name": "获取面试满意度问卷信息高级hire:questionnaire:readonly",
+      "description": "该权限为租户级别权限。应用获取该权限后，可获取该租户下用户的面试满意度问卷数据。"
+    },
+    {
+      "name": "更新内推信息高级hire:referral",
+      "description": "获得“获取内推信息”接口权限，可根据投递 ID 获取内推信息。"
+    },
+    {
+      "name": "获取内推信息高级hire:referral:readonly",
+      "description": "获得“获取内推信息”接口权限，可根据投递 ID 获取内推信息。"
+    },
+    {
+      "name": "更新内推账号信息高级hire:referral_account",
+      "description": "更新内推账号信息"
+    },
+    {
+      "name": "获取内推账户信息高级hire:referral_account:readonly",
+      "description": "获取内推账户信息"
+    },
+    {
+      "name": "获取内推官网信息高级hire:referral_website:readonly",
+      "description": "获取内推官网信息"
+    },
+    {
+      "name": "更新官网信息高级hire:site",
+      "description": "获得官网信息及官网上的职位、职位广告、投递职位职能等相关信息的更新和查询权限，可进行的操作包括：创建官网用户、创建官网投递、获取自定义官网列表、搜索自定义官网下的职位列表、获取自定义官网下的职位列表、获取官网职位列表、获取官网职位信息、获取自定义官网下职位广告详情、获取职位职能列表、获取职位地址列表。"
+    },
+    {
+      "name": "获取官网信息高级hire:site:readonly",
+      "description": "获得官网信息的查询权限，可进行的操作包括：获取自定义官网列表、获取招聘官网列表、创建官网用户。"
+    },
+    {
+      "name": "更新官网投递信息高级hire:site_application",
+      "description": "通过此权限，可调用“创建招聘官网投递”接口。"
+    },
+    {
+      "name": "获取官网投递信息高级hire:site_application:readonly",
+      "description": "可获取官网上的投递信息。\n\n\n注：该权限已不再维护，只供调用历史接口“获取投递信息”时使用；建议申请开通权限“hire:application:readonly”（获取投递信息）。"
+    },
+    {
+      "name": "获取官网职位信息高级hire:site_job_post:readonly",
+      "description": "获得官网职位信息、官网职位广告的查询权限，可进行的操作包括：搜索自定义官网下的职位列表、获取自定义官网下的职位列表、获取官网职位列表、获取官网职位信息、获取自定义官网下职位广告详情。"
+    },
+    {
+      "name": "获取项目信息普通hire:subject:readonly",
+      "description": "获得“获取项目列表”接口权限，可获取全量招聘项目信息。"
+    },
+    {
+      "name": "更新人才信息高级hire:talent",
+      "description": "获得人才信息、人才相关的简历来源信息、人才文件夹信息的更新与查询权限，可进行的操作包括：创建人才、更新人才、上传简历创建人才、获取人才列表、获取人才字段、获取人才信息、获取简历来源列表、查询简历来源、文件夹创建。"
+    },
+    {
+      "name": "获取人才信息高级hire:talent:readonly",
+      "description": "获得人才信息、人才相关的简历来源信息、人才文件夹信息的查询权限，可进行的操作包括：获取人才列表、获取人才字段、获取人才信息、获取简历来源列表、查询简历来源。"
+    },
+    {
+      "name": "更新人才屏蔽名单信息高级hire:talent_blocklist",
+      "description": "开通权限后，应用可查看与更新人才屏蔽名单信息。"
+    },
+    {
+      "name": "查看人才屏蔽名单信息高级hire:talent_blocklist:readonly",
+      "description": "开通权限后，应用可查看人才屏蔽名单信息。"
+    },
+    {
+      "name": "更新人才库信息高级hire:talent_folder",
+      "description": "通过此权限，可创建人才文件夹。\n\n注：该权限已不再维护，只供调用历史接口“创建人才文件夹”时使用。"
+    },
+    {
+      "name": "获取人才库信息高级hire:talent_folder:readonly",
+      "description": "该权限为租户级别权限。应用获取该权限后，可获取该租户下的所有人才库数据。"
+    },
+    {
+      "name": "操作人才加入/移除文件夹高级hire:talent_folder_association",
+      "description": "操作人才加入/移除文件夹"
+    },
+    {
+      "name": "更新人才标签高级hire:talent_tag",
+      "description": "开通权限后，应用可操作与查询人才标签。"
+    },
+    {
+      "name": "获取人才标签普通hire:talent_tag:readonly",
+      "description": "开通权限后，应用可查询人才标签。"
+    },
+    {
+      "name": "获取招聘待办信息普通hire:todo:readonly",
+      "description": "为特殊下游开发的定制化需求，暂不开放给其他用户。"
+    },
+    {
+      "name": "更新三方协议高级hire:tripartite_agreement",
+      "description": "开通权限后，应用可查看和更新三方协议信息，可进行的操作包括：\n创建三方协议\n修改三方协议\n取消三方协议"
+    },
+    {
+      "name": "查看三方协议信息高级hire:tripartite_agreement:readonly",
+      "description": "开通权限后，应用可查看三方协议的信息。"
+    },
+    {
+      "name": "更新 OKR 信息高级okr:okr",
+      "description": "获得 OKR 相关信息的更新和查询权限，包括：\n获取 OKR 周期\n获取用户的 OKR"
+    },
+    {
+      "name": "获取 OKR 内容高级okr:okr.content:readonly",
+      "description": "开通权限后，应用可获取企业内用户填写的 OKR 内容。"
+    },
+    {
+      "name": "更新 OKR 内容高级okr:okr.content:writeonly",
+      "description": "开通权限后，应用可创建和更新企业内用户的 OKR。"
+    },
+    {
+      "name": "获取 OKR 周期高级okr:okr.period:readonly",
+      "description": "开通权限后，应用可获取企业的 OKR 周期列表。"
+    },
+    {
+      "name": "更新 OKR 周期高级okr:okr.period:writeonly",
+      "description": "开通权限后，应用可新建和修改企业的 OKR 周期。"
+    },
+    {
+      "name": "上传 OKR 进展图片附件高级okr:okr.progress.file:upload",
+      "description": "开通权限后，应用可在企业内用户的 OKR 进展中上传图片。"
+    },
+    {
+      "name": "删除 OKR 进展高级okr:okr.progress:delete",
+      "description": "开通权限后，应用可删除企业内用户的 OKR 进展。"
+    },
+    {
+      "name": "获取 OKR 进展高级okr:okr.progress:readonly",
+      "description": "开通权限后，应用可获取企业内用户填写的 OKR 进展记录内容。"
+    },
+    {
+      "name": "更新 OKR 进展高级okr:okr.progress:writeonly",
+      "description": "开通权限后，应用可创建和更新企业内用户的 OKR 进展。"
+    },
+    {
+      "name": "获取 OKR 复盘高级okr:okr.review:readonly",
+      "description": "开通权限后，应用可获取企业内用户的 OKR 复盘文档。"
+    },
+    {
+      "name": "获取 OKR 信息高级okr:okr:readonly",
+      "description": "获得 OKR 相关信息的更新和查询权限，包括：\n获取 OKR 周期\n获取用户的 OKR"
+    },
+    {
+      "name": "查看智能门禁记录高级acs:access_record:readonly",
+      "description": "允许应用查看用户在智能门禁设备上的通行记录，包括：\naccess_record_id ：通行记录的唯一标识\nuser_id ：该通行记录对应的用户 ID\ndevice_id ：该通行记录对应的智能门禁设备 ID\nis_clock_in ：该通行记录是否被用作打卡记录\naccess_time ：通行时间\naccess_type ：通行认证方式"
+    },
+    {
+      "name": "查看、创建、更新、删除门禁机设备信息高级acs:access_record:write",
+      "description": "开通权限后，应用可查看、创建、更新、删除智能门禁中的设备信息，包括设备属性和权限组等内容。"
+    },
+    {
+      "name": "门禁机设备写入权限高级acs:device:write",
+      "description": "门禁机设备写入权限"
+    },
+    {
+      "name": "查看智能门禁设备列表高级acs:devices:readonly",
+      "description": "允许应用查看租户下所有智能门禁设备，设备信息包括：\ndevice_id ：智能门禁设备的唯一标识\ndevice_name ：智能门禁设备的名称\ndevice_sn：智能门禁设备的 SN 编码"
+    },
+    {
+      "name": "查看、更新智能门禁用户高级acs:users",
+      "description": "允许应用查看、创建、修改、删除智能门禁中的用户信息，包括：\ncard：用户的门禁卡卡号\nface：用户的人脸图片"
+    },
+    {
+      "name": "获取关键指标数据高级performance:metric:read",
+      "description": "获取关键指标数据"
+    },
+    {
+      "name": "管理关键指标数据高级performance:metric:write",
+      "description": "管理关键指标数据"
+    },
+    {
+      "name": "获取指标配置信息高级performance:metric_lib:read",
+      "description": "获取指标配置信息"
+    },
+    {
+      "name": "管理绩效数据高级performance:performance",
+      "description": "获取绩效评估信息的查询权限，可获取被评估人信息、各评估环节的评分、评级、评语内容。"
+    },
+    {
+      "name": "查看绩效数据高级performance:performance:readonly",
+      "description": "获取绩效评估信息的查询权限，可获取被评估人信息、各评估环节的评分、评级、评语内容。"
+    },
+    {
+      "name": "获取评估配置信息高级performance:review_template:read",
+      "description": "开通权限后，应用可获取绩效评估配置的相关信息，包括评估模板、评估项、标签填写题。"
+    },
+    {
+      "name": "查看周期数据高级performance:semester:read",
+      "description": "查看周期数据"
+    },
+    {
+      "name": "获取周期与项目配置信息高级performance:semester_activity:read",
+      "description": "开通权限后，应用可获取绩效周期与项目配置的相关信息，包括周期、项目等信息。"
+    },
+    {
+      "name": "管理周期与项目配置信息高级performance:semester_activity:write",
+      "description": "开通权限后，应用可管理周期与项目配置信息。"
+    },
+    {
+      "name": "获取周期人员信息高级performance:semester_user:read",
+      "description": "获取周期人员信息"
+    },
+    {
+      "name": "获取公司银行账号信息主数据普通mdm:company.company_bank_account.account:readonly",
+      "description": "获取公司银行账号主数据信息。\n开通此权限后，应用可查看公司银行账号主数据，多用于外部第三方 ISV 交易系统和费控对公单据的集成业务。目前包括以下几类数据：\n公司银行账号"
+    },
+    {
+      "name": "查询国家/地区的公共数据普通mdm:country_region:read",
+      "description": "开通权限后，应用可通过编码查询国家/地区信息，以及通过自定义条件查询国家/地区。"
+    },
+    {
+      "name": "查看、创建、编辑主数据中的法人实体相关信息高级mdm:legal_entity",
+      "description": "查看、创建、编辑主数据中的法人实体相关信息。\n开通此权限后，应用可查看、创建、编辑主数据中的法人实体信息，多用于外部第三方 ISV 交易系统和 SaaS 主数据管理系统的集成业务。\n目前包括以下几类法人实体信息：\n基础信息、银行账户。"
+    },
+    {
+      "name": "获取主数据中的法人实体信息高级mdm:legal_entity:readonly",
+      "description": "获取主数据中的法人实体信息。\n开通此权限后，应用可查询主数据中的法人实体信息，多用于外部第三方 ISV 交易系统和 SaaS 主数据管理系统的集成业务。\n目前包括以下几类法人实体信息：\n基础信息、银行账户。"
+    },
+    {
+      "name": "查看、创建、编辑和删除费控主数据信息高级mdm:spend",
+      "description": "查看、创建、编辑和删除费控主数据信息。\n开通此权限后，应用可对主数据进行增删改查，多用于外部第三方 ISV 交易系统和费控对公单据的集成业务。目前包括以下几类数据：\n公司、公司银行资产、会计科目、会计科目与公司关系、成本中心、部门与成本中心关系、内部订单"
+    },
+    {
+      "name": "获取费控主数据信息高级mdm:spend:readonly",
+      "description": "获取费控主数据信息。\n开通此权限后，应用可对费控主数据进行查看，多用于外部第三方 ISV 交易系统和费控对公单据的集成业务。目前包括以下几类数据：\n公司、公司银行资产、会计科目、会计科目与公司关系、成本中心、部门与成本中心关系、内部订单"
+    },
+    {
+      "name": "查看、创建、编辑主数据中的供应商相关信息高级mdm:vendor",
+      "description": "查看、创建、编辑主数据中的供应商相关信息。\n开通此权限后，应用可查看、创建、编辑主数据中的供应商信息，多用于外部第三方 ISV 交易系统和 SaaS 主数据管理系统的集成业务。\n目前包括以下几类供应商信息：\n基础信息、经营地址、联系人、银行账户、公司视图。"
+    },
+    {
+      "name": "获取主数据中的供应商信息高级mdm:vendor:readonly",
+      "description": "获取主数据中的供应商信息。\n开通此权限后，应用可查询主数据中的供应商信息，多用于外部第三方 ISV 交易系统和 SaaS 主数据管理系统的集成业务。\n目前包括以下几类供应商信息：\n基础信息、经营地址、联系人、银行账户、公司视图。"
+    },
+    {
+      "name": "查看、创建、编辑、删除词典词条高级baike:entity",
+      "description": "查看、创建、编辑词典数据信息。\n应用具有此权限后，可对词典的数据进行增改查操作。\n目前，数据主要包括：草稿（未通过审批状态的词条创建或变更记录）、词条（通过审批，可以对外展示的词条）。"
+    },
+    {
+      "name": "免审删除词典词条高级baike:entity:exempt_delete",
+      "description": "开通权限后，应用可不经过词典管理员审批，对词典的数据进行删除操作。"
+    },
+    {
+      "name": "创建、更新词典免审词条高级baike:entity:exempt_review",
+      "description": "免审创建、更新词典数据信息。\n应用具有此权限后，可不经过词典管理员审批，对词典的数据进行增改查操作，即免审创建词条或更新词条（创建的词条将直接展示给成员，无需词典管理员审核）。"
+    },
+    {
+      "name": "查看词典词条高级baike:entity:readonly",
+      "description": "查看词典数据信息。\n应用具有此权限后，可查看词典内的词条信息，进行搜索词条、高亮词条等操作。仅具有查看能力，无法对词条进行变更操作。"
+    },
+    {
+      "name": "获取汇报业务域的全部权限高级report:report",
+      "description": "获得全部汇报接口的授权，包括读写汇报规则、汇报任务数据。"
+    },
+    {
+      "name": "查看汇报规则高级report:rule:readonly",
+      "description": "获得汇报规则数据读取接口权限。"
+    },
+    {
+      "name": "查看汇报任务高级report:task:readonly",
+      "description": "获得汇报填写任务数据读取接口权限。"
+    },
+    {
+      "name": "获取兼职的薪资类型高级corehr:additional_job.compensation_type:read",
+      "description": "获取兼职的薪资类型"
+    },
+    {
+      "name": "读写兼职的薪资类型高级corehr:additional_job.compensation_type:write",
+      "description": "读写兼职的薪资类型"
+    },
+    {
+      "name": "获取兼职的职务信息高级corehr:additional_job.job:read",
+      "description": "获取兼职的职务信息"
+    },
+    {
+      "name": "读写兼职的职务信息高级corehr:additional_job.job:write",
+      "description": "读写兼职的职务信息"
+    },
+    {
+      "name": "获取兼职的职级信息高级corehr:additional_job.job_level:read",
+      "description": "获取兼职的职级信息"
+    },
+    {
+      "name": "读写兼职的职级信息高级corehr:additional_job.job_level:write",
+      "description": "读写兼职的职级信息"
+    },
+    {
+      "name": "读取兼职的岗位高级corehr:additional_job.position:read",
+      "description": "读取兼职的岗位"
+    },
+    {
+      "name": "读写兼职的岗位高级corehr:additional_job.position:write",
+      "description": "读写兼职的岗位"
+    },
+    {
+      "name": "获取兼职的任职公司高级corehr:additional_job.service_company:read",
+      "description": "获取兼职的任职公司"
+    },
+    {
+      "name": "读写兼职的任职公司高级corehr:additional_job.service_company:write",
+      "description": "读写兼职的任职公司"
+    },
+    {
+      "name": "获取兼职的排班信息高级corehr:additional_job.work_shift:read",
+      "description": "获取兼职的排班信息"
+    },
+    {
+      "name": "读写兼职的排班信息高级corehr:additional_job.work_shift:write",
+      "description": "读写兼职的排班信息"
+    },
+    {
+      "name": "获取兼职信息高级corehr:additional_job:read",
+      "description": "获取兼职信息"
+    },
+    {
+      "name": "读写兼职信息高级corehr:additional_job:write",
+      "description": "读写兼职信息"
+    },
+    {
+      "name": "获取组织架构调整部门调整内容高级corehr:approval_groups.orgdraft_department_change:read",
+      "description": "获取组织架构调整部门调整内容"
+    },
+    {
+      "name": "获取组织架构调整人员调整内容高级corehr:approval_groups.orgdraft_job_change:read",
+      "description": "获取组织架构调整人员调整内容"
+    },
+    {
+      "name": "获取组织架构调整中的岗位调整内容高级corehr:approval_groups.orgdraft_position_change:read",
+      "description": "开通权限后，应用可获取组织架构调整中的岗位调整内容。"
+    },
+    {
+      "name": "获取组织架构调整流程信息高级corehr:approval_groups:read",
+      "description": "获取组织架构调整流程信息"
+    },
+    {
+      "name": "查询部门/地点的HRBP/属地BP高级corehr:authorization.bp:read",
+      "description": "查询部门/地点的HRBP/属地BP"
+    },
+    {
+      "name": "获取用户授权数据高级corehr:authorization:read",
+      "description": "开通权限后，应用可调用用户授权相关查询 API。"
+    },
+    {
+      "name": "更新用户权限高级corehr:authorization:write",
+      "description": "开通权限后，应用可进行以下操作：\n为用户授权新角色\n更新已授权角色的授权范围\n移除已授权的角色"
+    },
+    {
+      "name": "查看部门 BP 信息高级corehr:bp.get_by_department:read",
+      "description": "开通权限后，应用可查询部门的 HRBP 信息。"
+    },
+    {
+      "name": "查看 BP 列表高级corehr:bp.list:read",
+      "description": "开通权限后，应用可查询 HRBP 列表。"
+    },
+    {
+      "name": "获取基础数据信息高级corehr:common_data.basic_data:read",
+      "description": "开通该权限后，应用可获取基础数据信息。基础数据信息包括：国家/地区信息、省份/行政区信息、城市/区域信息、货币信息等。"
+    },
+    {
+      "name": "获取 ID 转换信息高级corehr:common_data.id.convert:read",
+      "description": "开通权限后，应用可获取飞书通讯录、飞书人事、People Admin 之间的 ID 转换信息。"
+    },
+    {
+      "name": "获取元数据信息高级corehr:common_data.meta_data:read",
+      "description": "开通权限后，应用可获得元数据相关查询 API 的权限，包括：\n获取字段详情\n获取自定义字段列表\n获取飞书人事对象列表"
+    },
+    {
+      "name": "读写元数据信息高级corehr:common_data.meta_data:write",
+      "description": "读写元数据信息"
+    },
+    {
+      "name": "获取预置数据信息高级corehr:common_data.preset_data:read",
+      "description": "开通该权限后，应用可获取预置数据信息。预置数据包括：人员类型、国家证件类型、异动类型、异动原因、离职原因、假期类型等。"
+    },
+    {
+      "name": "更新预置数据信息高级corehr:common_data.preset_data:write",
+      "description": "开通该权限后，应用可更新预置数据信息。预置数据包括：人员类型、国家证件类型、异动类型、异动原因、离职原因、假期类型等。"
+    },
+    {
+      "name": "获取公司信息高级corehr:company:read",
+      "description": "开通权限后，应用可获得公司信息相关查询 API 的权限。"
+    },
+    {
+      "name": "查看、创建、更新、删除公司信息高级corehr:company:write",
+      "description": "开通权限后，应用可调用公司信息相关的全部接口，查看、创建、更新、删除公司信息。"
+    },
+    {
+      "name": "获取社保公积金险种普通corehr:compensation.insurance:read",
+      "description": "获取社保公积金险种"
+    },
+    {
+      "name": "一次性支付读权限高级corehr:compensation.lump_sum_payment:read",
+      "description": "一次性支付读权限"
+    },
+    {
+      "name": "一次性支付写权限高级corehr:compensation.lump_sum_payment:write",
+      "description": "一次性支付写权限"
+    },
+    {
+      "name": "经常性支付记录删除权限高级corehr:compensation.recurring_payment:delete",
+      "description": "经常性支付记录删除权限"
+    },
+    {
+      "name": "经常性支付记录读权限高级corehr:compensation.recurring_payment:read",
+      "description": "经常性支付记录读权限"
+    },
+    {
+      "name": "经常性支付记录更新权限高级corehr:compensation.recurring_payment:update",
+      "description": "经常性支付记录更新权限"
+    },
+    {
+      "name": "经常性支付记录写权限高级corehr:compensation.recurring_payment:write",
+      "description": "经常性支付记录写权限"
+    },
+    {
+      "name": "获取员工增减员记录信息高级corehr:compensation.social_adjust_record:read",
+      "description": "获取员工增减员记录信息"
+    },
+    {
+      "name": "获取员工参保档案信息高级corehr:compensation.social_archive:read",
+      "description": "获取员工参保档案信息"
+    },
+    {
+      "name": "查询参保方案信息高级corehr:compensation.social_plan:read",
+      "description": "查询参保方案信息"
+    },
+    {
+      "name": "创建定调薪任务高级corehr:compensation_archive:write",
+      "description": "开通权限后，应用可针对人员创建定调薪任务记录，生成薪资档案。"
+    },
+    {
+      "name": "获取薪资档案的调薪说明高级corehr:compensation_archive_detail.change_description:read",
+      "description": "开通权限后，应用可通过获取薪资档案 API，获取生成该薪资档案的调薪说明信息。"
+    },
+    {
+      "name": "获取薪资档案的关联薪资指标高级corehr:compensation_archive_detail.indicators:read",
+      "description": "开通权限后，应用可通过获取薪资档案 API，获取员工薪资档案的关联薪资统计指标项。"
+    },
+    {
+      "name": "获取薪资档案的关联薪资项高级corehr:compensation_archive_detail.items:read",
+      "description": "开通权限后，应用可通过获取薪资档案 API，获取员工薪资档案的关联薪资项。"
+    },
+    {
+      "name": "获取薪资档案的关联方案高级corehr:compensation_archive_detail.plan:read",
+      "description": "开通权限后，应用可通过获取薪资档案 API，读取员工薪资档案中已关联的薪资方案字段。"
+    },
+    {
+      "name": "获取薪资档案的关联薪级薪等高级corehr:compensation_archive_detail.salary_level:read",
+      "description": "开通权限后，应用可通过获取薪资档案 API，读取员工薪资档案中已关联的薪级薪等字段。"
+    },
+    {
+      "name": "获取基础薪酬的薪资档案信息高级corehr:compensation_archive_detail:read",
+      "description": "开通权限后，应用可查询基础薪酬的薪资档案信息，包括薪资档案 ID、薪资档案 TID、薪资档案生效时间、薪资档案失效时间、关联薪资方案 TID、关联定调薪原因 ID、关联档案薪资项、关联档案薪资指标等。"
+    },
+    {
+      "name": "获取基础薪酬的调薪原因信息高级corehr:compensation_change_reason:read",
+      "description": "开通权限后，应用可查询基础薪酬的调薪原因信息，包括调薪原因 ID、名称、描述、启用状态等。"
+    },
+    {
+      "name": "获取基础薪酬的薪资指标信息高级corehr:compensation_indicator:read",
+      "description": "开通权限后，应用可查询基础薪酬的薪资指标信息，包括薪资指标 ID、薪资指标名称、薪资指标数值类型等。"
+    },
+    {
+      "name": "获取基础薪酬的薪资项信息高级corehr:compensation_item:read",
+      "description": "开通权限后，应用可查询基础薪酬的薪资项信息，包括薪资项 ID、薪资项名称、薪资项描述、薪资项分类 ID、薪资项数据类型、薪资项使用频率等。"
+    },
+    {
+      "name": "获取基础薪酬的薪资项分类信息高级corehr:compensation_item_category:read",
+      "description": "开通权限后，应用可查询基础薪酬的薪资项分类信息，包括薪资项分类 ID、薪资项分类名称等。"
+    },
+    {
+      "name": "获取基础薪酬的薪资方案信息高级corehr:compensation_plan:read",
+      "description": "开通权限后，应用可查询基础薪酬的薪资方案信息，包括薪资方案 ID、TID、名称、生效日期、适用范围、关联薪资项、关联薪资指标等。"
+    },
+    {
+      "name": "获取薪资方案的关联薪资指标高级corehr:compensation_plan_detail.indicators:read",
+      "description": "开通权限后，应用可通过获取薪资方案 API，获取该薪资方案下关联的薪资统计指标。"
+    },
+    {
+      "name": "获取薪资方案的关联薪资项高级corehr:compensation_plan_detail.items:read",
+      "description": "开通权限后，应用可通过获取薪资方案 API，获取该薪资方案下关联的薪资项。"
+    },
+    {
+      "name": "获取薪资标准信息高级corehr:compensation_standards:read",
+      "description": "开通该权限后，应用可查询薪资标准信息。"
+    },
+    {
+      "name": "获取合同主体信息高级corehr:contract.company:read",
+      "description": "开通权限后，应用可在调用合同信息和异动信息相关 API 时获取以下信息： \noriginal_company：原公司\ntarget_company：新公司\nfirst_party_company_id ：合同主体"
+    },
+    {
+      "name": "读写合同主体信息高级corehr:contract.company:write",
+      "description": "开通权限后，应用可读写合同主体信息（即 company_id 字段）。"
+    },
+    {
+      "name": "获取合同期限信息高级corehr:contract.period:read",
+      "description": "开通权限后，应用可在调用合同信息、异动信息相关 API 时获取以下信息： \noriginal_contract_start_date：原合同开始日期\ntarget_contract_start_date：新合同开始日期\noriginal_contract_end_date：原合同结束日期\ntarget_contract_end_date：新合同结束日期\neffective_time：合同开始日期\nexpiration_time ：实际结束日期\ncontract_end_date：合同结束日期"
+    },
+    {
+      "name": "读写合同期限信息高级corehr:contract.period:write",
+      "description": "开通权限后，应用可读写合同期限信息（包括 contract_start_date、contract_end_date 字段）。"
+    },
+    {
+      "name": "创建合同接口权限高级corehr:contract:create",
+      "description": "创建合同接口权限"
+    },
+    {
+      "name": "查看合同信息高级corehr:contract:read",
+      "description": "开通权限后，应用可查看合同信息。"
+    },
+    {
+      "name": "创建、更新、删除合同信息高级corehr:contract:write",
+      "description": "开通权限后，应用可创建、更新和删除合同信息。"
+    },
+    {
+      "name": "更新核心人事信息高级corehr:corehr",
+      "description": "获取核心人事信息的更新权限，可获取或更新成本中心信息、职务级别、序列数据、证件类型数据、工时制度数据、雇员类型数据、级别数据、居民税信息数据、待入职数据、个人信息、雇佣信息、合同、任职信息数据、部门数据、公司数据、图片信息、地点数据、汇报关系。"
+    },
+    {
+      "name": "获取核心人事信息高级corehr:corehr:readonly",
+      "description": "获取核心人事信息的查询权限，可获取成本中心信息、职务级别、居民税信息数据、部门数据、公司数据、雇员类型数据、任职信息数据、序列数据、待入职数据、个人信息、地点数据、合同、任职信息数据、证件类型数据、汇报关系。"
+    },
+    {
+      "name": "成本分摊读权限高级corehr:cost_allocation:read",
+      "description": "成本分摊读权限"
+    },
+    {
+      "name": "成本分摊写权限高级corehr:cost_allocation:write",
+      "description": "成本分摊写权限"
+    },
+    {
+      "name": "查看成本中心信息高级corehr:cost_center:read",
+      "description": "开通权限后，应用可查看成本中心信息，包括名称、编码、描述、上级成本中心 ID、是否启用、生效日期、失效日期等。"
+    },
+    {
+      "name": "创建、更新、删除成本中心信息高级corehr:cost_center:write",
+      "description": "开通权限后，应用可创建、更新、删除成本中心信息，及启停用成本中心。成本中心信息包括名称、编码、描述、上级成本中心ID、是否启用、生效日期、失效日期等。"
+    },
+    {
+      "name": "获取自定义组织信息高级corehr:custom_org:read",
+      "description": "获取自定义组织信息"
+    },
+    {
+      "name": "读写自定义组织信息高级corehr:custom_org:write",
+      "description": "读写自定义组织信息"
+    },
+    {
+      "name": "默认成本中心读权限高级corehr:default_cost_center:read",
+      "description": "默认成本中心读权限"
+    },
+    {
+      "name": "默认成本中心写权限高级corehr:default_cost_center:write",
+      "description": "默认成本中心写权限"
+    },
+    {
+      "name": "获取部门成本中心字段信息高级corehr:department.cost_center_id:read",
+      "description": "获取部门成本中心字段信息"
+    },
+    {
+      "name": "获取部门自定义字段高级corehr:department.custom_fields:read",
+      "description": "开通权限后，应用可在调用获取部门信息 API 时获取以下信息：\ncustom_fields：自定义字段"
+    },
+    {
+      "name": "按负责人搜索部门高级corehr:department.manager.search:read",
+      "description": "开通权限后，应用可根据部门负责人搜索部门。"
+    },
+    {
+      "name": "获取部门负责人信息高级corehr:department.manager:read",
+      "description": "开通权限后，应用可在调用获取部门信息相关 API 时获取以下信息：\nmanager：部门负责人雇佣 ID"
+    },
+    {
+      "name": "获取部门操作日志高级corehr:department.operation_log:read",
+      "description": "开通权限后，应用可查询部门操作日志。"
+    },
+    {
+      "name": "按上级部门搜索部门高级corehr:department.organize.search:read",
+      "description": "开通权限后，应用可根据直接上级部门搜索部门。"
+    },
+    {
+      "name": "获取部门组织架构信息高级corehr:department.organize:read",
+      "description": "开通权限后，应用可在调用获取部门信息相关 API 时获取以下信息：\nparent_department_id：上级部门 ID"
+    },
+    {
+      "name": "获取部门信息高级corehr:department:read",
+      "description": "开通权限后，应用可获得部门信息相关查询 API 和事件的权限。\n\n注：部分敏感字段可能需要额外权限，具体以文档为准。"
+    },
+    {
+      "name": "读写部门信息高级corehr:department:write",
+      "description": "开通权限后，应用可获得部门信息相关全部 API 和事件的权限。\n\n注：部分敏感字段可能需要额外权限，具体以文档为准。"
+    },
+    {
+      "name": "根据组织架构调整 ID 获取组织架构调整流程信息高级corehr:draft:read",
+      "description": "开通权限后，应用可根据组织架构调整 ID，获取组织架构调整流程信息。"
+    },
+    {
+      "name": "添加人员高级corehr:employee.add:write",
+      "description": "开通权限后，应用可调用添加人员 API。"
+    },
+    {
+      "name": "查看员工的全部 BP 信息高级corehr:employee.all_bp:read",
+      "description": "开通权限后，应用可在查询员工的 HRBP 与属地 BP 时，查看员工的全部 BP 信息字段。"
+    },
+    {
+      "name": "查看员工的部分 BP 信息高级corehr:employee.bp:read",
+      "description": "开通权限后，应用可查看员工的 HRBP 和属地 BP。"
+    },
+    {
+      "name": "获取人员领域事件高级corehr:employee.event:read",
+      "description": "获取人员领域事件"
+    },
+    {
+      "name": "查看员工的任职信息高级corehr:employee.job_data:read",
+      "description": "开通权限后，应用可调用“批量查询员工任职信息”和“获取任职信息列表” API。"
+    },
+    {
+      "name": "更新人员高级corehr:employee.update:write",
+      "description": "开通权限后，应用可调用更新人员 API。"
+    },
+    {
+      "name": "获取员工信息高级corehr:employee:read",
+      "description": "开通权限后，应用可获得查询员工信息 API 权限。\n\n注：部分敏感字段可能需要额外权限，具体以文档为准。"
+    },
+    {
+      "name": "读写员工信息高级corehr:employee:write",
+      "description": "开通权限后，应用可获得创建/更新员工信息 API 权限。\n\n注：部分敏感字段可能需要额外权限，具体以文档为准。"
+    },
+    {
+      "name": "读取外派信息高级corehr:employees.international_assignment:read",
+      "description": "读取外派信息"
+    },
+    {
+      "name": "读写外派信息高级corehr:employees.international_assignment:write",
+      "description": "读写外派信息"
+    },
+    {
+      "name": "获取员工薪资方案高级corehr:employment.archive_cpst_plan:read",
+      "description": "开通权限后，应用可获取员工当前所属的薪资方案 ID。"
+    },
+    {
+      "name": "获取员工外派信息高级corehr:employment.assignment:read",
+      "description": "获取员工外派信息"
+    },
+    {
+      "name": "获取员工所属外派薪资组普通corehr:employment.assignment_pay_group:read",
+      "description": "开通权限后，应用可获取员工当前所属外派薪资组 ID。"
+    },
+    {
+      "name": "查看员工的薪资类型信息高级corehr:employment.compensation_type:read",
+      "description": "开通权限后，应用可获取员工的薪资类型信息（即 compensation_type 字段）。"
+    },
+    {
+      "name": "读写员工的薪资类型信息高级corehr:employment.compensation_type:write",
+      "description": "开通权限后，应用可读写员工的薪资类型信息（即 compensation_type 字段）。"
+    },
+    {
+      "name": "获取员工合同类型普通corehr:employment.contract_type:read",
+      "description": "开通权限后，应用可获取员工当前生效中的合同类型。"
+    },
+    {
+      "name": "获取员工成本中心信息高级corehr:employment.cost_center:read",
+      "description": "获取员工成本中心信息"
+    },
+    {
+      "name": "获取雇佣信息自定义字段信息高级corehr:employment.custom_field:read",
+      "description": "开通权限后，应用可在调用获取员工信息 API 时获取以下信息：\ncustom_fields：自定义字段（雇佣基础信息下的自定义字段）"
+    },
+    {
+      "name": "获取员工的自定义组织信息普通corehr:employment.custom_org:read",
+      "description": "获取员工的自定义组织信息"
+    },
+    {
+      "name": "读写员工的自定义组织信息普通corehr:employment.custom_org:write",
+      "description": "读写员工的自定义组织信息"
+    },
+    {
+      "name": "获取员工的自定义组织信息普通corehr:employment.custom_org_field:read",
+      "description": "获取员工的自定义组织信息"
+    },
+    {
+      "name": "读写员工的自定义组织信息普通corehr:employment.custom_org_field:write",
+      "description": "读写员工的自定义组织信息"
+    },
+    {
+      "name": "查看是否有 Offer 薪酬高级corehr:employment.has_offer_salary:read",
+      "description": "查看是否有 Offer 薪酬"
+    },
+    {
+      "name": "读取员工的外派信息高级corehr:employment.international_assignment.bt:read",
+      "description": "读取员工的外派信息"
+    },
+    {
+      "name": "读取外派薪资类型高级corehr:employment.international_assignment.compensation_type:read",
+      "description": "读取外派薪资类型"
+    },
+    {
+      "name": "读写外派薪资类型高级corehr:employment.international_assignment.compensation_type:write",
+      "description": "读写外派薪资类型"
+    },
+    {
+      "name": "读取外派自定义字段 aPaas ID普通corehr:employment.international_assignment.custom_field.apaas_id__c:read",
+      "description": "读取外派自定义字段 aPaas ID"
+    },
+    {
+      "name": "读取外派自定义字段高级corehr:employment.international_assignment.custom_field:read",
+      "description": "读取外派自定义字段"
+    },
+    {
+      "name": "读写外派自定义字段高级corehr:employment.international_assignment.custom_field:write",
+      "description": "读写外派自定义字段"
+    },
+    {
+      "name": "读取外派职务高级corehr:employment.international_assignment.job:read",
+      "description": "读取外派职务"
+    },
+    {
+      "name": "读写外派职务高级corehr:employment.international_assignment.job:write",
+      "description": "读写外派职务"
+    },
+    {
+      "name": "读取外派序列高级corehr:employment.international_assignment.job_family:read",
+      "description": "读取外派序列"
+    },
+    {
+      "name": "读写外派职务高级corehr:employment.international_assignment.job_family:write",
+      "description": "读写外派职务"
+    },
+    {
+      "name": "读取外派职等高级corehr:employment.international_assignment.job_grade:read",
+      "description": "读取外派职等"
+    },
+    {
+      "name": "读写外派职等高级corehr:employment.international_assignment.job_grade:write",
+      "description": "读写外派职等"
+    },
+    {
+      "name": "读取外派职级高级corehr:employment.international_assignment.job_level:read",
+      "description": "读取外派职级"
+    },
+    {
+      "name": "读写外派职级高级corehr:employment.international_assignment.job_level:write",
+      "description": "读写外派职级"
+    },
+    {
+      "name": "读取外派岗位高级corehr:employment.international_assignment.position:read",
+      "description": "读取外派岗位"
+    },
+    {
+      "name": "读写外派岗位高级corehr:employment.international_assignment.position:write",
+      "description": "读写外派岗位"
+    },
+    {
+      "name": "读取外派公司高级corehr:employment.international_assignment.service_company:read",
+      "description": "读取外派公司"
+    },
+    {
+      "name": "读写外派公司高级corehr:employment.international_assignment.service_company:write",
+      "description": "读写外派公司"
+    },
+    {
+      "name": "读取外派周工作时长高级corehr:employment.international_assignment.weekly_working_hours:read",
+      "description": "读取外派周工作时长"
+    },
+    {
+      "name": "读写外派周工作时长高级corehr:employment.international_assignment.weekly_working_hours:write",
+      "description": "读写外派周工作时长"
+    },
+    {
+      "name": "读取外派工作日历高级corehr:employment.international_assignment.work_calendar:read",
+      "description": "读取外派工作日历"
+    },
+    {
+      "name": "读写外派工作日历高级corehr:employment.international_assignment.work_calendar:write",
+      "description": "读写外派工作日历"
+    },
+    {
+      "name": "读取外派地点高级corehr:employment.international_assignment.work_location:read",
+      "description": "读取外派地点"
+    },
+    {
+      "name": "读写外派地点高级corehr:employment.international_assignment.work_location:write",
+      "description": "读写外派地点"
+    },
+    {
+      "name": "读取外派排班类型高级corehr:employment.international_assignment.work_shift:read",
+      "description": "读取外派排班类型"
+    },
+    {
+      "name": "读写外派排班类型高级corehr:employment.international_assignment.work_shift:write",
+      "description": "读写外派排班类型"
+    },
+    {
+      "name": "读取外派工时制度高级corehr:employment.international_assignment.working_hours_type:read",
+      "description": "读取外派工时制度"
+    },
+    {
+      "name": "读写外派工时制度高级corehr:employment.international_assignment.working_hours_type:write",
+      "description": "读写外派工时制度"
+    },
+    {
+      "name": "获取员工的职务信息高级corehr:employment.job:read",
+      "description": "开通权限后，应用可在调用获取员工信息、异动信息、待入职信息相关 API 时获取：\njob_id：职务 ID\noriginal_job：原职务\ntarget_job：新职务"
+    },
+    {
+      "name": "获取职等信息高级corehr:employment.job_grade:read",
+      "description": "开通权限后，应用可获取员工的职等信息。"
+    },
+    {
+      "name": "读写职等信息高级corehr:employment.job_grade:write",
+      "description": "开通权限后，应用可读写员工的职等信息。"
+    },
+    {
+      "name": "获取职务级别信息高级corehr:employment.job_level:read",
+      "description": "开通权限后，应用可在调用获取员工信息、异动信息、待入职信息相关 API 时获取：\njob_level_id：职级 ID\noriginal_job_level：原级别\ntarget_job_level：新级别"
+    },
+    {
+      "name": "读写员工的职务级别信息高级corehr:employment.job_level:write",
+      "description": "开通权限后，应用可读写员工的职务级别信息（包括 job_id、job_level_id 和 job_title 字段）。"
+    },
+    {
+      "name": "查看竞业状态高级corehr:employment.non_compete_covenant:read",
+      "description": "开通权限后，应用可获取员工的竞业状态（即 non_compete_covenant 字段）。"
+    },
+    {
+      "name": "读写竞业状态高级corehr:employment.non_compete_covenant:write",
+      "description": "开通权限后，应用可读写员工的竞业状态（即 non_compete_covenant 字段）。"
+    },
+    {
+      "name": "按照离职原因搜索高级corehr:employment.offboarding_reason.search:read",
+      "description": "开通权限后，应用可根据离职原因搜索员工。"
+    },
+    {
+      "name": "获取员工离职原因高级corehr:employment.offboarding_reason:read",
+      "description": "开通权限后，应用可在调用离职信息相关 API 时获取以下信息： \nemployee_reason：离职原因（员工）\nemployee_reason_explanation：离职原因说明（员工）\nreason：离职原因\nreason_explanation：离职原因说明"
+    },
+    {
+      "name": "获取员工通道信息高级corehr:employment.pathway:read",
+      "description": "获取员工通道信息"
+    },
+    {
+      "name": "读写员工通道高级corehr:employment.pathway:write",
+      "description": "读写员工通道"
+    },
+    {
+      "name": "获取薪资组信息高级corehr:employment.pay_group:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时，查看以下信息： \n- pay_group_id：薪资组 ID"
+    },
+    {
+      "name": "获取员工的岗位信息高级corehr:employment.position:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时，获取岗位信息。"
+    },
+    {
+      "name": "读写员工的岗位信息高级corehr:employment.position:write",
+      "description": "开通权限后，应用可读写员工的岗位信息。"
+    },
+    {
+      "name": "查看待入职的招聘项目高级corehr:employment.recruitment_project_id:read",
+      "description": "查看待入职的招聘项目"
+    },
+    {
+      "name": "获取雇佣信息高级corehr:employment:read",
+      "description": "开通权限后，应用可获得雇佣信息相关查询 API 和事件的权限，包括：查询单个雇佣信息、批量查询雇佣信息、雇佣信息创建（事件）、雇佣信息删除（事件）、雇佣信息更新（事件）、员工完成转正（事件）。\n\n注：部分敏感字段可能需要额外权限，具体以文档为准。"
+    },
+    {
+      "name": "读写雇佣信息高级corehr:employment:write",
+      "description": "开通权限后，应用可获得雇佣信息相关 API 和事件的权限，包括：创建雇佣信息、更新雇佣信息、删除雇佣信息、查询单个雇佣信息、批量查询雇佣信息、雇佣信息创建（事件）、雇佣信息删除（事件）、雇佣信息更新（事件）、员工完成转正（事件）。\n\n注：部分敏感字段可能需要额外权限，具体以文档为准。"
+    },
+    {
+      "name": "下载文件高级corehr:file:download",
+      "description": "下载文件"
+    },
+    {
+      "name": "读写飞书人事的附件信息高级corehr:file:write",
+      "description": "读写飞书人事的附件信息"
+    },
+    {
+      "name": "获取流程定义数据高级corehr:flow.definition:read",
+      "description": "开通权限后，应用可获取流程定义的相关信息。"
+    },
+    {
+      "name": "获取派驻信息高级corehr:international_assignment:read",
+      "description": "获取派驻信息"
+    },
+    {
+      "name": "读写派驻信息高级corehr:international_assignment:write",
+      "description": "读写派驻信息"
+    },
+    {
+      "name": "获取职务中的职级信息高级corehr:job.job_level:read",
+      "description": "开通权限后，应用可在调用查询职务 API 时获取：\njob_level_id_list：职务级别 ID 列表"
+    },
+    {
+      "name": "获取职务信息（仅职务）高级corehr:job.only:read",
+      "description": "开通权限后，应用可获得职务信息相关 API 的访问权限。可获取的数据仅含职务数据本身，关联数据参见字段权限。 \n\n注：部分敏感字段可能需要额外权限，具体以文档为准。"
+    },
+    {
+      "name": "获取职务信息高级corehr:job:read",
+      "description": "开通权限后，应用可获得职务信息相关 API 的访问权限，包括：查询职务信息。\n\n注：部分敏感字段可能需要额外权限，具体以文档为准"
+    },
+    {
+      "name": "读写职务信息高级corehr:job:write",
+      "description": "开通权限后，应用可获得职务信息相关 API 的访问权限，包括：创建职务信息、更新职务信息、删除职务信息、查询职务信息。\n\n注：部分敏感字段可能需要额外权限，具体以文档为准。"
+    },
+    {
+      "name": "获取员工异动的公司信息高级corehr:job_change.company:read",
+      "description": "获取员工异动的公司信息"
+    },
+    {
+      "name": "写入员工异动的公司信息高级corehr:job_change.company:write",
+      "description": "写入员工异动的公司信息"
+    },
+    {
+      "name": "获取员工异动的薪资类型信息高级corehr:job_change.compensation_type:read",
+      "description": "获取员工异动的薪资类型信息"
+    },
+    {
+      "name": "写入员工异动的薪资类型信息高级corehr:job_change.compensation_type:write",
+      "description": "写入员工异动的薪资类型信息"
+    },
+    {
+      "name": "获取员工异动的合同结束日期高级corehr:job_change.contract_end_date:read",
+      "description": "获取员工异动的合同结束日期"
+    },
+    {
+      "name": "写入员工异动的合同结束日期高级corehr:job_change.contract_end_date:write",
+      "description": "写入员工异动的合同结束日期"
+    },
+    {
+      "name": "获取员工异动的合同编号信息高级corehr:job_change.contract_number:read",
+      "description": "获取员工异动的合同编号信息"
+    },
+    {
+      "name": "写入员工异动的合同编号信息高级corehr:job_change.contract_number:write",
+      "description": "写入员工异动的合同编号信息"
+    },
+    {
+      "name": "获取员工异动的合同开始日期信息高级corehr:job_change.contract_start_date:read",
+      "description": "获取员工异动的合同开始日期信息"
+    },
+    {
+      "name": "写入员工异动的合同开始日期信息高级corehr:job_change.contract_start_date:write",
+      "description": "写入员工异动的合同开始日期信息"
+    },
+    {
+      "name": "获取员工异动的合同类型信息高级corehr:job_change.contract_type:read",
+      "description": "获取员工异动的合同类型信息"
+    },
+    {
+      "name": "写入员工异动的合同类型信息高级corehr:job_change.contract_type:write",
+      "description": "写入员工异动的合同类型信息"
+    },
+    {
+      "name": "获取异动成本中心信息高级corehr:job_change.cost_center:read",
+      "description": "获取异动成本中心信息"
+    },
+    {
+      "name": "写入员工异动的成本中心信息高级corehr:job_change.cost_center:write",
+      "description": "写入员工异动的成本中心信息"
+    },
+    {
+      "name": "获取员工异动的部门信息高级corehr:job_change.department:read",
+      "description": "获取员工异动的部门信息"
+    },
+    {
+      "name": "写入员工异动的部门信息高级corehr:job_change.department:write",
+      "description": "写入员工异动的部门信息"
+    },
+    {
+      "name": "写入员工异动的直属上级信息高级corehr:job_change.direct_manager:write",
+      "description": "写入员工异动的直属上级信息"
+    },
+    {
+      "name": "写入员工异动的虚线上级信息高级corehr:job_change.dotted_manager:write",
+      "description": "写入员工异动的虚线上级信息"
+    },
+    {
+      "name": "获取员工异动的合同期限类型信息高级corehr:job_change.duration_type:read",
+      "description": "获取员工异动的合同期限类型信息"
+    },
+    {
+      "name": "写入员工异动的合同期限类型信息高级corehr:job_change.duration_type:write",
+      "description": "写入员工异动的合同期限类型信息"
+    },
+    {
+      "name": "获取员工异动的人员子类型信息高级corehr:job_change.employee_subtype:read",
+      "description": "获取员工异动的人员子类型信息"
+    },
+    {
+      "name": "获取异动工作信息自定义字段高级corehr:job_change.employment_custom_field:read",
+      "description": "开通权限后，应用可查询异动记录中可见工作信息的自定义字段值。"
+    },
+    {
+      "name": "获取异动单据是否调薪字段高级corehr:job_change.is_adjust_salary:read",
+      "description": "获取异动单据是否调薪字段"
+    },
+    {
+      "name": "获取员工异动的职务信息高级corehr:job_change.job:read",
+      "description": "获取员工异动的职务信息"
+    },
+    {
+      "name": "写入员工异动的职务信息高级corehr:job_change.job:write",
+      "description": "写入员工异动的职务信息"
+    },
+    {
+      "name": "获取员工异动的序列信息高级corehr:job_change.job_family:read",
+      "description": "获取员工异动的序列信息"
+    },
+    {
+      "name": "写入员工异动的序列信息高级corehr:job_change.job_family:write",
+      "description": "写入员工异动的序列信息"
+    },
+    {
+      "name": "获取员工异动的职等信息高级corehr:job_change.job_grade:read",
+      "description": "获取员工异动的职等信息"
+    },
+    {
+      "name": "写入员工异动的职等信息高级corehr:job_change.job_grade:write",
+      "description": "写入员工异动的职等信息"
+    },
+    {
+      "name": "获取员工异动的职级信息高级corehr:job_change.job_level:read",
+      "description": "获取员工异动的职级信息"
+    },
+    {
+      "name": "写入员工异动的职级信息高级corehr:job_change.job_level:write",
+      "description": "写入员工异动的职级信息"
+    },
+    {
+      "name": "读取异动信息中的通道字段信息高级corehr:job_change.pathway:read",
+      "description": "读取异动信息中的通道字段信息"
+    },
+    {
+      "name": "读写异动信息中的通道字段信息高级corehr:job_change.pathway:write",
+      "description": "读写异动信息中的通道字段信息"
+    },
+    {
+      "name": "写入员工异动的试用期结束日期高级corehr:job_change.probation_end_date:write",
+      "description": "写入员工异动的试用期结束日期"
+    },
+    {
+      "name": "获取员工异动的是否有试用期信息高级corehr:job_change.probation_exist:read",
+      "description": "获取员工异动的是否有试用期信息"
+    },
+    {
+      "name": "写入员工异动的是否有试用期信息高级corehr:job_change.probation_exist:write",
+      "description": "写入员工异动的是否有试用期信息"
+    },
+    {
+      "name": "获取异动流程备注信息高级corehr:job_change.remark:read",
+      "description": "开通权限后，应用可在调用搜索异动信息 API 时获得以下信息： \nremark：备注"
+    },
+    {
+      "name": "写入员工异动的备注信息高级corehr:job_change.remark:write",
+      "description": "写入员工异动的备注信息"
+    },
+    {
+      "name": "获取员工异动的任职公司信息高级corehr:job_change.service_company:read",
+      "description": "获取员工异动的任职公司信息"
+    },
+    {
+      "name": "写入员工异动的任职公司信息高级corehr:job_change.service_company:write",
+      "description": "写入员工异动的任职公司信息"
+    },
+    {
+      "name": "写入员工异动的签订类型信息高级corehr:job_change.signing_type:write",
+      "description": "写入员工异动的签订类型信息"
+    },
+    {
+      "name": "获取异动单据社保字段高级corehr:job_change.social_security_city:read",
+      "description": "获取异动单据社保字段"
+    },
+    {
+      "name": "写入员工异动的社保城市信息高级corehr:job_change.social_security_city:write",
+      "description": "写入员工异动的社保城市信息"
+    },
+    {
+      "name": "获取员工异动状态变更信息高级corehr:job_change.status_update_event:read",
+      "description": "获取员工异动状态变更信息"
+    },
+    {
+      "name": "获取员工异动信息变更高级corehr:job_change.update_event_v2:read",
+      "description": "开通权限后，应用可获得异动信息变更相关查询 API 和事件的权限。 \n注：部分敏感字段可能需要额外权限，具体以文档为准。"
+    },
+    {
+      "name": "写入员工异动的周工作时长信息高级corehr:job_change.weekly_working_hours:write",
+      "description": "写入员工异动的周工作时长信息"
+    },
+    {
+      "name": "写入员工异动的工作地点信息高级corehr:job_change.work_location:write",
+      "description": "写入员工异动的工作地点信息"
+    },
+    {
+      "name": "获取员工异动的排班信息高级corehr:job_change.work_shift:read",
+      "description": "获取员工异动的排班信息"
+    },
+    {
+      "name": "写入员工异动的排班信息高级corehr:job_change.work_shift:write",
+      "description": "写入员工异动的排班信息"
+    },
+    {
+      "name": "获取员工异动的人员类型信息高级corehr:job_change.workforce_type:read",
+      "description": "获取员工异动的人员类型信息"
+    },
+    {
+      "name": "写入员工异动的人员类型信息高级corehr:job_change.workforce_type:write",
+      "description": "写入员工异动的人员类型信息"
+    },
+    {
+      "name": "获取员工异动的工作日历信息高级corehr:job_change.working_calendar:read",
+      "description": "获取员工异动的工作日历信息"
+    },
+    {
+      "name": "写入员工异动的工作日历信息高级corehr:job_change.working_calendar:write",
+      "description": "写入员工异动的工作日历信息"
+    },
+    {
+      "name": "写入员工异动的工时制度信息高级corehr:job_change.working_hours_type:write",
+      "description": "写入员工异动的工时制度信息"
+    },
+    {
+      "name": "写员工异动信息高级corehr:job_change:create",
+      "description": "写员工异动信息"
+    },
+    {
+      "name": "获取员工异动信息高级corehr:job_change:read",
+      "description": "开通权限后，应用可获得异动信息相关查询 API 和事件的权限。\n\n注：部分敏感字段可能需要额外权限，具体以文档为准。"
+    },
+    {
+      "name": "读写员工异动信息高级corehr:job_change:write",
+      "description": "开通权限后，应用可获得异动信息相关 API 和事件的权限。\n\n注：部分敏感字段可能需要额外权限，具体以文档为准。"
+    },
+    {
+      "name": "查看任职记录的原因字段高级corehr:job_data.assignment_start_reason:read",
+      "description": "开通权限后，应用可查看任职记录中的原因字段。"
+    },
+    {
+      "name": "获取薪资类型高级corehr:job_data.compensation_type:read",
+      "description": "开通权限后，应用可获取员工的薪资类型信息。"
+    },
+    {
+      "name": "读取任职原因普通corehr:job_data.job_data_reason:read",
+      "description": "读取任职原因"
+    },
+    {
+      "name": "获取任职公司高级corehr:job_data.service_company:read",
+      "description": "开通权限后，应用可获取员工的任职公司信息。"
+    },
+    {
+      "name": "获取排班信息高级corehr:job_data.work_shift:read",
+      "description": "开通权限后，应用可获取员工的排班信息。"
+    },
+    {
+      "name": "查看任职信息高级corehr:job_data:read",
+      "description": "开通权限后，应用可获得查询任职信息相关 API 和事件的权限，包括：查询单个任职信息、批量查询任职信息。\n\n注：部分敏感字段可能需要额外权限，具体以文档为准。"
+    },
+    {
+      "name": "获取任职信息高级corehr:job_data:readonly",
+      "description": "开通该权限后，应用可获取任职相关数据。"
+    },
+    {
+      "name": "读写任职信息高级corehr:job_data:write",
+      "description": "开通权限后，应用可调用读写任职信息相关 API。"
+    },
+    {
+      "name": "获取序列信息高级corehr:job_family:read",
+      "description": "开通权限后，应用可获得序列信息相关 API 的访问权限，包括：查询序列信息。"
+    },
+    {
+      "name": "读写序列信息高级corehr:job_family:write",
+      "description": "开通权限后，应用可获得序列信息相关 API 的访问权限，包括：创建序列信息、更新序列信息、删除序列信息、查询序列信息。"
+    },
+    {
+      "name": "查看职等信息高级corehr:job_grade:read",
+      "description": "开通权限后，应用可查看职等信息，包括名称、职等数值、编码、描述、是否启用等。"
+    },
+    {
+      "name": "查看、创建、更新、删除职等信息高级corehr:job_grade:write",
+      "description": "开通权限后，应用可查看、创建、更新、删除职等信息，包括名称、职等数值、编码、描述、是否启用等。"
+    },
+    {
+      "name": "更新职级信息高级corehr:job_level",
+      "description": "获取职级信息的更新权限，可创建职级、获取职级列表、更新职级、删除职级。"
+    },
+    {
+      "name": "获取职级信息高级corehr:job_level:read",
+      "description": "开通权限后，应用可获得职级信息相关查询 API 的权限。"
+    },
+    {
+      "name": "获取职级信息高级corehr:job_level:readonly",
+      "description": "获取职级信息的查询权限，可获取职级列表。"
+    },
+    {
+      "name": "读写职级信息高级corehr:job_level:write",
+      "description": "开通权限后，应用可获得职级信息相关全部 API 的权限。"
+    },
+    {
+      "name": "获取休假信息高级corehr:leave:read",
+      "description": "开通权限后，应用可获得休假信息相关查询 API 的权限。"
+    },
+    {
+      "name": "获取员工假期发放记录权限高级corehr:leave_grant:read",
+      "description": "获取员工假期发放记录权限"
+    },
+    {
+      "name": "获取创建、删除、修改员工假期发放记录权限高级corehr:leave_grant:write",
+      "description": "获取创建、删除、修改员工假期发放记录权限"
+    },
+    {
+      "name": "更新假期授予记录高级corehr:leave_granting_record:write",
+      "description": "开通权限后，应用可调用更新假期授予记录相关的全部 API。"
+    },
+    {
+      "name": "获取员工请假记录权限高级corehr:leave_record:read",
+      "description": "获取员工请假记录权限"
+    },
+    {
+      "name": "查询员工假期余额权限高级corehr:leaves:read",
+      "description": "查询员工假期余额权限"
+    },
+    {
+      "name": "获取地点信息高级corehr:locations:read",
+      "description": "开通该权限后，应用可获取地点信息，如查询单个地点或批量查询地点。"
+    },
+    {
+      "name": "更新地点信息高级corehr:locations:write",
+      "description": "开通该权限后，应用可进行以下操作：\n批量查询地点\n查询单个地点\n创建地点\n删除地点"
+    },
+    {
+      "name": "获取离职屏蔽名单高级corehr:offboarding.block_list:read",
+      "description": "开通权限后，应用可在查询离职信息时，获取以下字段：\nadd_block_list：是否加入离职屏蔽名单\nblock_reason：屏蔽原因\nblock_reason_explanation：屏蔽原因说明"
+    },
+    {
+      "name": "读写离职屏蔽名单高级corehr:offboarding.block_list:write",
+      "description": "开通权限后，应用可在操作员工离职、查询离职信息时，读写以下字段：\nadd_block_list：是否加入离职屏蔽名单\nblock_reason：屏蔽原因\nblock_reason_explanation：屏蔽原因说明"
+    },
+    {
+      "name": "订阅离职流转状态变更事件普通corehr:offboarding.checklist_status_message:read",
+      "description": "开通权限后，应用可订阅离职流转状态变更事件，获取飞书人事数据权限范围内的员工的离职流转状态变更情况和基本字段权限。"
+    },
+    {
+      "name": "获取离职信息自定义字段信息高级corehr:offboarding.custom_field:read",
+      "description": "开通权限后，应用可在调用获取离职信息 API 时获取以下信息：\ncustom_fields：自定义字段"
+    },
+    {
+      "name": "获取离职申请的最后出勤日高级corehr:offboarding.last_attendance_date:read",
+      "description": "开通权限后，应用可获取离职申请的最后出勤日字段。"
+    },
+    {
+      "name": "获取离职申请的竞业信息高级corehr:offboarding.noncompete_agreement:read",
+      "description": "开通权限后，应用可获取离职申请的竞业协议相关字段。"
+    },
+    {
+      "name": "获取离职后是否保留账号字段高级corehr:offboarding.retain_account:read",
+      "description": "开通权限后，应用可获取离职后是否保留账号字段（retain_account）。"
+    },
+    {
+      "name": "读写离职后是否保留账号字段高级corehr:offboarding.retain_account:write",
+      "description": "开通权限后，应用可在操作员工离职、查询离职信息时，读写是否保留账号字段（retain_account）。"
+    },
+    {
+      "name": "撤销离职申请高级corehr:offboarding.revoke:write",
+      "description": "开通权限后，应用可撤销飞书人事中的离职申请。"
+    },
+    {
+      "name": "获取离职申请的电子签相关字段高级corehr:offboarding.signature:read",
+      "description": "开通权限后，应用可获取离职申请的电子签相关字段。"
+    },
+    {
+      "name": "获取离职申请的社保信息高级corehr:offboarding.social_insurance:read",
+      "description": "开通权限后，应用可获取离职申请的社保相关字段。"
+    },
+    {
+      "name": "订阅新版离职状态变更事件高级corehr:offboarding.status_message_v2:read",
+      "description": "开通权限后，应用可订阅新版离职状态变更事件，获取飞书人事数据权限范围内的员工的离职状态变更情况。"
+    },
+    {
+      "name": "读写员工离职信息高级corehr:offboarding.submit:write",
+      "description": "开通权限后，应用可获得离职信息相关 API 和事件的权限。 \n\n注：部分敏感字段可能需要额外权限，具体以文档为准。"
+    },
+    {
+      "name": "编辑离职信息高级corehr:offboarding.update:write",
+      "description": "开通权限后，应用可调用编辑离职信息接口，支持员工鉴权。"
+    },
+    {
+      "name": "订阅离职字段变更事件高级corehr:offboarding.update_field_message:read",
+      "description": "开通权限后，应用可订阅离职字段变更事件，获取飞书人事数据权限范围内的员工的离职字段变更情况。"
+    },
+    {
+      "name": "获取员工离职信息高级corehr:offboarding:read",
+      "description": "开通权限后，应用可获得离职信息相关查询 API 和事件的权限。\n\n注：部分敏感字段可能需要额外权限，具体以文档为准。"
+    },
+    {
+      "name": "读写员工离职信息高级corehr:offboarding:write",
+      "description": "开通权限后，应用可获得离职信息相关 API 和事件的权限。\n\n注：部分敏感字段可能需要额外权限，具体以文档为准。"
+    },
+    {
+      "name": "获取组织角色普通corehr:orgrole_info:read",
+      "description": "获取组织角色"
+    },
+    {
+      "name": "写入假勤外出数据高级corehr:out:write",
+      "description": "写入假勤外出数据"
+    },
+    {
+      "name": "获取通道信息高级corehr:pathway:read",
+      "description": "开通权限后，应用可读取通道信息。"
+    },
+    {
+      "name": "读写通道信息高级corehr:pathway:write",
+      "description": "开通权限后，应用可以读写通道信息。"
+    },
+    {
+      "name": "读取其他国籍普通corehr:person.additional_nationalities:read",
+      "description": "读取其他国籍"
+    },
+    {
+      "name": "其他国籍写权限高级corehr:person.additional_nationalities:write",
+      "description": "其他国籍写权限"
+    },
+    {
+      "name": "读取个人地址信息高级corehr:person.address:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时获取以下信息： \naddress_list：地址列表"
+    },
+    {
+      "name": "读写个人地址信息高级corehr:person.address:write",
+      "description": "开通权限后，应用可在调用创建/更新员工信息 V2 版 API 时更新以下信息：\naddress_list：地址列表"
+    },
+    {
+      "name": "获取银行账号列表信息高级corehr:person.bank_account:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时获取以下信息： \nbank_account_list：银行账号"
+    },
+    {
+      "name": "读写银行账号信息高级corehr:person.bank_account:write",
+      "description": "开通权限后，应用可在调用创建/更新员工信息 V2 版 API 时更新以下信息：\nbank_account_list：银行账号列表"
+    },
+    {
+      "name": "获取出生国家/地区信息高级corehr:person.born_country_region:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时，查看以下信息： \n- born_country_region：出生国家/地区"
+    },
+    {
+      "name": "读写出生国家/地区信息高级corehr:person.born_country_region:write",
+      "description": "开通权限后，应用可读写员工的读写出生国家/地区信息。"
+    },
+    {
+      "name": "读取公民身份普通corehr:person.citizenship_status:read",
+      "description": "读取公民身份"
+    },
+    {
+      "name": "读写公民身份信息高级corehr:person.citizenship_status:write",
+      "description": "读写公民身份信息"
+    },
+    {
+      "name": "获取个人信息自定义字段信息高级corehr:person.custom_field:read",
+      "description": "开通权限后，应用可在调用获取员工信息 API 时获取以下信息：\ncustom_fields：自定义字段（个人信息下的自定义字段）"
+    },
+    {
+      "name": "读写个人信息中的自定义字段信息高级corehr:person.custom_field:write",
+      "description": "开通权限后，应用可读写员工个人信息中的自定义字段（即 custom_fields 字段）。"
+    },
+    {
+      "name": "获取参加工作日期高级corehr:person.date_entered_workforce:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时获取以下信息： \ndate_entered_workforce：参加工作日期"
+    },
+    {
+      "name": "读写参加工作日期高级corehr:person.date_entered_workforce:write",
+      "description": "开通权限后，应用可在调用创建/更新员工信息 V2 版 API 时更新以下信息：\ndate_entered_workforce：参加工作日期"
+    },
+    {
+      "name": "获取生日信息高级corehr:person.date_of_birth:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时获取以下信息： \ndate_of_birth：出生日期\nage ：年龄"
+    },
+    {
+      "name": "读写生日信息高级corehr:person.date_of_birth:write",
+      "description": "开通权限后，应用可在调用创建/更新员工信息 V2 版 API 时更新以下信息：\ndate_of_birth：生日\nage ： 年龄"
+    },
+    {
+      "name": "获取家庭成员信息高级corehr:person.dependent:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时获取以下信息： \ndependent_list：家庭成员列表"
+    },
+    {
+      "name": "读写家庭成员信息高级corehr:person.dependent:write",
+      "description": "开通权限后，应用可在调用创建/更新员工信息 V2 版 API 时更新以下信息：\ndependent_list：家庭成员列表"
+    },
+    {
+      "name": "获取教育经历信息高级corehr:person.education:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时获取以下信息：\neducation_list：教育经历列表\nhighest_level_of_education：最高学历教育经历\nhighest_degree_of_education：最高学位教育经历"
+    },
+    {
+      "name": "读写教育经历信息高级corehr:person.education:write",
+      "description": "开通权限后，应用可在调用创建/更新员工信息 V2 版 API 时更新以下信息：\neducation_list：教育经历列表"
+    },
+    {
+      "name": "获取个人邮箱信息高级corehr:person.email:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时获取以下信息： \nemail_list：邮箱列表\nemail_address：邮箱"
+    },
+    {
+      "name": "读写个人邮箱信息高级corehr:person.email:write",
+      "description": "开通权限后，应用可在调用创建/更新员工信息 V2 版 API 时更新以下信息：\nemail_list：邮箱列表"
+    },
+    {
+      "name": "获取紧急联系人信息高级corehr:person.emergency_contact:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时获取以下信息： \nemergency_contact_list：紧急联系人列表"
+    },
+    {
+      "name": "读写紧急联系人信息高级corehr:person.emergency_contact:write",
+      "description": "开通权限后，应用可在调用创建/更新员工信息 V2 版 API 时更新以下信息：\nemergency_contact_list：紧急联系人列表"
+    },
+    {
+      "name": "获取出入境日期信息高级corehr:person.entry_leave_time:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时，查看以下信息： \n- first_entry_time：首次入境日期 \n- leave_time：预计离境日期"
+    },
+    {
+      "name": "获取性别信息高级corehr:person.gender:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时获取以下信息：\ngender：性别"
+    },
+    {
+      "name": "读写性别信息高级corehr:person.gender:write",
+      "description": "开通权限后，应用可在调用创建/更新员工信息 V2 版 API 时更新以下信息：\ngender：性别"
+    },
+    {
+      "name": "获取户口信息高级corehr:person.hukou:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时获取以下信息： \nhukou_location：户口所在地\nhukou_type：户口类型"
+    },
+    {
+      "name": "读写户口信息高级corehr:person.hukou:write",
+      "description": "开通权限后，应用可在调用创建/更新员工信息 V2 版 API 时更新以下信息：\nhukou_location：户口所在地\nhukou_type：户口类型"
+    },
+    {
+      "name": "获取残疾信息高级corehr:person.is_disabled:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时，查看以下信息： \n- is_disabled：是否残疾"
+    },
+    {
+      "name": "读写残疾信息高级corehr:person.is_disabled:write",
+      "description": "开通权限后，应用可在调用创建/更新员工信息相关 V2 版 API 时，更新以下信息：\n- is_disabled：是否残疾 \n- disable_card_number ：残疾证号"
+    },
+    {
+      "name": "获取孤老信息高级corehr:person.is_old_alone:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时，查看以下信息：\n- is_old_alone：是否孤老"
+    },
+    {
+      "name": "读写孤老信息高级corehr:person.is_old_alone:write",
+      "description": "开通权限后，应用可在调用创建/更新员工信息相关 V2 版 API 时，更新以下信息：\n- is_old_alone：是否孤老"
+    },
+    {
+      "name": "获取法定姓名信息高级corehr:person.legal_name:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时获取以下信息：\nlegal_name：法定姓名"
+    },
+    {
+      "name": "读写法定姓名信息高级corehr:person.legal_name:write",
+      "description": "开通权限后，应用可在调用创建/更新员工信息 V2 版 API 时更新以下信息：\nname_list：姓名列表"
+    },
+    {
+      "name": "获取婚姻状况信息高级corehr:person.marital_status:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时获取以下信息： \nmarital_status：婚姻状态"
+    },
+    {
+      "name": "读写婚姻状况信息高级corehr:person.marital_status:write",
+      "description": "开通权限后，应用可在调用创建/更新员工信息 V2 版 API 时更新以下信息：\nmarital_status：婚姻状态"
+    },
+    {
+      "name": "获取烈属信息高级corehr:person.martyr_family:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时，查看以下信息：\n- is_martyr_family：是否烈属"
+    },
+    {
+      "name": "读写烈属信息高级corehr:person.martyr_family:write",
+      "description": "开通权限后，应用可在调用创建/更新员工信息相关 V2 版 API 时，更新以下信息：\n- is_martyr_family：是否烈属 \n- martyr_card_number：烈属证号"
+    },
+    {
+      "name": "按照身份证号码精确搜索高级corehr:person.national_id.search:read",
+      "description": "按照身份证号码精确搜索"
+    },
+    {
+      "name": "获取证件信息高级corehr:person.national_id:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时获取以下信息：\nnational_id_list：证件"
+    },
+    {
+      "name": "读写证件信息高级corehr:person.national_id:write",
+      "description": "开通权限后，应用可在调用创建/更新员工信息 V2 版 API 时更新以下信息：\nnational_id_list：证件列表"
+    },
+    {
+      "name": "获取国籍信息高级corehr:person.nationality:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时获取以下信息： \nnationality_id：国籍 ID"
+    },
+    {
+      "name": "读写国籍信息高级corehr:person.nationality:write",
+      "description": "开通权限后，应用可在调用创建/更新员工信息 V2 版 API 时更新以下信息：\nnationality_id：国籍信息"
+    },
+    {
+      "name": "获取籍贯信息高级corehr:person.native_region:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时获取以下信息： \nnative_region：籍贯 ID"
+    },
+    {
+      "name": "读写籍贯信息高级corehr:person.native_region:write",
+      "description": "开通权限后，应用可在调用创建/更新员工信息 V2 版 API 时更新以下信息：\nnative_region：籍贯信息"
+    },
+    {
+      "name": "获取护照号码高级corehr:person.passport_number:read",
+      "description": "获取护照号码"
+    },
+    {
+      "name": "获取个人资料信息高级corehr:person.personal_profile:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时获取以下信息： \npersonal_profile：个人资料附件"
+    },
+    {
+      "name": "读写个人资料信息高级corehr:person.personal_profile:write",
+      "description": "开通权限后，应用可在调用创建/更新员工信息 V2 版 API 时更新以下信息：\npersonal_profile：个人资料信息"
+    },
+    {
+      "name": "按照手机号搜索高级corehr:person.phone.search:read",
+      "description": "开通权限后，应用可根据个人电话搜索员工。"
+    },
+    {
+      "name": "获取个人手机号信息高级corehr:person.phone:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时获取以下信息： \nphone_number：个人电话\nphone_list：电话列表"
+    },
+    {
+      "name": "读写个人手机号信息高级corehr:person.phone:write",
+      "description": "开通权限后，应用可在调用创建/更新员工信息 V2 版 API 时更新以下信息：\nphone_list：电话列表"
+    },
+    {
+      "name": "获取政治面貌信息高级corehr:person.political_affiliation:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时获取以下信息： \npolitical_affiliation_list：政治面貌"
+    },
+    {
+      "name": "读写个人政治面貌信息高级corehr:person.political_affiliation:write",
+      "description": "开通权限后，应用可读写员工的个人信息下的政治面貌信息。"
+    },
+    {
+      "name": "读写常用名信息高级corehr:person.preferred_name:write",
+      "description": "读写常用名信息"
+    },
+    {
+      "name": "获取民族/种族信息高级corehr:person.race:read",
+      "description": "开通权限后，应用可在调用搜索员工信息相关 API 时获取以下信息：\nrace：民族/种族"
+    },
+    {
+      "name": "读写民族/种族信息高级corehr:person.race:write",
+      "description": "读写民族/种族信息"
+    },
+    {
+      "name": "查看宗教信仰信息高级corehr:person.religion:read",
+      "description": "开通权限后，应用可获取员工个人信息中的宗教信仰信息（即 religion 字段）。"
+    },
+    {
+      "name": "读写宗教信仰信息高级corehr:person.religion:write",
+      "description": "开通权限后，应用可读写员工个人信息中的宗教信仰信息（即 religion 字段）。"
+    },
+    {
+      "name": "获取居民身份信息高级corehr:person.resident_tax:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时，查看以下信息：\n- resident_tax_list：居民身份信息"
+    },
+    {
+      "name": "读写居民身份信息高级corehr:person.resident_tax:write",
+      "description": "开通权限后，应用可在调用创建/更新员工信息相关 V2 版 API 时，更新以下信息：\n- resident_taxes：居民身份信息"
+    },
+    {
+      "name": "获取居民身份自定义字段信息高级corehr:person.resident_tax_custom_field:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时，查看以下信息：\n- resident_taxes.custom_field：自定义字段"
+    },
+    {
+      "name": "读写居民身份自定义字段信息高级corehr:person.resident_tax_custom_field:write",
+      "description": "开通权限后，应用可在调用创建/更新员工信息相关 API 时，更新以下信息：\n- resident_taxes.custom_field：自定义字段"
+    },
+    {
+      "name": "获取工作履历信息高级corehr:person.work_experience:read",
+      "description": "开通权限后，应用可在调用获取员工信息相关 API 时获取以下信息：\nwork_experience_list：工作经历列表"
+    },
+    {
+      "name": "读写工作履历信息高级corehr:person.work_experience:write",
+      "description": "开通权限后，应用可在调用创建/更新员工信息 V2 版 API 时更新以下信息：\nwork_experience_list：工作经历列表"
+    },
+    {
+      "name": "读写员工的个人信息高级corehr:person:write",
+      "description": "开通权限后，应用可进行以下操作：\n创建个人信息\n更新个人信息\n查询单个个人信息"
+    },
+    {
+      "name": "获取岗位的直线上级字段信息高级corehr:position.direct_leader:read",
+      "description": "开通权限后，应用可获取岗位直线上级字段信息。"
+    },
+    {
+      "name": "获取岗位的人员类型字段信息高级corehr:position.employee_type:read",
+      "description": "开通权限后，应用可获取岗位人员类型字段信息。"
+    },
+    {
+      "name": "获取岗位的职务字段信息高级corehr:position.job:read",
+      "description": "开通权限后，应用可获取岗位职务字段信息。"
+    },
+    {
+      "name": "获取岗位的序列字段信息高级corehr:position.job_family:read",
+      "description": "开通权限后，应用可获取岗位序列字段信息。"
+    },
+    {
+      "name": "获取岗位的职等字段信息高级corehr:position.job_grade:read",
+      "description": "开通权限后，应用可获取岗位职等字段信息。"
+    },
+    {
+      "name": "获取岗位的职级字段信息高级corehr:position.job_level:read",
+      "description": "开通权限后，应用可获取岗位职级字段信息。"
+    },
+    {
+      "name": "获取岗位的工时制度字段信息高级corehr:position.working_hours_type:read",
+      "description": "开通权限后，应用可获取岗位工时制度字段信息。"
+    },
+    {
+      "name": "获取岗位信息高级corehr:position:read",
+      "description": "获取岗位信息"
+    },
+    {
+      "name": "读写岗位信息高级corehr:position:write",
+      "description": "读写岗位信息"
+    },
+    {
+      "name": "获取待入职的异常信息高级corehr:pre_hire.abnormal_reason_field:read",
+      "description": "获取待入职的异常信息"
+    },
+    {
+      "name": "获取待入职人员的签到数据高级corehr:pre_hire.check_in_data:read",
+      "description": "获取待入职人员的签到数据"
+    },
+    {
+      "name": "查看待入职是否被更新过公司主体高级corehr:pre_hire.company_manual_updated:read",
+      "description": "查看待入职是否被更新过公司主体"
+    },
+    {
+      "name": "查看签证要求高级corehr:pre_hire.company_sponsored_visa:read",
+      "description": "开通权限后，应用可获取签证要求（即 company_sponsored_visa 字段）。"
+    },
+    {
+      "name": "查看待入职人员的成本中心信息高级corehr:pre_hire.cost_center:read",
+      "description": "开通权限后，应用可在调用搜索待入职人员信息 API 时，查看以下信息：\ncost_center_rates：成本中心分摊信息"
+    },
+    {
+      "name": "读写待入职人员的成本中心信息高级corehr:pre_hire.cost_center:write",
+      "description": "开通权限后，应用可在调用搜索待入职人员信息 API 时，读写以下信息：\ncost_center_rates：成本中心分摊信息"
+    },
+    {
+      "name": "获取入职流程高级corehr:pre_hire.flow_id:read",
+      "description": "获取入职流程"
+    },
+    {
+      "name": "获取办公地址高级corehr:pre_hire.office_address:read",
+      "description": "获取办公地址"
+    },
+    {
+      "name": "获取入职地址高级corehr:pre_hire.onboarding_address:read",
+      "description": "获取入职地址"
+    },
+    {
+      "name": "搜索待入职人员信息高级corehr:pre_hire.search:read",
+      "description": "开通权限后，应用可调用搜索待入职人员信息 API。"
+    },
+    {
+      "name": "待入职撤销原因高级corehr:pre_hire.withdrawn_reason:read",
+      "description": "待入职撤销原因"
+    },
+    {
+      "name": "工作邮箱校验权限普通corehr:pre_hire:check_work_email",
+      "description": "工作邮箱校验权限"
+    },
+    {
+      "name": "完成入职普通corehr:pre_hire:complete",
+      "description": "完成入职"
+    },
+    {
+      "name": "删除待入职高级corehr:pre_hire:delete",
+      "description": "删除待入职"
+    },
+    {
+      "name": "查看待入职人员信息高级corehr:pre_hire:read",
+      "description": "开通权限后，应用可查看待入职人员信息，及订阅待入职事件。"
+    },
+    {
+      "name": "查询待入职信息高级corehr:pre_hire:read_only",
+      "description": "查询待入职信息"
+    },
+    {
+      "name": "恢复入职普通corehr:pre_hire:restore_flow_instance",
+      "description": "开通权限后，应用可恢复入职。"
+    },
+    {
+      "name": "入职常规任务的通用流转普通corehr:pre_hire:transform_onboarding_task",
+      "description": "入职常规任务的通用流转"
+    },
+    {
+      "name": "入职任务流转普通corehr:pre_hire:transit_tasks",
+      "description": "入职任务流转"
+    },
+    {
+      "name": "更新待入职人员信息高级corehr:pre_hire:update",
+      "description": "开通权限后，应用可更新待入职人员的信息。"
+    },
+    {
+      "name": "撤销入职普通corehr:pre_hire:withdraw_onboarding",
+      "description": "开通权限后，应用可撤销入职。"
+    },
+    {
+      "name": "读写待入职人员信息高级corehr:pre_hire:write",
+      "description": "开通权限后，应用可查看、创建、更新、删除待入职人员信息，及订阅待入职事件。"
+    },
+    {
+      "name": "读写试用期考核信息高级corehr:probation.assessment.submit2:write",
+      "description": "读写试用期考核信息"
+    },
+    {
+      "name": "读写试用期考核信息高级corehr:probation.assessment:write",
+      "description": "读写试用期考核信息"
+    },
+    {
+      "name": "读取试用期备注信息高级corehr:probation.notes:read",
+      "description": "读取试用期备注信息"
+    },
+    {
+      "name": "获取试用期结果字段高级corehr:probation.probation_outcome:read",
+      "description": "获取试用期结果字段"
+    },
+    {
+      "name": "写试用期结果字段高级corehr:probation.probation_outcome:write",
+      "description": "写试用期结果字段"
+    },
+    {
+      "name": "获取试用期考核得分信息高级corehr:probation.score:read",
+      "description": "获取试用期考核得分信息"
+    },
+    {
+      "name": "读取员工自评信息高级corehr:probation.self_review:read",
+      "description": "读取员工自评信息"
+    },
+    {
+      "name": "读写试用期信息高级corehr:probation.submit:write",
+      "description": "读写试用期信息"
+    },
+    {
+      "name": "获取试用期信息高级corehr:probation:read",
+      "description": "获取试用期信息"
+    },
+    {
+      "name": "读写试用期信息高级corehr:probation:write",
+      "description": "读写试用期信息"
+    },
+    {
+      "name": "查询流程实例高级corehr:process.detail:read",
+      "description": "查询流程实例"
+    },
+    {
+      "name": "获取流程实例详情高级corehr:process.instance:read",
+      "description": "获取流程实例详情"
+    },
+    {
+      "name": "通过或拒绝审批任务普通corehr:process.instance:write",
+      "description": "开通权限后，应用可通过或拒绝审批任务，并支持写入审批表单字段。"
+    },
+    {
+      "name": "获取流程数据高级corehr:process:read",
+      "description": "开通权限后，应用可调用查询流程信息相关的 API。"
+    },
+    {
+      "name": "获取角色信息高级corehr:security_group:read",
+      "description": "获取角色信息"
+    },
+    {
+      "name": "查看电子签文件高级corehr:signature.file:read",
+      "description": "开通权限后，应用可查看电子签文件。数据权限范围可根据“电子签文件”进行配置。"
+    },
+    {
+      "name": "入职员工电子签文件读权限高级corehr:signature_file.pre_hire:read",
+      "description": "入职员工电子签文件读权限"
+    },
+    {
+      "name": "对待入职员工发起电子签签署权限高级corehr:signature_file.pre_hire:write",
+      "description": "对待入职员工发起电子签签署权限"
+    },
+    {
+      "name": "查看电子签文件高级corehr:signature_file:read",
+      "description": "开通权限后，应用可调用查看和下载电子签文件的相关 API。"
+    },
+    {
+      "name": "终止电子签文件高级corehr:signature_file:terminate",
+      "description": "终止电子签文件"
+    },
+    {
+      "name": "获取电子签模板信息高级corehr:signature_template:read",
+      "description": "获取电子签模板信息"
+    },
+    {
+      "name": "查询工作日历高级corehr:work_calendar:read",
+      "description": "查询工作日历"
+    },
+    {
+      "name": "查看编制规划明细信息高级corehr:workforce_detail:read",
+      "description": "开通权限后，应用可查看编制规划明细信息。"
+    },
+    {
+      "name": "写入编制规划明细信息高级corehr:workforce_detail:write",
+      "description": "写入编制规划明细信息"
+    },
+    {
+      "name": "查看编制规划方案信息高级corehr:workforce_plan:read",
+      "description": "开通权限后，应用可查看编制规划方案信息。"
+    },
+    {
+      "name": "写入编制规划集中填报明细信息高级corehr:workforce_plan_centralized_reporting_project_detail:write",
+      "description": "写入编制规划集中填报明细信息"
+    },
+    {
+      "name": "登出指定用户高级passport:session:logout",
+      "description": "可强制踢出租户内某个或某些员工的登录态。"
+    },
+    {
+      "name": "获取用户登录信息（mask）高级passport:session_mask:readonly",
+      "description": "获取用户登录信息，包括会话创建时间与设备类型。关键字段将进行脱敏处理。"
+    },
+    {
+      "name": "查询公司圈内容、板块高级moments:moments:readonly",
+      "description": "当应用拥有此权限时，可以以用户身份查询公司圈内容，包括帖子、评论、表情回复、版块列表等。\n\n注：不涉及到写操作的应用应申请此权限，而非“moments:moments”（查询、创建、修改和删除公司圈内容、板块）权限。"
+    },
+    {
+      "name": "搜索飞书内的数据高级component:selector",
+      "description": "开通此权限后，应用可通过 Selector 组件，以关联的飞书账号身份，搜索飞书内对该账号身份可见的人、群、云文档、知识库等数据。"
+    },
+    {
+      "name": "获取成员名片信息高级component:user_profile",
+      "description": "在网页中展示成员名片页，名片中可能包含部门、邮箱等信息。不同企业下的成员名片字段由企业管理员设置。"
+    },
+    {
+      "name": "创建、更新 BlockEntity普通block:entity",
+      "description": "开通此权限后，应用可创建、更新 BlockEntity。\nBlockEntity 是一串标准的数据结构，包括 BlockID、SourceMeta、SourceData 等信息，存储在开放平台服务端上。小组件需要使用 BlockEntity 数据实现渲染。通过创建、更新 BlockEntity，可使 blockID 相同的小组件收到内容相同的数据推送。"
+    },
+    {
+      "name": "推送小组件的协同数据普通block:message",
+      "description": "开通此权限后，应用可推送小组件的协同数据。\n小组件的协同数据指以用户维度隔离的、应用自定义的需要在小组件中展示的数据。通过推送小组件的协同数据，可实现用户维度的差异化数据推送。"
+    },
+    {
+      "name": "查看 OpenAPI 审计日志高级security_and_compliance:audit_log.openapi_log:readonly",
+      "description": "开通权限后，应用可查看 OpenAPI 审计日志。"
+    },
+    {
+      "name": "查询自主申报申请高级security_and_compliance:device_apply_record:read",
+      "description": "开通权限后，应用可查询成员提交的设备自主申报申请，包括设备信息、设备归属、申请人、申请时间等信息。"
+    },
+    {
+      "name": "审核自主申报申请高级security_and_compliance:device_apply_record:write",
+      "description": "开通权限后，应用可通过或驳回成员提交的设备自主申报申请。"
+    },
+    {
+      "name": "获取设备信息高级security_and_compliance:device_record:read",
+      "description": "开通权限后，应用可获取设备信息，包括设备参数、设备归属、设备状态等。"
+    },
+    {
+      "name": "新增、更新、删除设备高级security_and_compliance:device_record:write",
+      "description": "开通权限后，应用可新增设备、更新设备信息、删除设备。其中，可更新的设备信息包括设备参数、设备归属、设备状态等。"
+    },
+    {
+      "name": "以应用身份读取关联组织高级trust_party:collaboration.tenant:readonly",
+      "description": "开通此权限后，应用可以获取关联组织的相关组织架构信息。"
+    },
+    {
+      "name": "获取关联组织协作规则高级trust_party:collaboration_rule:read",
+      "description": "开通权限后，应用可获取关联组织对方共享范围以及本方设置的协作规则。"
+    },
+    {
+      "name": "变更关联组织协作规则高级trust_party:collaboration_rule:write",
+      "description": "开通权限后，应用可创建、更新、删除关联组织协作规则。"
+    },
+    {
+      "name": "查看租户认证信息普通verification:verification_information:readonly",
+      "description": "开通此权限后，应用可查看租户认证信息。"
+    },
+    {
+      "name": "开启或关闭用户系统状态高级personal_settings:status:system_status_operate",
+      "description": "系统状态是租户赋予用户、用于展示用户状态的一种状态标签，如\"请假\"。开通此权限后，应用可以开启或关闭租户内用户对系统状态的使用权。"
+    },
+    {
+      "name": "获取与更新系统状态高级personal_settings:status:system_status_update",
+      "description": "系统状态是租户赋予用户、用于展示用户状态的一种状态标签，如\"请假\"。开通此权限后，应用可以对租户内所有系统状态进行添加、删除、修改、查询等操作。"
+    },
+    {
+      "name": "查看、创建、编辑及管理妙记文件高级minutes:minutes",
+      "description": "开通此权限后，应用可查看、创建、编辑及管理妙记文件。"
+    },
+    {
+      "name": "获取妙记的基本信息高级minutes:minutes.basic:read",
+      "description": "开通权限后，应用可读取妙记文件的基本信息。"
+    },
+    {
+      "name": "下载妙记的音视频文件高级minutes:minutes.media:export",
+      "description": "接入了 Privilege 数据权限管控能力。开通权限后，应用可下载指定范围内用户公开妙记的音视频文件。"
+    },
+    {
+      "name": "获取妙记的统计信息高级minutes:minutes.statistics:read",
+      "description": "开通权限后，应用可获取妙记的用户浏览数、页面浏览数等统计信息。"
+    },
+    {
+      "name": "导出妙记转写的文字内容高级minutes:minutes.transcript:export",
+      "description": "接入了 Privilege 数据权限管控能力。开通权限后，应用可导出指定范围内用户公开妙记的文字记录。"
+    },
+    {
+      "name": "查看妙记文件高级minutes:minutes:readonly",
+      "description": "开通此权限后，应用可查看妙记文件。"
+    },
+    {
+      "name": "查询环境变量高级app_engine:application.environment_variable:read",
+      "description": "开通权限后，应用可查看企业内基于飞书 aPaaS 开发的应用的环境变量详情，包括名称、描述、变量值等。"
+    },
+    {
+      "name": "获取飞书 aPaaS 应用观测事件普通app_engine:application.event:read",
+      "description": "开通权限后，应用可获取飞书 aPaaS 应用观测事件。"
+    },
+    {
+      "name": "获取事件订阅器高级app_engine:application.event_subscriber:read",
+      "description": "获取事件订阅器"
+    },
+    {
+      "name": "执行函数高级app_engine:application.function:write",
+      "description": "开通权限后，应用可执行企业内基于飞书 aPaaS 开发的应用的自定义函数。"
+    },
+    {
+      "name": "获取飞书 aPaaS 应用观测日志普通app_engine:application.log:read",
+      "description": "开通权限后，应用可获取飞书 aPaaS 应用观测日志。"
+    },
+    {
+      "name": "获取飞书 aPaaS 应用监控指标普通app_engine:application.metric:read",
+      "description": "开通权限后，应用可获取飞书 aPaaS 应用的监控指标。"
+    },
+    {
+      "name": "获取飞书 aPaaS 审批信息高级app_engine:approval:read",
+      "description": "开通权限后，应用可获取飞书 aPaaS 审批信息，如审批人、发起人、审批详情、评论等。"
+    },
+    {
+      "name": "修改飞书 aPaaS 审批信息高级app_engine:approval:write",
+      "description": "开通权限后，应用可修改飞书 aPaaS 审批信息，如同意、拒绝、转交、加签审批任务等。"
+    },
+    {
+      "name": "查询应用基本信息高级app_engine:apps:read",
+      "description": "开通权限后，应用可获取企业下的应用基本信息，如应用命名空间、应用名称等。"
+    },
+    {
+      "name": "下载飞书 aPaaS 附件高级app_engine:attachment:read",
+      "description": "开通权限后，应用可下载上传到飞书 aPaaS 的文件。"
+    },
+    {
+      "name": "上传、删除飞书 aPaaS 附件高级app_engine:attachment:write",
+      "description": "开通权限后，应用可上传文件到飞书 aPaaS，以及删除已上传的文件。"
+    },
+    {
+      "name": "读取数据表变更记录高级app_engine:data.record.change:read",
+      "description": "读取数据表变更记录"
+    },
+    {
+      "name": "查询数据集及其字段高级app_engine:dataset.meta:read",
+      "description": "开通权限后，应用可查询数据集基本信息及其字段信息。"
+    },
+    {
+      "name": "查询数据集记录高级app_engine:dataset.record:read",
+      "description": "开通权限后，应用可查询数据集中的记录数据。"
+    },
+    {
+      "name": "执行流程高级app_engine:flow:write",
+      "description": "执行流程"
+    },
+    {
+      "name": "查询全局选项高级app_engine:global_option:read",
+      "description": "开通权限后，应用可查询飞书 aPaaS 中配置的全局选项信息。"
+    },
+    {
+      "name": "查询对象及其字段高级app_engine:object.meta:read",
+      "description": "开通权限后，应用可查询对象基本信息及其字段信息。"
+    },
+    {
+      "name": "查看对象记录数据高级app_engine:object.record:read",
+      "description": "开通权限后，应用可调用相关 API，查询自定义对象记录。"
+    },
+    {
+      "name": "创建、更新、删除对象记录数据高级app_engine:object.record:write",
+      "description": "开通权限后，应用可调用相关 API，创建、更新、删除自定义对象记录。"
+    },
+    {
+      "name": "编辑记录权限授权用户高级app_engine:record_permission.member:write",
+      "description": "开通权限后，应用可编辑记录权限授权的用户范围。"
+    },
+    {
+      "name": "编辑角色授权用户高级app_engine:role.member:write",
+      "description": "开通权限后，应用可编辑角色授权的用户范围。"
+    },
+    {
+      "name": "查询角色配置信息高级app_engine:role:read",
+      "description": "开通权限后，应用可查询角色权限配置、授权用户范围等详细信息。"
+    },
+    {
+      "name": "查询席位活跃详情普通app_engine:seat_activities:read",
+      "description": "开通权限后，应用可获取企业下的席位活跃详情信息，如席位活跃时间、用户 ID 等。"
+    },
+    {
+      "name": "查询席位分配详情高级app_engine:seat_assignments:read",
+      "description": "开通权限后，应用可获取企业下的席位分配详情信息，如用户 ID、应用命名空间等。"
+    },
+    {
+      "name": "获取飞书 aPaaS 审计日志信息高级app_engine:security.audit_log:read",
+      "description": "开通权限后，应用可获取飞书 aPaaS 上的审计日志信息，如登录日志、企业管理日志。"
+    },
+    {
+      "name": "在工作空间下执行 SQL 语句高级app_engine:workspace.sql_commands:write",
+      "description": "在工作空间下执行 SQL 语句"
+    },
+    {
+      "name": "读取数据表数据记录高级app_engine:workspace.table.record:read",
+      "description": "读取数据表数据记录"
+    },
+    {
+      "name": "修改或删除数据表数据记录高级app_engine:workspace.table.record:write",
+      "description": "修改或删除数据表数据记录"
+    },
+    {
+      "name": "读取工作空间及数据表相关信息高级app_engine:workspace.table:read",
+      "description": "读取工作空间及数据表相关信息"
+    },
+    {
+      "name": "修改工作空间及数据表相关信息高级app_engine:workspace.table:write",
+      "description": "修改工作空间及数据表相关信息"
+    },
+    {
+      "name": "创建、更新、删除自定义字段高级directory:custom_field:write",
+      "description": "开通权限后，应用可：\n创建自定义字段\n更新自定义字段\n删除自定义字段"
+    },
+    {
+      "name": "查看部门基础信息高级directory:department.base:read",
+      "description": "开通权限后，应用可获取部门的以下信息：\n部门 ID\n部门名称"
+    },
+    {
+      "name": "查看部门成员与子部门计数高级directory:department.count:read",
+      "description": "开通权限后，应用可获取部门下的成员数量，以及子部门的数量。"
+    },
+    {
+      "name": "创建部门高级directory:department.create:write",
+      "description": "开通权限后，应用可创建部门。"
+    },
+    {
+      "name": "查看部门自定义字段信息高级directory:department.custom_field:read",
+      "description": "开通权限后，应用可获取部门的自定义字段值。"
+    },
+    {
+      "name": "查看部门数据来源高级directory:department.data_source:read",
+      "description": "开通权限后，应用可获取部门的数据来源，如管理后台、人事企业版等。"
+    },
+    {
+      "name": "删除部门高级directory:department.delete:write",
+      "description": "开通权限后，应用可删除部门。"
+    },
+    {
+      "name": "查看部门路径信息高级directory:department.department_path:read",
+      "description": "开通权限后，应用可获取部门的部门路径信息。"
+    },
+    {
+      "name": "查看部门自定义 ID高级directory:department.external_id:read",
+      "description": "开通权限后，应用可获取部门的自定义 ID。"
+    },
+    {
+      "name": "查看部门是否有子部门高级directory:department.has_child:read",
+      "description": "开通权限后，应用可获取部门是否有子部门。"
+    },
+    {
+      "name": "获取部门 ID 转换信息普通directory:department.idconvert:read",
+      "description": "开通权限后，应用可调用 idconvert 接口，获取部门其他类型的 ID 信息。"
+    },
+    {
+      "name": "查看部门负责人信息高级directory:department.leader:read",
+      "description": "开通权限后，应用可获取部门的负责人信息。"
+    },
+    {
+      "name": "查看部门的名称高级directory:department.name:read",
+      "description": "开通权限后，应用可获取部门的名称。"
+    },
+    {
+      "name": "查看部门排序权重高级directory:department.order_weight:read",
+      "description": "开通权限后，应用可获取部门在上级部门下的排序权重。"
+    },
+    {
+      "name": "查看部门组织架构信息高级directory:department.organization:read",
+      "description": "开通权限后，应用可获取部门的以下信息：\n父部门 ID\n是否有子部门\n部门成员计数与子部门计数\n在上级部门下的排序权重"
+    },
+    {
+      "name": "查看部门的父部门 ID高级directory:department.parent_id:read",
+      "description": "开通权限后，应用可获取部门的父部门 ID。"
+    },
+    {
+      "name": "查看部门的停启用状态高级directory:department.status:read",
+      "description": "开通权限后，应用可获取部门的停启用状态。"
+    },
+    {
+      "name": "更新部门高级directory:department.update:write",
+      "description": "开通权限后，应用可更新部门信息。"
+    },
+    {
+      "name": "调用 API 获取部门列表高级directory:department:list",
+      "description": "开通权限后，应用可通过指定的条件，获取符合条件的部门列表。"
+    },
+    {
+      "name": "调用 API 获取部门信息高级directory:department:read",
+      "description": "开通权限后，应用可通过部门 ID 查询部门信息。\n注：查看部门详情还需其他额外权限，请以 API 文档为准。"
+    },
+    {
+      "name": "搜索部门高级directory:department:search",
+      "description": "开通权限后，应用可通过名称搜索部门。"
+    },
+    {
+      "name": "创建、更新、删除部门高级directory:department:write",
+      "description": "开通权限后，应用可：\n创建部门\n更新部门信息\n删除部门"
+    },
+    {
+      "name": "查看员工账号活跃状态高级directory:employee.base.active_status:read",
+      "description": "开通权限后，应用可获取员工的账号活跃状态，如激活、未激活、冻结等。"
+    },
+    {
+      "name": "查看员工的头像高级directory:employee.base.avatar:read",
+      "description": "开通权限后，应用可获取员工的头像 URL。"
+    },
+    {
+      "name": "查看员工的名片页自定义背景图高级directory:employee.base.background_image:read",
+      "description": "开通权限后，应用可获取员工的自定义背景图 URL。"
+    },
+    {
+      "name": "查看员工个人基本信息高级directory:employee.base.base:read",
+      "description": "开通权限后，应用可获取员工的以下信息：\n员工 ID\n员工的姓\n员工的名\n姓名\n别名\n头像\n自定义背景图\n个性签名\n员工数据来源\n员工的数据驻留地\n分配给员工的席位 ID 列表"
+    },
+    {
+      "name": "查看员工自定义字段值高级directory:employee.base.custom_field:read",
+      "description": "开通权限后，应用可获取员工的自定义字段值。"
+    },
+    {
+      "name": "查看员工数据来源高级directory:employee.base.data_source:read",
+      "description": "开通权限后，应用可获取员工的数据来源，如管理后台、人事企业版等。"
+    },
+    {
+      "name": "查看员工所属部门信息高级directory:employee.base.department:read",
+      "description": "开通权限后，应用可获取员工所在的部门信息、在部门中的排序信息。\n注：获取部门详细信息还需其他额外权限，请以 API 文档为准。"
+    },
+    {
+      "name": "查看员工部门路径高级directory:employee.base.department_path:read",
+      "description": "开通权限后，应用可获取员工所在部门的部门路径信息。"
+    },
+    {
+      "name": "查看员工在部门内的排序高级directory:employee.base.dept_order:read",
+      "description": "开通权限后，应用可获取员工在部门内的排序信息，包括员工在部门的排序权重、是否是其主部门等。"
+    },
+    {
+      "name": "查看员工的个性签名高级directory:employee.base.description:read",
+      "description": "开通权限后，应用可获取员工的个性签名。"
+    },
+    {
+      "name": "查看员工虚线上级 ID高级directory:employee.base.dotted_line_leaders:read",
+      "description": "开通权限后，应用可获取员工的虚线上级 ID。"
+    },
+    {
+      "name": "查看员工工作邮箱高级directory:employee.base.email:read",
+      "description": "开通权限后，应用可获取员工的工作邮箱。"
+    },
+    {
+      "name": "查看员工企业邮箱高级directory:employee.base.enterprise_email:read",
+      "description": "开通权限后，应用可获取员工的企业邮箱、企业邮箱别名。"
+    },
+    {
+      "name": "查看员工的企业邮箱别名高级directory:employee.base.enterprise_email_alias:read",
+      "description": "开通权限后，应用可获取员工的企业邮箱别名。"
+    },
+    {
+      "name": "查看员工自定义 ID高级directory:employee.base.external_id:read",
+      "description": "开通权限后，应用可获取员工的自定义 ID。"
+    },
+    {
+      "name": "查看员工性别高级directory:employee.base.gender:read",
+      "description": "开通权限后，应用可获取员工的性别信息。"
+    },
+    {
+      "name": "查看员工数据驻留地高级directory:employee.base.geo:read",
+      "description": "开通权限后，应用可获取员工的数据驻留地信息。"
+    },
+    {
+      "name": "创建、更新、删除员工数据驻留地高级directory:employee.base.geo:write",
+      "description": "开通权限后，应用可在创建成员时，写入员工的数据驻留地信息。"
+    },
+    {
+      "name": "查看员工是否是普通管理员高级directory:employee.base.is_admin:read",
+      "description": "开通权限后，应用可获取员工是否是企业普通管理员角色（即超级管理员以外的其他管理员角色）。"
+    },
+    {
+      "name": "查看员工是否是超级管理员高级directory:employee.base.is_primary_admin:read",
+      "description": "开通权限后，应用可获取员工是否是企业超级管理员角色。"
+    },
+    {
+      "name": "查看员工离职状态高级directory:employee.base.is_resigned:read",
+      "description": "开通权限后，应用可获取员工当前是否已离职。"
+    },
+    {
+      "name": "查看员工上级信息高级directory:employee.base.leader:read",
+      "description": "开通权限后，应用可获取员工的直属上级、虚线上级 ID。"
+    },
+    {
+      "name": "查看员工直属上级 ID高级directory:employee.base.leader_id:read",
+      "description": "开通权限后，应用可获取员工的直属上级 ID。"
+    },
+    {
+      "name": "查看员工手机号高级directory:employee.base.mobile:read",
+      "description": "开通权限后，应用可获取员工的联系手机号。"
+    },
+    {
+      "name": "查看员工的别名高级directory:employee.base.name.another_name:read",
+      "description": "开通权限后，应用可获取员工的别名。"
+    },
+    {
+      "name": "查看员工的名高级directory:employee.base.name.first_name:read",
+      "description": "开通权限后，应用可获取员工的名。"
+    },
+    {
+      "name": "查看员工的姓高级directory:employee.base.name.last_name:read",
+      "description": "开通权限后，应用可获取员工的姓。"
+    },
+    {
+      "name": "查看员工的姓名高级directory:employee.base.name.name:read",
+      "description": "开通权限后，应用可获取员工的姓名。"
+    },
+    {
+      "name": "查看员工离职时间高级directory:employee.base.resign_time:read",
+      "description": "开通权限后，应用可获取员工的离职时间。"
+    },
+    {
+      "name": "查看员工角色信息高级directory:employee.base.role:read",
+      "description": "开通权限后，应用可获取员工是否是企业超级管理员或普通管理员。"
+    },
+    {
+      "name": "查看员工状态信息高级directory:employee.base.status:read",
+      "description": "开通权限后，应用可获取员工当前的账号状态、人事状态。"
+    },
+    {
+      "name": "查看员工席位信息高级directory:employee.base.subscription_ids:read",
+      "description": "开通权限后，应用可获取员工被分配的席位 ID 列表。"
+    },
+    {
+      "name": "创建、更新、删除员工席位信息高级directory:employee.base.subscription_ids:write",
+      "description": "开通权限后，应用可在创建成员时，为员工分配席位。"
+    },
+    {
+      "name": "创建员工高级directory:employee.create:write",
+      "description": "开通权限后，应用可创建员工。"
+    },
+    {
+      "name": "获取员工 ID 转换信息普通directory:employee.idconvert:read",
+      "description": "开通权限后，应用可调用 idconvert 接口，获取员工的其他类型 ID 值。"
+    },
+    {
+      "name": "操作员工离职高级directory:employee.resign:write",
+      "description": "开通权限后，应用可操作员工离职。"
+    },
+    {
+      "name": "恢复离职员工高级directory:employee.resurrect:write",
+      "description": "开通权限后，应用可恢复 30 天内离职的员工。"
+    },
+    {
+      "name": "更新待离职员工高级directory:employee.to_be_resigned:write",
+      "description": "开通权限后，应用可将在职员工更新为待离职状态，或是将待离职员工流转回在职状态。"
+    },
+    {
+      "name": "更新员工高级directory:employee.update:write",
+      "description": "开通权限后，应用可更新员工信息。"
+    },
+    {
+      "name": "查看员工基础工作信息高级directory:employee.work.base_work:read",
+      "description": "开通权限后，应用可获取员工的以下信息：\n工作国家/地区\n工作地点\n工位\n工号\n分机号"
+    },
+    {
+      "name": "查看员工的员工类型高级directory:employee.work.employment_type:read",
+      "description": "开通权限后，应用可获取员工所属的人员类型，包括企业自定义的人员类型。"
+    },
+    {
+      "name": "查看员工的分机号高级directory:employee.work.extension_number:read",
+      "description": "开通权限后，应用可获取员工的分机号。"
+    },
+    {
+      "name": "查看员工的工号高级directory:employee.work.job_number:read",
+      "description": "开通权限后，应用可获取员工的工号。"
+    },
+    {
+      "name": "查看员工职务信息高级directory:employee.work.job_title:read",
+      "description": "开通权限后，应用可获取员工的职务信息。\n注：查看职务详细信息还需其他额外权限，请以 API 文档为准。"
+    },
+    {
+      "name": "查看员工的入职日期高级directory:employee.work.join_date:read",
+      "description": "开通权限后，应用可获取员工的入职日期。"
+    },
+    {
+      "name": "查看员工的岗位信息高级directory:employee.work.positions:read",
+      "description": "开通权限后，应用可获取员工的岗位信息，包括：\n岗位编码\n岗位名称\n是否主岗位\n上级领导 ID\n上级领导的岗位编码\n岗位所属的部门 ID"
+    },
+    {
+      "name": "查看员工离职日期高级directory:employee.work.resign_date:read",
+      "description": "开通权限后，应用可获取员工的离职日期。"
+    },
+    {
+      "name": "查看员工离职原因高级directory:employee.work.resign_reason:read",
+      "description": "开通权限后，应用可获取员工的离职原因，例如家庭原因等。"
+    },
+    {
+      "name": "查看员工离职备注高级directory:employee.work.resign_remark:read",
+      "description": "开通权限后，应用可获取员工的离职备注信息。"
+    },
+    {
+      "name": "查看员工离职类型高级directory:employee.work.resign_type:read",
+      "description": "开通权限后，应用可获取员工的离职类型，例如主动离职、被动离职等。"
+    },
+    {
+      "name": "查看员工的人事状态高级directory:employee.work.staff_status:read",
+      "description": "开通权限后，应用可获取员工当前的人事状态，如在职、已离职等。"
+    },
+    {
+      "name": "查看员工的工作国家/地区高级directory:employee.work.work_country_or_region:read",
+      "description": "开通权限后，应用可获取员工的工作地国家/地区代码。"
+    },
+    {
+      "name": "查看员工的工作地点高级directory:employee.work.work_place:read",
+      "description": "开通权限后，应用可获取员工的工作地点信息。\n注：查看地点详细信息还需其他额外权限，请以 API 文档为准。"
+    },
+    {
+      "name": "查看员工的工位高级directory:employee.work.work_station:read",
+      "description": "开通权限后，应用可获取员工的工位信息。"
+    },
+    {
+      "name": "调用 API 获取员工列表高级directory:employee:list",
+      "description": "开通权限后，应用可通过指定的条件，获取符合条件的员工列表。"
+    },
+    {
+      "name": "调用 API 获取员工信息高级directory:employee:read",
+      "description": "开通权限后，应用可通过员工 ID 查询员工详情。\n注：获取更多字段数据还需其他额外权限，请以 API 文档为准。"
+    },
+    {
+      "name": "搜索员工高级directory:employee:search",
+      "description": "开通权限后，应用可通过姓名、ID、手机号、邮箱搜索员工。"
+    },
+    {
+      "name": "创建、更新、离职、恢复员工高级directory:employee:write",
+      "description": "开通权限后，应用可：\n创建员工\n更新员工信息\n操作员工离职\n恢复 30 天内离职的员工"
+    },
+    {
+      "name": "创建、更新、删除自定义人员类型高级directory:employee_type_enum:write",
+      "description": "开通权限后，应用可：\n创建自定义人员类型\n更新自定义人员类型\n删除自定义人员类型"
+    },
+    {
+      "name": "查看职务基础信息高级directory:job_title.base:read",
+      "description": "开通权限后，应用可获取职务的以下信息：\n职务 ID\n职务名称\n职务描述\n数据来源"
+    },
+    {
+      "name": "查看职务状态高级directory:job_title.status:read",
+      "description": "开通权限后，应用可获取职务的启用状态。"
+    },
+    {
+      "name": "创建、更新、删除职务高级directory:job_title:write",
+      "description": "开通权限后，应用可：\n创建职务\n更新职务\n删除职务"
+    },
+    {
+      "name": "查看地点基础信息高级directory:place.base:read",
+      "description": "开通权限后，应用可获取地点的以下信息：\n地点 ID\n地点名称\n地点描述\n数据来源"
+    },
+    {
+      "name": "查看地点状态高级directory:place.status:read",
+      "description": "开通权限后，应用可获取地点的启用状态。"
+    },
+    {
+      "name": "创建、更新、删除地点高级directory:place:write",
+      "description": "开通权限后，应用可：\n创建地点\n更新地点\n删除地点"
+    },
+    {
+      "name": "读写业财数据高级financial_access_platform:data:write",
+      "description": "开通权限后，应用可读写对应业务线的业财数据。"
+    },
+    {
+      "name": "获取成本分摊报表明细数据高级payroll:cost_allocation_details:read",
+      "description": "开通权限后，应用可获取成本分摊报表明细数据。"
+    },
+    {
+      "name": "获取成本分摊方案高级payroll:cost_allocation_plan:read",
+      "description": "开通权限后，应用可获取 Payroll 中的成本分摊方案列表。"
+    },
+    {
+      "name": "获取成本分摊报表汇总数据高级payroll:cost_allocation_report:read",
+      "description": "开通权限后，应用可获取 Payroll 中的成本分摊报表汇总数据。"
+    },
+    {
+      "name": "Payroll外部数据源设置读权限高级payroll:external_datasource_configuration:read",
+      "description": "Payroll外部数据源设置读权限"
+    },
+    {
+      "name": "Payroll外部数据记录查询权限高级payroll:external_datasource_record:read",
+      "description": "Payroll外部数据记录查询权限"
+    },
+    {
+      "name": "Payroll外部数据记录写入权限高级payroll:external_datasource_record:write",
+      "description": "Payroll外部数据记录写入权限"
+    },
+    {
+      "name": "获取薪资组信息高级payroll:pay_groups:read",
+      "description": "获取薪资组信息"
+    },
+    {
+      "name": "封存发薪活动高级payroll:payment_activity:archive",
+      "description": "封存发薪活动"
+    },
+    {
+      "name": "订阅发薪活动状态变更事件高级payroll:payment_activity:monitor",
+      "description": "开通权限后，应用可订阅发薪活动状态变更事件。"
+    },
+    {
+      "name": "获取发薪活动列表数据高级payroll:payment_activity:read",
+      "description": "获取发薪活动列表数据"
+    },
+    {
+      "name": "获取发薪明细数据高级payroll:payment_activity_details:read",
+      "description": "获取发薪明细数据"
+    },
+    {
+      "name": "获取发薪明细数据V2高级payroll:payment_details:read",
+      "description": "获取发薪明细数据V2"
+    },
+    {
+      "name": "获取算薪项信息高级payroll:payroll_calculation_item:read",
+      "description": "开通权限后，应用可获取算薪项信息。"
+    },
+    {
+      "name": "考勤机打卡记录上报高级attendance_machine:check_in_record:write",
+      "description": "考勤机打卡记录上报"
+    },
+    {
+      "name": "考勤机设备写入权限高级attendance_machine:device:write",
+      "description": "考勤机设备写入权限"
+    },
+    {
+      "name": "查看、更新考勤机用户高级attendance_machine:users",
+      "description": "查看、更新考勤机用户"
+    },
+    {
+      "name": "激活、关闭协作插件普通collab_plugins:collab_plugins",
+      "description": "开通权限后，应用可激活、关闭协作插件。"
+    },
+    {
+      "name": "获取协作插件关联关系变化普通collab_plugins:collab_plugins.relation.change:read",
+      "description": "开通权限后，应用可获取协作插件关联关系的变化，如事项与群组的解绑和绑定。"
+    },
+    {
+      "name": "读取律所和律师容量高级ea_integration_platform:lawfirm_attorney_capacity:read",
+      "description": "开通权限后，应用可查询维护在 Symphony 系统中的律所和律师的容量信息。“容量”指可处理案件的数量。"
+    },
+    {
+      "name": "获取智能伙伴创建平台数据知识资产普通aily:data_asset:read",
+      "description": "开通权限后，应用可读取飞书智能伙伴创建平台上的数据知识资产。"
+    },
+    {
+      "name": "上传数据知识文件普通aily:data_asset:upload_file",
+      "description": "开通权限后，应用可上传数据知识文件。具体用户权限配置和智能伙伴创建平台用户权限管理保持一致。"
+    },
+    {
+      "name": "创建、更新、删除智能伙伴创建平台数据知识资产普通aily:data_asset:write",
+      "description": "开通权限后，应用可创建、更新、删除智能伙伴创建平台上的数据知识资产。具体用户权限控制和智能伙伴创建平台的终端用户权限配置保持一致。"
+    },
+    {
+      "name": "获取文件高级aily:file:read",
+      "description": "开通权限后，应用可获取上传到智能伙伴创建平台中的文件信息。"
+    },
+    {
+      "name": "上传文件高级aily:file:write",
+      "description": "开通权限后，应用可上传文件到智能伙伴创建平台，以便在后续操作中引用。"
+    },
+    {
+      "name": "执行智能伙伴数据知识问答高级aily:knowledge:ask",
+      "description": "开通权限后，应用可执行飞书智能伙伴的数据知识问答能力。"
+    },
+    {
+      "name": "智能伙伴知识库读取高级aily:knowledge:read",
+      "description": "智能伙伴知识库读取"
+    },
+    {
+      "name": "智能伙伴知识写入高级aily:knowledge:write",
+      "description": "智能伙伴知识写入"
+    },
+    {
+      "name": "获取消息高级aily:message:read",
+      "description": "开通权限后，应用可获取在智能伙伴创建平台上创建的会话中的消息。"
+    },
+    {
+      "name": "发送消息高级aily:message:write",
+      "description": "开通权限后，应用可在智能伙伴创建平台上创建的会话中发送消息。"
+    },
+    {
+      "name": "获取运行信息普通aily:run:read",
+      "description": "开通权限后，应用可获取会话在智能伙伴应用中的一次运行信息，包括启动时间、结束时间、当前状态等。"
+    },
+    {
+      "name": "创建运行普通aily:run:write",
+      "description": "开通权限后，应用可在指定智能伙伴应用中使用会话内容创建一次运行。"
+    },
+    {
+      "name": "获取会话信息高级aily:session:read",
+      "description": "开通权限后，应用可查看在智能伙伴创建平台中创建的会话信息，如创建时间、渠道上下文等。"
+    },
+    {
+      "name": "读写会话信息高级aily:session:write",
+      "description": "开通权限后，应用可创建、更新、删除在智能伙伴创建平台中创建的会话信息，如创建时间、渠道上下文等。"
+    },
+    {
+      "name": "获取技能信息普通aily:skill:read",
+      "description": "开通权限后，应用可获取在飞书智能伙伴创建平台中创建的技能。"
+    },
+    {
+      "name": "运行技能普通aily:skill:write",
+      "description": "开通权限后，应用可运行在飞书智能伙伴创建平台中创建的技能。"
+    },
+    {
+      "name": "获取卡片信息普通cardkit:card:read",
+      "description": "开通权限后，应用可通过 message_id 获取卡片类型消息关联的卡片实例 ID。获取卡片实例 ID 后，可通过卡片更新 API 进行卡片内容更新。"
+    },
+    {
+      "name": "创建与更新卡片普通cardkit:card:write",
+      "description": "开通权限后，应用可通过创建卡片 API 创建卡片实例，并在发送消息、链接预览等功能中使用。成功创建卡片实例后，可通过卡片全量、局部更新等 API 更新卡片内容。"
+    },
+    {
+      "name": "获取卡片模板信息普通cardkit:template:read",
+      "description": "获取卡片模板信息"
+    },
+    {
+      "name": "获取智能伙伴统计数据高级myai_data:myai_data:read",
+      "description": "开通权限后，应用可获取智能伙伴的日均统计数据。"
+    },
+    {
+      "name": "使用数据保险箱时根据权限判断是否过滤敏感人员信息高级ability:security_and_compliance.exempt_kp_protect",
+      "description": "使用数据保险箱时根据权限判断是否过滤敏感人员信息"
+    },
+    {
+      "name": "获取员工使用应用明细数据（历史版本）高级admin:app.usage.detail:readonly",
+      "description": "允许应用查看可以使用某应用的人员列表。"
+    },
+    {
+      "name": "获取员工使用应用的概览数据高级admin:app.usage.overview:readonly",
+      "description": "允许应用查看某应用的统计数据，比如该应用的活跃用户数、累计活跃用户数等指标。"
+    },
+    {
+      "name": "获取机器人发送消息的概览数据高级admin:message.bot.overview:readonly",
+      "description": "允许应用查看某机器人在统计周期内的消息发送情况，包括推送消息数量、消息触达人数、消息已读数量等。"
+    },
+    {
+      "name": "【废弃】查询环境变量高级app_engine:application.global_variable:read",
+      "description": "【废弃】查询环境变量"
+    },
+    {
+      "name": "查询飞书低代码平台共享库高级app_engine:component_lib:read",
+      "description": "开通权限后，应用可查询飞书低代码平台中的共享库版本列表。"
+    },
+    {
+      "name": "更新应用配置高级application:application:write",
+      "description": "更新应用配置"
+    },
+    {
+      "name": "查看、评论、编辑和管理多维表格（套件内）高级bitable:bitable",
+      "description": "该权限已不再维护，不可新增申请；你可申请开通权限“bitable:app”（查看、评论、编辑和管理多维表格）。"
+    },
+    {
+      "name": "查看、评论和导出多维表格（套件内）高级bitable:bitable:readonly",
+      "description": "该权限已不再维护，不可新增申请；你可申请开通权限“bitable:app:readonly”（查看、评论和导出多维表格）。"
+    },
+    {
+      "name": "查询BlockEntity内容普通block:entity:readlonly",
+      "description": "查询BlockEntity内容"
+    },
+    {
+      "name": "查看、创建、修改、删除客户360客户信息高级c360:account",
+      "description": "查看、创建、修改、删除客户360客户信息"
+    },
+    {
+      "name": "查看客户360客户信息高级c360:account:readonly",
+      "description": "查看客户360客户信息"
+    },
+    {
+      "name": "获得客户360对象信息变更事件推送高级c360:object:event",
+      "description": "获得客户360对象信息变更事件推送"
+    },
+    {
+      "name": "查看、创建、修改、删除客户360商机信息高级c360:opportunity",
+      "description": "查看、创建、修改、删除客户360商机信息"
+    },
+    {
+      "name": "查看客户360商机信息高级c360:opportunity:readonly",
+      "description": "查看客户360商机信息"
+    },
+    {
+      "name": "查看、创建、修改、删除客户360订单信息高级c360:order",
+      "description": "查看、创建、修改、删除客户360订单信息"
+    },
+    {
+      "name": "查看客户360订单信息高级c360:order:readonly",
+      "description": "查看客户360订单信息"
+    },
+    {
+      "name": "查看客户360跟进记录信息高级c360:record_follow:readonly",
+      "description": "查看客户360跟进记录信息"
+    },
+    {
+      "name": "访问日历高级calendar:calendar:access",
+      "description": "获得全部日历接口的授权。\n\n注：该权限已不再维护，不可新增申请；你可申请开通权限“calendar:calendar”（更新日历及日程信息）。"
+    },
+    {
+      "name": "创建 Exchange 绑定关系高级calendar:exchange.bingdings:create",
+      "description": "开通权限后，应用可创建 Exchange 绑定关系。"
+    },
+    {
+      "name": "删除 Exchange 绑定关系高级calendar:exchange.bingdings:delete",
+      "description": "开通权限后，应用可删除 Exchange 绑定关系。"
+    },
+    {
+      "name": "读取 Exchange 绑定关系高级calendar:exchange.bingdings:read",
+      "description": "开通权限后，应用可读取 Exchange 绑定关系。"
+    },
+    {
+      "name": "以应用身份读取关联组织高级contact:collaboration.tenant:readonly",
+      "description": "开通此权限后，应用可获取关联组织的相关组织架构信息。"
+    },
+    {
+      "name": "更新通讯录-即将下线高级contact:contact.old",
+      "description": "获得用户、部门、人员类型的相关更新能力。 \n\n注：该权限已不再维护，不可新增申请；你可申请开通权限“contact:contact”（更新通讯录）。"
+    },
+    {
+      "name": "以应用身份访问通讯录普通contact:contact:access_as_app",
+      "description": "以 tenant_access_token 获得如下接口权限：\n1. 读取用户信息相关能力，包括：获取单个用户信息、获取用户列表、获取用户变更事件\n2. 读取部门信息相关能力，包括：获取单个部门信息、获取部门信息列表、获取父部门信息、搜索部门、获取部门变更事件\n3. 读取人员类型相关能力，包括：查询人员类型、人员类型变更事件\n4. 通讯录权限范围变更事件\n\n注：调用接口时，部分字段可能需要额外权限，具体以文档为准。"
+    },
+    {
+      "name": "读取通讯录高级contact:contact:readonly",
+      "description": "该权限已弃用。"
+    },
+    {
+      "name": "获取联系人基本信息普通contact:user.base_old:readonly",
+      "description": "该权限已弃用。"
+    },
+    {
+      "name": "获取用户账号信息普通contact:user.identity:readonly",
+      "description": "该权限已弃用。"
+    },
+    {
+      "name": "获取用户 union ID高级contact:user.union_id:readonly",
+      "description": "获得根据 union_id 查询用户 open_id/user_id 的能力。\n\n注：该权限已不再维护，不可新增申请；你可申请开通权限“contact:user.employee_id:readonly”（获取用户 user ID）。"
+    },
+    {
+      "name": "获取基础数据信息（历史版本）高级corehr:common_data.basic_data.read",
+      "description": "获取基础数据信息"
+    },
+    {
+      "name": "读写公司信息高级corehr:companies",
+      "description": "读写公司信息"
+    },
+    {
+      "name": "获取公司信息高级corehr:companies:readonly",
+      "description": "获取公司信息"
+    },
+    {
+      "name": "读写成本中心信息（废弃）高级corehr:cost_centers",
+      "description": "读写成本中心信息（废弃）"
+    },
+    {
+      "name": "获取货币信息高级corehr:currencies:readonly",
+      "description": "获取货币信息"
+    },
+    {
+      "name": "获取自定义字段信息高级corehr:custom_fields:readonly",
+      "description": "获取自定义字段信息"
+    },
+    {
+      "name": "更新人员类型信息高级corehr:employee_types",
+      "description": "更新人员类型信息"
+    },
+    {
+      "name": "获取人员类型信息高级corehr:employee_types:readonly",
+      "description": "获取人员类型信息"
+    },
+    {
+      "name": "获取员工是否回流高级corehr:employment.custom_field.whether_returnee:read",
+      "description": "获取员工是否回流"
+    },
+    {
+      "name": "获取地理库信息高级corehr:geographic_datas:readonly",
+      "description": "获取地理库信息"
+    },
+    {
+      "name": "更新职务序列信息高级corehr:job_families",
+      "description": "更新职务序列信息"
+    },
+    {
+      "name": "获取职务序列信息高级corehr:job_families:readonly",
+      "description": "获取职务序列信息"
+    },
+    {
+      "name": "更新职务级别信息高级corehr:job_levels",
+      "description": "更新职务级别信息"
+    },
+    {
+      "name": "获取职务级别信息（历史版本）高级corehr:job_levels:readonly",
+      "description": "获取职务级别信息"
+    },
+    {
+      "name": "更新职务信息高级corehr:jobs",
+      "description": "更新职务信息"
+    },
+    {
+      "name": "获取职务信息高级corehr:jobs:readonly",
+      "description": "获取职务信息"
+    },
+    {
+      "name": "更新地点信息（历史版本）高级corehr:locations",
+      "description": "更新地点信息"
+    },
+    {
+      "name": "获取地点信息（历史版本）高级corehr:locations:readonly",
+      "description": "获取地点信息"
+    },
+    {
+      "name": "更新国家证件类型信息高级corehr:national_id_types",
+      "description": "更新国家证件类型信息"
+    },
+    {
+      "name": "获取国家证件类型信息高级corehr:national_id_types:readonly",
+      "description": "获取国家证件类型信息"
+    },
+    {
+      "name": "读写工时制度信息高级corehr:working_hours_types",
+      "description": "读写工时制度信息"
+    },
+    {
+      "name": "获取工时制度信息高级corehr:working_hours_types:readonly",
+      "description": "获取工时制度信息"
+    },
+    {
+      "name": "创建、更新用户数据迁移任务（已迁移至security_and_compliance:user_migration_task)高级data_compliance:user_migration_task",
+      "description": "创建、更新用户数据迁移任务（已迁移至security_and_compliance:user_migration_task)"
+    },
+    {
+      "name": "查看用户数据迁移任务(已迁移至security_and_compliance:user_migration_task:readonly)普通data_compliance:user_migration_task:readonly",
+      "description": "查看用户数据迁移任务(已迁移至security_and_compliance:user_migration_task:readonly)"
+    },
+    {
+      "name": "101184高级directory:bank_account:write",
+      "description": "101184"
+    },
+    {
+      "name": "查看员工雇佣信息高级directory:employee.work.employment:read",
+      "description": "查看员工雇佣信息"
+    },
+    {
+      "name": "以用户身份进行云文档操作高级docs:docs:operate_as_user",
+      "description": "该权限已弃用。"
+    },
+    {
+      "name": "查看云文档协作者的权限高级docs:permission.member:read",
+      "description": "查看云文档协作者的权限"
+    },
+    {
+      "name": "查看云文档权限设置的权限高级docs:permission.public:read",
+      "description": "查看云文档权限设置的权限"
+    },
+    {
+      "name": "获取服务台资源列表高级helpdesk:resource.list:readonly",
+      "description": "查看服务台资源详情，包含工单详情字段、知识库、推送内容和客服状态日程技能等。\n\n注：该权限已不再维护，不可新增申请；你可申请开通权限“helpdesk:all:readonly”（获取服务台资源详情）。"
+    },
+    {
+      "name": "订阅访问机器人会话相关事件普通im:chat.bot_p2p_chat.access_event:read",
+      "description": "开通权限后，应用可订阅用户访问与机器人的会话的相关事件。"
+    },
+    {
+      "name": "读取新版群置顶高级im:chat.chat_pins.read",
+      "description": "读取新版群置顶"
+    },
+    {
+      "name": "操作新版群置顶高级im:chat.chat_pins.write_only",
+      "description": "操作新版群置顶"
+    },
+    {
+      "name": "读取群信息（历史版本）高级im:chat.group_info:readonly",
+      "description": "可以读取群信息，包括：群名称、群描述、群头像、群主 ID、群模式及群类型、 进退群的系统消息可见性、群成员的发言权限、加群审批、Tenant Key。\n\n注：该权限已不再维护，不建议继续申请使用。你可申请开通权限“im:chat:read”（查看群信息）或“im:chat.members:read”（查看群成员）。"
+    },
+    {
+      "name": "获取用户在群组中@机器人的消息（历史版本）普通im:message.group_at_msg",
+      "description": "可接收机器人所在群聊中@机器人的消息。\n\n注：该权限已不再维护，不建议继续申请使用。你可申请开通权限“im:message.group_at_msg:readonly”（接收群聊中@机器人消息事件）。"
+    },
+    {
+      "name": "获取群聊中所有的用户聊天消息高级im:message.group_msg:readonly",
+      "description": "可接收机器人所在群聊中的所有消息。"
+    },
+    {
+      "name": "更新应用创建群聊的信息（历史版本）高级im:message.groups",
+      "description": "可更新应用所创建的群的群信息，包括：群名称、群描述、群头像、群主 ID、群模式及群类型、 进退群的系统消息可见性、群成员的发言权限、加群审批等。\n\n注：该权限已不再维护，不建议继续申请使用。你可申请开通权限“im:chat:operate_as_owner”（更新应用所创建群的群信息）。"
+    },
+    {
+      "name": "获取单聊、群组的历史消息普通im:message.history:readonly",
+      "description": "该权限已不再维护，不可新增申请；你可申请开通权限“im:message”（获取与发送单聊、群组消息）。"
+    },
+    {
+      "name": "获取用户发给机器人的单聊消息（历史版本）普通im:message.p2p_msg",
+      "description": "可接收单聊中的用户发送的消息。\n\n注：该权限已不再维护，不建议继续申请使用。你可申请开通权限“im:message.p2p_msg:readonly”（读取用户发给机器人的单聊消息）。"
+    },
+    {
+      "name": "获取会话中消息撤回操作高级im:message.revert_msg:readonly",
+      "description": "该权限已不再维护，不可新增申请；你可申请开通权限“im:message”（获取与发送单聊、群组消息）。"
+    },
+    {
+      "name": "获取消息的基础信息V2普通im:message:basic",
+      "description": "该权限已不再维护，不可新增申请；你可申请开通权限“im:message:readonly”（获取单聊、群组消息）。"
+    },
+    {
+      "name": "以用户身份获取消息内容高级im:message:get_as_user",
+      "description": "以用户身份获取消息内容"
+    },
+    {
+      "name": "发送消息V2普通im:message:send",
+      "description": "该权限已不再维护，不可新增申请；你可申请开通权限“im:message”（获取与发送单聊、群组消息）。"
+    },
+    {
+      "name": "应用可向未加入的群聊发送消息高级im:message:send_any_group",
+      "description": "该权限已不再维护，不可新增申请；你可申请开通权限“im:message”（获取与发送单聊、群组消息）。"
+    },
+    {
+      "name": "上传文件V2高级im:resource:upload",
+      "description": "该权限已不再维护，不可新增申请；你可申请开通权限“im:resource”（获取与上传图片或文件资源）。"
+    },
+    {
+      "name": "查询、创建、修改和删除公司圈内容、板块高级moments:moments",
+      "description": "当应用拥有此权限时，可以以用户身份操作公司圈内容，包括查询帖子、评论、表情回复、版块列表，以及创建和删除帖子、评论、表情回复等。该权限不能用于创建版块资源，仅能管理授权用户自己的数据。\n\n注：如需管理企业数据，可申请开通权限“moments:moments:access_all”（允许管理租户全部公司圈数据）。"
+    },
+    {
+      "name": "安全的错误日志高级security_and_compliance:audit_log.security_err_log:read",
+      "description": "安全的错误日志"
+    },
+    {
+      "name": "DLP(集成天空卫士)系统执行日志读权限 (不支持申请)高级security_and_compliance:dlp_skg_execute_log:read",
+      "description": "DLP(集成天空卫士)系统执行日志读权限 (不支持申请)"
+    },
+    {
+      "name": "使用数据保险箱功能审计特定成员高级security_and_compliance:usts",
+      "description": "使用数据保险箱功能审计特定成员"
+    },
+    {
+      "name": "使用内容审计功能（USTS）导出成员内容高级security_and_compliance:vault.usts",
+      "description": "开通权限后，应用可使用内容审计（USTS）功能，导出成员的消息、文档、邮件、妙记、日历等内容。"
+    }
+  ],
+  "apiPermissions": [
+    {
+      "url": "https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/user/index",
+      "title": "",
+      "permissions": []
+    },
+    {
+      "url": "https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/department/index",
+      "title": "",
+      "permissions": []
+    },
+    {
+      "url": "https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/search-v1/index",
+      "title": "",
+      "permissions": []
+    }
+  ],
+  "timestamp": "2026-03-01T14:47:03.959Z"
+}
