@@ -52,6 +52,20 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - `trash` > `rm` (recoverable beats gone forever)
 - When in doubt, ask.
 
+### 🔑 SSH Key Persistence (Critical)
+
+**Problem:** SSH keys in `~/.ssh/` are lost when environment resets.
+
+**Solution:**
+1. **Backup Location:** `~/.openclaw/workspace/.ssh-backup/`
+2. **Restore Script:** `~/.openclaw/workspace/scripts/restore-ssh.sh`
+3. **On SSH errors:** Run restore script before regenerating keys
+
+**Prevention:**
+- SSH keys are backed up to workspace (GitHub synced)
+- Never store keys only in `~/.ssh/` without backup
+- Check backup exists before assuming keys are lost
+
 ### ⚠️ CRITICAL: File Write Safety
 
 **NEVER overwrite existing files without explicit confirmation.**

@@ -1,0 +1,2 @@
+*.ssh-backup/*
+!.ssh-backup/*.pub
