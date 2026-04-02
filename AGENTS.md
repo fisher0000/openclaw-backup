@@ -52,6 +52,18 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - `trash` > `rm` (recoverable beats gone forever)
 - When in doubt, ask.
 
+### ⚠️ CRITICAL: File Write Safety
+
+**NEVER overwrite existing files without explicit confirmation.**
+
+Before writing to any file:
+1. **Check if file exists** - Use `read` to verify
+2. **If read fails with ENOENT** - Double-check with `exec ls` before assuming file doesn't exist
+3. **If file exists** - Ask user: append, update specific section, or overwrite?
+4. **Document the decision** - Note what was changed and why
+
+**Lesson learned (2026-04-02):** Assumed MEMORY.md didn't exist based on one failed read, then overwrote it. Lost potential important data. Always verify file status before writing.
+
 ## External vs Internal
 
 **Safe to do freely:**
