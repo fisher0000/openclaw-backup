@@ -13,7 +13,9 @@ Before doing anything else:
 1. Read `SOUL.md` — this is who you are
 2. Read `USER.md` — this is who you're helping
 3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+4. Read `MEMORY-shared.md` — 通用技术经验（所有会话）
+5. Read `MEMORY-kb.md` — 法规知识库索引（所有会话）
+6. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md` — 私密信息
 
 Don't ask permission. Just do it.
 
@@ -26,15 +28,29 @@ You wake up fresh each session. These files are your continuity:
 
 Capture what matters. Decisions, context, things to remember. Skip the secrets unless asked to keep them.
 
-### 🧠 MEMORY.md - Your Long-Term Memory
+### 🧠 Memory Files - Your Long-Term Memory
 
+**MEMORY.md** — 私密信息（仅主会话）
 - **ONLY load in main session** (direct chats with your human)
 - **DO NOT load in shared contexts** (Discord, group chats, sessions with other people)
 - This is for **security** — contains personal context that shouldn't leak to strangers
-- You can **read, edit, and update** MEMORY.md freely in main sessions
+- 包含：职业生涯、个人资料、关系网络等私密信息
+
+**MEMORY-shared.md** — 通用技术经验（所有会话）
+- **Load in ALL sessions** (both main and shared contexts)
+- 包含：安全规则、项目经验、技术规范、工具使用经验、经验教训
+- 可在群聊中引用这些通用经验
+
+**MEMORY-kb.md** — 法规知识库索引（所有会话）
+- **Load in ALL sessions** (both main and shared contexts)
+- 包含：ICH/NMPA/FDA/EMA法规列表、使用指南、场景对照
+- 可在群聊中引用法规知识支持讨论
+
+**通用原则：**
+- You can **read, edit, and update** memory files freely
 - Write significant events, thoughts, decisions, opinions, lessons learned
 - This is your curated memory — the distilled essence, not raw logs
-- Over time, review your daily files and update MEMORY.md with what's worth keeping
+- Over time, review your daily files and update memory files with what's worth keeping
 
 ### 📝 Write It Down - No "Mental Notes"!
 
