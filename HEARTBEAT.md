@@ -1,5 +1,47 @@
 # HEARTBEAT.md
 
-# Keep this file empty (or with only comments) to skip heartbeat API calls.
+> ⚠️ **注意**：此文件仅作为定时任务文档参考
+> 实际定时任务配置在：`~/.openclaw/cron/jobs.json`
 
-# Add tasks below when you want the agent to check something periodically.
+## 当前定时任务清单（5个）
+
+| 任务名称 | 执行时间(北京时间) | 状态 |
+|---------|------------------|------|
+| daily-core-backup | 每日 17:00 | ✅ 启用 |
+| weekly-workspace-backup | 每周五 17:00 | ✅ 启用 |
+| 技术部群消息汇总 | 每日 15:30 | ✅ 启用 |
+| 研发小群消息汇总 | 每日 15:40 | ✅ 启用 |
+| 日报自动生成 | 每日 16:00 | ✅ 启用 |
+
+## 任务详情
+
+### 1. daily-core-backup
+- **描述**：每日 17:00 执行 backup-daily.sh 脚本
+- **动作**：备份核心文件到GitHub
+
+### 2. weekly-workspace-backup
+- **描述**：每周五 17:00 执行 backup-weekly.sh 脚本
+- **动作**：备份整个workspace到GitHub
+
+### 3. 技术部群消息汇总
+- **描述**：每日 15:30 汇总技术部群消息
+- **群ID**：oc_2df0cdf639f1385cbacfd200789042bc
+- **发送方式**：私聊给用户
+
+### 4. 研发小群消息汇总
+- **描述**：每日 15:40 汇总研发小群消息
+- **群ID**：oc_c463887844674a38fb581b954f5ee35b
+- **发送方式**：私聊给用户
+
+### 5. 日报自动生成
+- **描述**：每日 16:00 自动生成个人日报
+- **条件**：非节假日执行
+- **脚本**：`bash ~/.openclaw/scripts/daily-report.sh`
+
+## 如需修改
+
+请编辑 `~/.openclaw/cron/jobs.json`
+
+## 历史记录
+
+- 2026-04-03：更新"技术部小群消息汇总"为"研发小群消息汇总"，明确群ID

@@ -68,6 +68,18 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - `trash` > `rm` (recoverable beats gone forever)
 - When in doubt, ask.
 
+### ⚠️ 强制操作检查清单（2026-04-03更新）
+
+**以下操作必须执行检查清单，禁止跳过：**
+
+**飞书文件上传到云盘：**
+```
+□ 查阅 MEMORY-shared.md → 飞书文件上传参数问题
+□ 确认使用 parent_node（不是 folder_token！）
+□ 上传后 list 验证 parent_token 匹配
+```
+**违反后果**：文件会上传到错误位置，需重新上传并记录错误
+
 ### 🔑 SSH Key Persistence (Critical)
 
 **Problem:** SSH keys in `~/.ssh/` are lost when environment resets.
