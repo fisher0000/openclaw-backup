@@ -1,0 +1,336 @@
+{
+  "generated_at": "2026-04-04T05:42:49.135304",
+  "total": 33,
+  "tasks": [
+    {
+      "id": 1,
+      "rel_path": "EMA/EMA 关于非致突变杂质的界定的思考性文件 Reflection paper on the qualification of non-mutagenic impurities 20260313 - 识林.md",
+      "filename": "EMA 关于非致突变杂质的界定的思考性文件 Reflection paper on the qualification of non-mutagenic impurities 20260313 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/EMA/EMA 关于非致突变杂质的界定的思考性文件 Reflection paper on the qualification of non-mutagenic impurities 20260313 - 识林.md",
+      "file_size": 279611,
+      "file_hash": "6b5d9074dca7a7a5f50cb8751a36fd22",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/EMA/EMA 关于非致突变杂质的界定的思考性文件 Reflection paper on the qualification of non-mutagenic impurities 20260313 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 2,
+      "rel_path": "FDA/ANDA 申报.md",
+      "filename": "ANDA 申报.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/FDA/ANDA 申报.md",
+      "file_size": 13839,
+      "file_hash": "1cbd6221be9145c6306f0fb5cb9885fc",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/FDA/ANDA 申报.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 3,
+      "rel_path": "FDA/FDA Orange Book - 识林.md",
+      "filename": "FDA Orange Book - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/FDA/FDA Orange Book - 识林.md",
+      "file_size": 122892,
+      "file_hash": "737b72ca33ee95a764d38ecf91b4f581",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/FDA/FDA Orange Book - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 4,
+      "rel_path": "ICH/M4Q(R1) Quality cn - 识林.md",
+      "filename": "M4Q(R1) Quality cn - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/ICH/M4Q(R1) Quality cn - 识林.md",
+      "file_size": 62051,
+      "file_hash": "5a0faa08c02c60066c882afb60ffcbee",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/ICH/M4Q(R1) Quality cn - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 5,
+      "rel_path": "ICH/M7 R2 评估和控制药物中DNA反应性致突变杂质以限制潜在致癌风险 20230403 - 识林.md",
+      "filename": "M7 R2 评估和控制药物中DNA反应性致突变杂质以限制潜在致癌风险 20230403 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/ICH/M7 R2 评估和控制药物中DNA反应性致突变杂质以限制潜在致癌风险 20230403 - 识林.md",
+      "file_size": 108807,
+      "file_hash": "20e6fd441a32b1d80110860130a951e7",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/ICH/M7 R2 评估和控制药物中DNA反应性致突变杂质以限制潜在致癌风险 20230403 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 6,
+      "rel_path": "ICH/M7 R2 问答文件 20220524 - 识林.md",
+      "filename": "M7 R2 问答文件 20220524 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/ICH/M7 R2 问答文件 20220524 - 识林.md",
+      "file_size": 22879,
+      "file_hash": "0442eb6165f54d6a4ad9960ec368aa6a",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/ICH/M7 R2 问答文件 20220524 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 7,
+      "rel_path": "ICH/Q11 原料药开发和生产 化学实体和生物技术-生物实体药物 20120501 - 识林.md",
+      "filename": "Q11 原料药开发和生产 化学实体和生物技术-生物实体药物 20120501 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q11 原料药开发和生产 化学实体和生物技术-生物实体药物 20120501 - 识林.md",
+      "file_size": 81957,
+      "file_hash": "131ee2713e67a16c02b38bb3dbb93a7e",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q11 原料药开发和生产 化学实体和生物技术-生物实体药物 20120501 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 8,
+      "rel_path": "ICH/Q11 问答 原料药开发和生产 化学实体和生物技术-生物实体药物 问答 20170823 - 识林.md",
+      "filename": "Q11 问答 原料药开发和生产 化学实体和生物技术-生物实体药物 问答 20170823 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q11 问答 原料药开发和生产 化学实体和生物技术-生物实体药物 问答 20170823 - 识林.md",
+      "file_size": 45890,
+      "file_hash": "a6013f2f144fa5ea3b7aaaa8e8e6790c",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q11 问答 原料药开发和生产 化学实体和生物技术-生物实体药物 问答 20170823 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 9,
+      "rel_path": "ICH/Q13 原料药和制剂的连续制造 20221116 - 识林.md",
+      "filename": "Q13 原料药和制剂的连续制造 20221116 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q13 原料药和制剂的连续制造 20221116 - 识林.md",
+      "file_size": 110720,
+      "file_hash": "3fdc7ce6b6aa6c7e85380d865bcd5981",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q13 原料药和制剂的连续制造 20221116 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 10,
+      "rel_path": "ICH/Q14 分析方法开发 20231101 - 识林.md",
+      "filename": "Q14 分析方法开发 20231101 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q14 分析方法开发 20231101 - 识林.md",
+      "file_size": 143561,
+      "file_hash": "9a39f1a29c3c0efd0fc4f993ca81e812",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q14 分析方法开发 20231101 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 11,
+      "rel_path": "ICH/Q1A R2 新原料药和制剂的稳定性试验 20030206 - 识林.md",
+      "filename": "Q1A R2 新原料药和制剂的稳定性试验 20030206 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q1A R2 新原料药和制剂的稳定性试验 20030206 - 识林.md",
+      "file_size": 64515,
+      "file_hash": "b20268490e18fc8a3130fd72e4810e47",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q1A R2 新原料药和制剂的稳定性试验 20030206 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 12,
+      "rel_path": "ICH/Q1B 稳定性试验新原料药和制剂的光稳定性试验 19961106 - 识林.md",
+      "filename": "Q1B 稳定性试验新原料药和制剂的光稳定性试验 19961106 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q1B 稳定性试验新原料药和制剂的光稳定性试验 19961106 - 识林.md",
+      "file_size": 13098,
+      "file_hash": "6afd1e2b1e842fdaa16fd7b41aa880f7",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q1B 稳定性试验新原料药和制剂的光稳定性试验 19961106 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 13,
+      "rel_path": "ICH/Q1指导原则草案 20250506 - 识林.md",
+      "filename": "Q1指导原则草案 20250506 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q1指导原则草案 20250506 - 识林.md",
+      "file_size": 238679,
+      "file_hash": "4aed4b8915b208508878cf0c5f342ac4",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q1指导原则草案 20250506 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 14,
+      "rel_path": "ICH/Q2 R2 分析方法验证 20231101 - 识林.md",
+      "filename": "Q2 R2 分析方法验证 20231101 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q2 R2 分析方法验证 20231101 - 识林.md",
+      "file_size": 79454,
+      "file_hash": "1b41fe753ba3c5831d68fceed00c9b42",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q2 R2 分析方法验证 20231101 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 15,
+      "rel_path": "ICH/Q3A R2 新原料药中的杂质 20061025 - 识林.md",
+      "filename": "Q3A R2 新原料药中的杂质 20061025 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q3A R2 新原料药中的杂质 20061025 - 识林.md",
+      "file_size": 37677,
+      "file_hash": "915893e51f87b88b264685b8a35de7d8",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q3A R2 新原料药中的杂质 20061025 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 16,
+      "rel_path": "ICH/Q3C R9 杂质残留溶剂的指导原则 20240124 - 识林.md",
+      "filename": "Q3C R9 杂质残留溶剂的指导原则 20240124 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q3C R9 杂质残留溶剂的指导原则 20240124 - 识林.md",
+      "file_size": 111984,
+      "file_hash": "42cb3b9b59f270dace8b279f09a56118",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q3C R9 杂质残留溶剂的指导原则 20240124 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 17,
+      "rel_path": "ICH/Q3D R2 元素杂质指导原则 20220426 - 识林.md",
+      "filename": "Q3D R2 元素杂质指导原则 20220426 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q3D R2 元素杂质指导原则 20220426 - 识林.md",
+      "file_size": 226271,
+      "file_hash": "72e6e81cb522a81cf2d307c079ab010d",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q3D R2 元素杂质指导原则 20220426 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 18,
+      "rel_path": "ICH/Q3E 指导原则草案 20250926 - 识林.md",
+      "filename": "Q3E 指导原则草案 20250926 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q3E 指导原则草案 20250926 - 识林.md",
+      "file_size": 122902,
+      "file_hash": "e62be8e47d9342e7311a44f802e7cabe",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q3E 指导原则草案 20250926 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 19,
+      "rel_path": "ICH/Q7 原料药的药品生产质量管理规范指南 20001110 - 识林.md",
+      "filename": "Q7 原料药的药品生产质量管理规范指南 20001110 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q7 原料药的药品生产质量管理规范指南 20001110 - 识林.md",
+      "file_size": 134442,
+      "file_hash": "9f972710f496745c1c4e9534d12418b8",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q7 原料药的药品生产质量管理规范指南 20001110 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 20,
+      "rel_path": "ICH/Q7 问答 原料药的药品生产质量管理规范指南问答 20150610 - 识林.md",
+      "filename": "Q7 问答 原料药的药品生产质量管理规范指南问答 20150610 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q7 问答 原料药的药品生产质量管理规范指南问答 20150610 - 识林.md",
+      "file_size": 73015,
+      "file_hash": "4e2b3bbf16baf87ad708ebf04bffa1c0",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q7 问答 原料药的药品生产质量管理规范指南问答 20150610 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 21,
+      "rel_path": "ICH/Q8 R2 药品研发 200908 - 识林.md",
+      "filename": "Q8 R2 药品研发 200908 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q8 R2 药品研发 200908 - 识林.md",
+      "file_size": 56400,
+      "file_hash": "ceaf7a838294519488ecefe318d22cb7",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/ICH/Q8 R2 药品研发 200908 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 22,
+      "rel_path": "NMPA CFDA CFDI/CDE 创新药化学药临床试验期间药学变更技术指导原则试行 20210303 - 识林.md",
+      "filename": "CDE 创新药化学药临床试验期间药学变更技术指导原则试行 20210303 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/NMPA CFDA CFDI/CDE 创新药化学药临床试验期间药学变更技术指导原则试行 20210303 - 识林.md",
+      "file_size": 112396,
+      "file_hash": "48e7306c3929a503528299976eede0ca",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/NMPA CFDA CFDI/CDE 创新药化学药临床试验期间药学变更技术指导原则试行 20210303 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 23,
+      "rel_path": "NMPA CFDA CFDI/CDE 已上市化学药品药学变更研究技术指导原则试行 20210210 - 识林.md",
+      "filename": "CDE 已上市化学药品药学变更研究技术指导原则试行 20210210 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/NMPA CFDA CFDI/CDE 已上市化学药品药学变更研究技术指导原则试行 20210210 - 识林.md",
+      "file_size": 83376,
+      "file_hash": "7cba424dc014ea3ccf07ab7ed152a2e8",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/NMPA CFDA CFDI/CDE 已上市化学药品药学变更研究技术指导原则试行 20210210 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 24,
+      "rel_path": "NMPA CFDA CFDI/CFDI 工艺验证检查指南 20250407 - 识林.md",
+      "filename": "CFDI 工艺验证检查指南 20250407 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/NMPA CFDA CFDI/CFDI 工艺验证检查指南 20250407 - 识林.md",
+      "file_size": 169613,
+      "file_hash": "da9a7d6438c17b10b3f2744d2ae819c7",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/NMPA CFDA CFDI/CFDI 工艺验证检查指南 20250407 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 25,
+      "rel_path": "NMPA CFDA CFDI/CFDI 药品注册核查工作程序试行 20211217 - 识林.md",
+      "filename": "CFDI 药品注册核查工作程序试行 20211217 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/NMPA CFDA CFDI/CFDI 药品注册核查工作程序试行 20211217 - 识林.md",
+      "file_size": 31295,
+      "file_hash": "eab7273b4dfe90fb2cbced5bd1b3a78d",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/NMPA CFDA CFDI/CFDI 药品注册核查工作程序试行 20211217 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 26,
+      "rel_path": "NMPA CFDA CFDI/CFDI 药品注册核查要点与判定原则药学研制和生产现场试行 20211217 - 识林.md",
+      "filename": "CFDI 药品注册核查要点与判定原则药学研制和生产现场试行 20211217 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/NMPA CFDA CFDI/CFDI 药品注册核查要点与判定原则药学研制和生产现场试行 20211217 - 识林.md",
+      "file_size": 44061,
+      "file_hash": "81b37fdbfe356ce103548ec3f85e7dac",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/NMPA CFDA CFDI/CFDI 药品注册核查要点与判定原则药学研制和生产现场试行 20211217 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 27,
+      "rel_path": "NMPA CFDA CFDI/NMPA 化学药品注册分类及申报资料要求 20200629 - 识林.md",
+      "filename": "NMPA 化学药品注册分类及申报资料要求 20200629 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/NMPA CFDA CFDI/NMPA 化学药品注册分类及申报资料要求 20200629 - 识林.md",
+      "file_size": 10200,
+      "file_hash": "b16a7d4c56eb59bc2fed0e3d0b71fa6e",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/NMPA CFDA CFDI/NMPA 化学药品注册分类及申报资料要求 20200629 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 28,
+      "rel_path": "NMPA CFDA CFDI/NMPA 药品记录与数据管理要求试行 20200624 - 识林.md",
+      "filename": "NMPA 药品记录与数据管理要求试行 20200624 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/NMPA CFDA CFDI/NMPA 药品记录与数据管理要求试行 20200624 - 识林.md",
+      "file_size": 15897,
+      "file_hash": "e8e0732668f6ef0dbe00998d2fd8d256",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/NMPA CFDA CFDI/NMPA 药品记录与数据管理要求试行 20200624 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 29,
+      "rel_path": "NMPA CFDA CFDI/SAMR 药品注册管理办法 20200122 - 识林.md",
+      "filename": "SAMR 药品注册管理办法 20200122 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/NMPA CFDA CFDI/SAMR 药品注册管理办法 20200122 - 识林.md",
+      "file_size": 55844,
+      "file_hash": "a8b2e9efd344bccb1d1872ee7eb1413b",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/NMPA CFDA CFDI/SAMR 药品注册管理办法 20200122 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 30,
+      "rel_path": "NMPA CFDA CFDI/广东省药品注册研发质量管理指南（征求意见稿）康利华解读 - 识林.md",
+      "filename": "广东省药品注册研发质量管理指南（征求意见稿）康利华解读 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/NMPA CFDA CFDI/广东省药品注册研发质量管理指南（征求意见稿）康利华解读 - 识林.md",
+      "file_size": 67901,
+      "file_hash": "ee5012a841178dfb2c0df603347323c7",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/NMPA CFDA CFDI/广东省药品注册研发质量管理指南（征求意见稿）康利华解读 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 31,
+      "rel_path": "研究专题/分类基因毒性杂质 - 识林 1.md",
+      "filename": "分类基因毒性杂质 - 识林 1.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/研究专题/分类基因毒性杂质 - 识林 1.md",
+      "file_size": 38001,
+      "file_hash": "bf2f8141948de9133f5223f8f01f7bee",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/研究专题/分类基因毒性杂质 - 识林 1.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 32,
+      "rel_path": "研究专题/分类研发质量体系 - 识林.md",
+      "filename": "分类研发质量体系 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/研究专题/分类研发质量体系 - 识林.md",
+      "file_size": 93279,
+      "file_hash": "00df1a8f33604d95c8a529b41f87ad18",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/研究专题/分类研发质量体系 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    },
+    {
+      "id": 33,
+      "rel_path": "研究专题/分类警示结构 - 识林.md",
+      "filename": "分类警示结构 - 识林.md",
+      "local_path": "/tmp/github-kb-sync-3tvwtprb/KB/研究专题/分类警示结构 - 识林.md",
+      "file_size": 29798,
+      "file_hash": "c148f7538220fed998ec1bd65c9605aa",
+      "folder_token": "Ofu0fS87fl5SHwdTZSmcmXoQnse",
+      "openclaw_cmd": "openclaw tools feishu_drive_file action=upload file_path=/tmp/github-kb-sync-3tvwtprb/KB/研究专题/分类警示结构 - 识林.md folder_token=Ofu0fS87fl5SHwdTZSmcmXoQnse"
+    }
+  ]
+}
