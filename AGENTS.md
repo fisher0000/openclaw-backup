@@ -68,7 +68,7 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - `trash` > `rm` (recoverable beats gone forever)
 - When in doubt, ask.
 
-### ⚠️ 强制操作检查清单（2026-04-03更新）
+### ⚠️ 强制操作检查清单（2026-04-15 更新）
 
 **以下操作必须执行检查清单，禁止跳过：**
 
@@ -80,6 +80,29 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 ```
 **违反后果**：文件会上传到错误位置，需重新上传并记录错误
 
+
+**飞书发送文件消息：**
+```
+□ 确认文件位于允许的目录中：
+  - /tmp/openclaw/
+  - /home/node/.openclaw/media/
+  - /home/node/.openclaw/workspace/
+  - /home/node/.openclaw/sandboxes/
+□ 如文件不在允许目录，先复制到 /tmp/openclaw/
+□ 使用 message 工具发送（media + filename 参数）
+```
+**原因**：飞书插件有安全限制，只能发送允许目录中的文件
+**示例**：
+```bash
+# 步骤 1：复制到允许目录
+cp ~/.openclaw/skills/exp-record-audit/SKILL.md /tmp/openclaw/exp-record-audit-SKILL-V06.md
+
+# 步骤 2：发送文件消息
+message action=send
+  target: ou_xxx
+  media: /tmp/openclaw/exp-record-audit-SKILL-V06.md
+  filename: exp-record-audit-SKILL-V06.md
+```
 ### 🔑 SSH Key Persistence (Critical)
 
 **Problem:** SSH keys in `~/.ssh/` are lost when environment resets.
