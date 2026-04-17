@@ -194,6 +194,27 @@ Reactions are lightweight social signals. Humans use them constantly — they sa
 
 Skills provide your tools. When you need one, check its `SKILL.md`. Keep local notes (camera names, SSH details, voice preferences) in `TOOLS.md`.
 
+### 🖼️ Image Recognition - RapidOCR (Default)
+
+**Primary OCR Tool:** RapidOCR 1.4.4 (ONNX Runtime)
+
+**Why RapidOCR:**
+- ✅ **Free** - No API call costs
+- ✅ **Local execution** - No network dependency
+- ✅ **Fast** - 2-3 seconds per image
+- ✅ **Offline capable** - Works without internet
+- ✅ **Good accuracy** - >95% for printed text, ~70% for handwriting
+
+**When to use:**
+- Default for all image/PDF OCR tasks
+- Experiment record auditing
+- Handwritten note transcription
+- Document digitization
+
+**Fallback:** Online vision APIs (only if RapidOCR fails and user explicitly requests)
+
+**Location:** `~/.openclaw/skills/exp-record-audit/` (shared with experiment audit skill)
+
 **🎭 Voice Storytelling:** If you have `sag` (ElevenLabs TTS), use voice for stories, movie summaries, and "storytime" moments! Way more engaging than walls of text. Surprise people with funny voices.
 
 **📝 Platform Formatting:**
