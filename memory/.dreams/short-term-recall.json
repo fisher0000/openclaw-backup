@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-13T07:31:19.215Z",
+  "updatedAt": "2026-04-18T07:30:15.183Z",
   "entries": {
     "memory:memory/2026-04-08.md:29:78": {
       "key": "memory:memory/2026-04-08.md:29:78",
@@ -9,18 +9,20 @@
       "endLine": 78,
       "source": "memory",
       "snippet": "3. **索引和目录设计** - 主索引模板 (README.md) - 分类目录模板 (法规、项目、技术) - 最近更新动态文件 4. **文档格式转换** - 用户询问 docx → md 转换方法 - 可选方案：markitdown、pandoc、在线工具 ### 交付物 - 创建飞书云文档《个人知识库建设指南》 - 链接：https://www.feishu.cn/docx/GbM9dDOKpoLTy4xlcxicxZgJnXd --- ## 📋 定时任务状态 | 任务 | 状态 | 备注 | |------|------|------| | github-kb-sync | ✅ 100% 成功 | 35/35 文件 | | 技术部群消息汇总 | ✅ 完成 | 11 条消息 | | 研发小群消息汇总 | ✅ 完成 | 周报更新 | | 日报自动生成 | ✅ 完成 | 质量 100 分 | | daily-core-backup | ✅ 完成 | GitHub 推送成功 | --- ## 📝 待办/跟进 - [ ] 用户可能需要帮助创建知识库索引文件 - [ ] 用户可能需要 docx → md 转换协助 --- ## 📁 知识库同步位置确认 **同步目标**: 飞书云盘 → 「个人知识库」文件夹 **文件夹结构**: ``` 飞书云盘/个人知识库/ ├── 法规/ │ ├── ICH/ (18 个文件) │ ├── NMPA CFDA CFDI/ (9 个文件) │ ├── EMA/ (1 个文件)",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.7379696117375009,
-      "maxScore": 0.7379696117375009,
+      "totalScore": 1.4834813255915804,
+      "maxScore": 0.7455117138540795,
       "firstRecalledAt": "2026-04-13T07:31:19.215Z",
-      "lastRecalledAt": "2026-04-13T07:31:19.215Z",
+      "lastRecalledAt": "2026-04-18T07:30:15.183Z",
       "queryHashes": [
-        "1f0ec0dedc3f"
+        "1f0ec0dedc3f",
+        "cef481797bd0"
       ],
       "recallDays": [
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-18"
       ],
       "conceptTags": [
         "backup",
@@ -40,18 +42,20 @@
       "endLine": 38,
       "source": "memory",
       "snippet": "# 2026-04-08 记忆日志 ## 📊 重要事件 ### GitHub KB Sync - 100% 成功 - **时间**: 2026-04-08 08:00 北京时间 - **结果**: 35/35 文件全部成功同步 - **对比**: 昨日 (04-07) 仅 24/33 成功 (72.7%) - **状态**: 今日全部文件夹同步完成，包括昨日失败的 NMPA CFDA CFDI 文件夹 - **内容**: ICH 指导原则 18 个、NMPA 法规 9 个、FDA 2 个、EMA 1 个、研究专题 3 个、项目经验 2 个 --- ## 💬 主要对话 ### 知识库建设咨询 用户询问如何建立和更新个人知识库，讨论了以下内容： 1. **知识库架构设计** - 6 大分类：法规标准、项目经验、技术积累、管理知识、个人成长、外部资源 - 主索引 (README.md) + 分类索引结构 2. **本地更新方案** - 方案一：GitHub 网页端 (最简单，零配置) - 方案二：Obsidian + Git 插件 (推荐，专业工具) - 方案三：飞书云盘直接编辑 (便捷但不同步回 GitHub) - 方案四：手机端 (Obsidian 移动端 + Working Copy) 3. **索引和目录设计** - 主索引模板 (README.md) - 分类目录模板 (法规、项目、技术) - 最近更新动态文件 4. **文档格式转换** - 用户询问 docx → md 转换方法 -",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.7206994599318459,
-      "maxScore": 0.7206994599318459,
+      "totalScore": 1.4491061025378453,
+      "maxScore": 0.7284066426059995,
       "firstRecalledAt": "2026-04-13T07:31:19.215Z",
-      "lastRecalledAt": "2026-04-13T07:31:19.215Z",
+      "lastRecalledAt": "2026-04-18T07:30:15.183Z",
       "queryHashes": [
-        "1f0ec0dedc3f"
+        "1f0ec0dedc3f",
+        "cef481797bd0"
       ],
       "recallDays": [
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-18"
       ],
       "conceptTags": [
         "35/35",
@@ -71,18 +75,20 @@
       "endLine": 42,
       "source": "memory",
       "snippet": "# Memory Log - 2026-04-05 ## Session Context - **Date**: 2026-04-05 (Sunday) - **Time**: 03:55 UTC - **Type**: Pre-compaction memory flush - **Session**: Direct chat with 王涛 (ou_74a621752a07aed1c6db1b765365d15a) ## Bootstrap Event ### Memory System Demonstration 用户要求展示我的记忆结构，我详细解释了： 1. 记忆系统架构（短期/工作/长期记忆） 2. 记忆文件层级结构 3. 四种记忆类型详解 4. 记忆工作流程 5. 记忆安全策略 6. 当前已加载的记忆状态 7. 记忆检索机制 ### Key Insights - 用户关心AI的记忆机制和工作原理 - 需要清晰、结构化的信息展示 - 使用图表和表格增强可读性 ### Files Referenced During Session - AGENTS.md - 工作空间规则 - SOUL.md - 核心身份定义 - USER.md - 用户档案（王涛） - IDENTITY.md - AI标识信息 - TOOLS.md - 环境配置 - HEARTBEAT.md - 定时任务配置 - MEMORY.md - 私密长期记忆 ### Missing Files Noted - MEMORY-shared.md - 通用技术经验（未找到） - MEMORY-kb.m",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.6972506717754572,
-      "maxScore": 0.6972506717754572,
+      "totalScore": 1.404471585938619,
+      "maxScore": 0.7072209141631617,
       "firstRecalledAt": "2026-04-13T07:31:19.215Z",
-      "lastRecalledAt": "2026-04-13T07:31:19.215Z",
+      "lastRecalledAt": "2026-04-18T07:30:15.183Z",
       "queryHashes": [
-        "1f0ec0dedc3f"
+        "1f0ec0dedc3f",
+        "cef481797bd0"
       ],
       "recallDays": [
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-18"
       ],
       "conceptTags": [
         "pre-compaction",
