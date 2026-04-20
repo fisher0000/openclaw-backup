@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-18T07:30:15.183Z",
+  "updatedAt": "2026-04-20T07:28:05.038Z",
   "entries": {
     "memory:memory/2026-04-08.md:29:78": {
       "key": "memory:memory/2026-04-08.md:29:78",
@@ -99,6 +99,101 @@
         "identity.md",
         "tools.md",
         "heartbeat.md"
+      ]
+    },
+    "memory:memory/2026-04-16.md:1:44": {
+      "key": "memory:memory/2026-04-16.md:1:44",
+      "path": "memory/2026-04-16.md",
+      "startLine": 1,
+      "endLine": 44,
+      "source": "memory",
+      "snippet": "# 2026-04-16 会话记忆 ## 🧠 实验记录审核技能更新 (V07) ### 合并规则重大调整 **原规则：** 同一日期 + 连续页码 + 有前承/后接标识 → 合并 **新规则：** 连续页码 + 有前承/后接标识 → 合并（**不再要求同一日期**） **原因：** 实验记录可能跨天进行，但页码是连续的。应以页码承接关系为准，而非日期。 ### 链式合并逻辑 如果： - 第 9 页：后接第 10 页 - 第 10 页：前承第 9 页，后接第 11 页 - 第 11 页：前承第 10 页 则合并为：**第 9-11 页**（日期取最早的 2026-01-28） ### 实际操作案例 **米诺地尔第 9-11 页合并：** - 第 9 页：2026-01-28（反应阶段） - 第 10 页：2026-02-09（反应阶段 + 后处理） - 第 11 页：2026-02-09（结晶与过滤） - **结果：** 合并为\"第 9-11 页\"，完整记录整个实验流程 ### 文件操作经验 - 飞书云盘文件重命名：使用 `copy`（指定新名称）+ `delete`（原文件）组合 - `move` 操作不支持重命名，仅改变位置 - 删除操作需要用户授权（飞书安全限制） --- ## 📋 定时任务状态 当前 6 个定时任务正常运行： - daily-core-backup (每日 17:00) - weekly-workspace-backup (每周五 17:00) - 技术部群消息汇总 (每日 15:30) - 研发小群消息汇总 (每日 15",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7621042156135672,
+      "maxScore": 0.7621042156135672,
+      "firstRecalledAt": "2026-04-20T07:27:53.585Z",
+      "lastRecalledAt": "2026-04-20T07:27:53.585Z",
+      "queryHashes": [
+        "0ed2f2229c9e"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "backup",
+        "有前承/后接标识",
+        "9-11",
+        "daily-core-backup",
+        "weekly-workspace-backup",
+        "会话",
+        "记忆",
+        "实验"
+      ]
+    },
+    "memory:memory/2026-04-14.md:46:96": {
+      "key": "memory:memory/2026-04-14.md:46:96",
+      "path": "memory/2026-04-14.md",
+      "startLine": 46,
+      "endLine": 96,
+      "source": "memory",
+      "snippet": "- 开启 Auto commit interval（5 分钟） - 养成\"修改 → Commit → Pull → Push\"习惯 --- ### 3. Templater 插件错误 **错误**： ``` Templater Error: No active editor, can't append templates. ``` **原因**：没有激活的编辑器窗口。 **解决方案**： - 方法 1：先打开一个笔记，再触发模板 - 方法 2：使用 \"Create new note from template\" 命令（不需要打开笔记） --- ## 📅 定时任务状态 | 任务 | 计划时间 | 状态 | 备注 | |------|---------|------|------| | github-kb-sync | 08:00 | ✅ 已完成 | 远程 404，本地备份完整 | | 技术部群消息汇总 | 15:30 | ❌ 失败 | 需飞书授权 | | 研发小群消息汇总 | 15:40 | ⏳ 待执行 | - | | 日报自动生成 | 16:00 | ⏳ 待执行 | - | | daily-core-backup | 17:00 | ⏳ 待执行 | - | **待处理授权**：用户需在飞书发送 `/feishu_auth` 完成授权 --- ## 🧪 实验记录审核技能 **触发时间**：2026-04-14 约 11:30 北京时间 **扫描结果**： - 云盘文件夹：GsSrfB5PQlhMR5dvtsicOttXnTd - 发现文件：20260",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.4730739169857037,
+      "maxScore": 0.7365369584928518,
+      "firstRecalledAt": "2026-04-20T07:27:53.585Z",
+      "lastRecalledAt": "2026-04-20T07:28:05.038Z",
+      "queryHashes": [
+        "0ed2f2229c9e",
+        "43697397a748"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "backup",
+        "备份",
+        "github-kb-sync",
+        "daily-core-backup",
+        "feishu-auth",
+        "开启",
+        "auto",
+        "commit"
+      ]
+    },
+    "memory:memory/2026-04-14.md:86:132": {
+      "key": "memory:memory/2026-04-14.md:86:132",
+      "path": "memory/2026-04-14.md",
+      "startLine": 86,
+      "endLine": 132,
+      "source": "memory",
+      "snippet": "- 发现文件：20260414-112540.jpg（3.4 MB） **状态**：OCR 识别失败，等待用户选择替代方案 **技能版本**：V05 --- ## 💡 经验教训 1. **OCR 服务依赖**：视觉模型服务可能波动，需准备备用方案（人工录入/在线 API/本地 OCR） 2. **Git 同步冲突**：手机端必须禁用 Obsidian-Git 插件，只用 GitSync 3. **Templater 使用**：区分 \"Insert template\"（需打开笔记）和 \"Create new note from template\"（不需要） 4. **飞书授权**：群消息汇总任务依赖飞书授权，需提前完成 --- ## 📝 待跟进 - [ ] 实验记录审核 - 等待用户选择 OCR 替代方案 - [ ] 技术部群消息汇总 - 等待飞书授权 - [ ] Obsidian 同步 - 用户已了解完整方案 --- **记录时间**：2026-04-14 15:38 北京时间 --- ## 🕐 15:30-15:40 任务执行更新 ### 技术部群消息汇总（15:30）✅ - **状态**：已完成并发送 - **统计时间**：2026-04-12 至 2026-04-14 - **消息总数**：15 条 - **要点**： - 技术部审计通知（4 月 14 日） - 夏装工作服报买（12 人已接龙） - 每周值日安排（屈俊杰、洪喜） - 实验记录抽查情况发布 - 4 条请假申请 ### 研发小群消息汇总（15:40）✅ -",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.4730739169857037,
+      "maxScore": 0.7365369584928518,
+      "firstRecalledAt": "2026-04-20T07:27:53.585Z",
+      "lastRecalledAt": "2026-04-20T07:28:05.038Z",
+      "queryHashes": [
+        "0ed2f2229c9e",
+        "43697397a748"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "20260414-112540.jpg",
+        "3.4",
+        "人工录入/在线",
+        "api/本地",
+        "obsidian-git",
+        "30-15",
+        "发现",
+        "文件"
       ]
     }
   }
